@@ -27,6 +27,13 @@ predictor** in the microbenchmark. The complete p1_b4_s0 RTL/UVM run showed **no
 11.30 s SV versus 11.75 s C++ median, with overlapping ranges. The report keeps
 model computation, DPI overhead and complete simulation time separate.
 
+**Faster verification launches:** a separate Windows/XSim standalone launcher
+reduced median complete simulation time from **12.94 s to 7.91 s (39% less time)**
+across five interleaved pairs in one configuration, with compilation excluded.
+The same UVM sequences, passive monitors, both scoreboards and every memory
+readback remain active.
+[Matched complete-test measurements and commands](docs/simulation_performance.md).
+
 ## RTL mutation testing: 21/21 targeted faults detected
 
 The verification environment is tested against **intentionally broken RTL**.
@@ -120,7 +127,7 @@ SDRAM pin model through public maintenance/descriptor interfaces.
 | Corruption control | Deliberately wrong SDRAM data detected by the scoreboard |
 | RTL mutation campaign | 21/21 targeted defects detected; clean controls before/after; production sources unchanged |
 | Focused simulation regression | 35 invocations, including 10 expected-failure controls |
-| Python model/tooling tests | 61 tests passed |
+| Python model/tooling tests | 65 tests passed |
 | C++17 reference checks | 21 directed tests; 387 Python/C++ cases; 8,192 bank mappings; 100 C API lifecycles |
 | Dual SV/C++ UVM | Eight XSim configurations; 368 descriptors; both paths detect corruption |
 | C++-enabled mutation campaign | 21/21 selected faults: 17 C++ checks, 3 existing UVM protocol checks, 1 SDRAM pin check |

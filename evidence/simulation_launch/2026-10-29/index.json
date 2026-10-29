@@ -1,0 +1,48 @@
+{
+  "scope": "Native UVM simulator launch optimization; no hardware changes",
+  "timing_scope": {
+    "benchmark": "Five sequential interleaved nominal pairs with no other project simulator running; compilation excluded",
+    "full_features": "Functional acceptance only; collected concurrently with the original Questa regression; not performance samples"
+  },
+  "records": {
+    "benchmark": "benchmark/results.json",
+    "full_features": "full_features/results.json",
+    "original_questa": "original_questa/results.json"
+  },
+  "logs": {
+    "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_0_dual/console.log": "benchmark/0_p1_b4_s0_20261029_0_dual_console.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_1_dual/console.log": "benchmark/1_p1_b4_s0_20261029_1_dual_console.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_2_dual/console.log": "benchmark/2_p1_b4_s0_20261029_2_dual_console.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_3_dual/console.log": "benchmark/3_p1_b4_s0_20261029_3_dual_console.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_4_dual/console.log": "benchmark/4_p1_b4_s0_20261029_4_dual_console.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/data_fault_control/console.log": "benchmark/5_data_fault_control_console.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_0_dual/baseline_console.log": "benchmark/6_p1_b4_s0_20261029_0_dual_baseline_console.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_1_dual/baseline_console.log": "benchmark/7_p1_b4_s0_20261029_1_dual_baseline_console.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_2_dual/baseline_console.log": "benchmark/8_p1_b4_s0_20261029_2_dual_baseline_console.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_3_dual/baseline_console.log": "benchmark/9_p1_b4_s0_20261029_3_dual_baseline_console.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_4_dual/baseline_console.log": "benchmark/10_p1_b4_s0_20261029_4_dual_baseline_console.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/data_fault_control/baseline_console.log": "benchmark/11_data_fault_control_baseline_console.log",
+    "build/cpp_reference/uvm/20261029T192508921840Z/p1_b4_s0_20261029_0_dual/console.log": "full_features/0_p1_b4_s0_20261029_0_dual_console.log",
+    "build/cpp_reference/uvm/20261029T192508921840Z/p1_b4_s0_57_0_dual/console.log": "full_features/1_p1_b4_s0_57_0_dual_console.log",
+    "build/cpp_reference/uvm/20261029T192508921840Z/p1_b4_s0_991_0_dual/console.log": "full_features/2_p1_b4_s0_991_0_dual_console.log",
+    "build/cpp_reference/uvm/20261029T192508921840Z/data_fault_control/console.log": "full_features/3_data_fault_control_console.log",
+    "build/uvm/starter/p0_b1_s0_console.log": "original_questa/0_starter_p0_b1_s0_console.log",
+    "build/uvm/starter/p0_b1_s1_console.log": "original_questa/1_starter_p0_b1_s1_console.log",
+    "build/uvm/starter/p0_b4_s0_console.log": "original_questa/2_starter_p0_b4_s0_console.log",
+    "build/uvm/starter/p0_b4_s1_console.log": "original_questa/3_starter_p0_b4_s1_console.log",
+    "build/uvm/starter/p1_b1_s0_console.log": "original_questa/4_starter_p1_b1_s0_console.log",
+    "build/uvm/starter/p1_b1_s1_console.log": "original_questa/5_starter_p1_b1_s1_console.log",
+    "build/uvm/starter/p1_b4_s0_console.log": "original_questa/6_starter_p1_b4_s0_console.log",
+    "build/uvm/starter/p1_b4_s1_console.log": "original_questa/7_starter_p1_b4_s1_console.log",
+    "build/uvm/starter/data_fault_control_console.log": "original_questa/8_starter_data_fault_control_console.log"
+  },
+  "builds": {
+    "build/cpp_reference/uvm/20261029T193017742935Z/compile_p1_b4_s0/elaborate.log": "benchmark/build/compile_p1_b4_s0/elaborate.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/compile_p1_b4_s0/elaborate.log.normal.log": "benchmark/build/compile_p1_b4_s0/elaborate.log.normal.log",
+    "build/cpp_reference/uvm/20261029T193017742935Z/compile_p1_b4_s0/elaborate.log.standalone.args": "benchmark/build/compile_p1_b4_s0/elaborate.log.standalone.args",
+    "build/cpp_reference/uvm/20261029T193017742935Z/compile_p1_b4_s0/elaboration.args": "benchmark/build/compile_p1_b4_s0/elaboration.args",
+    "build/cpp_reference/uvm/20261029T192508921840Z/compile_p1_b4_s0/elaborate.log": "full_features/build/compile_p1_b4_s0/elaborate.log",
+    "build/cpp_reference/uvm/20261029T192508921840Z/compile_p1_b4_s0/elaborate.log.standalone.args": "full_features/build/compile_p1_b4_s0/elaborate.log.standalone.args",
+    "build/cpp_reference/uvm/20261029T192508921840Z/compile_p1_b4_s0/elaboration.args": "full_features/build/compile_p1_b4_s0/elaboration.args"
+  }
+}

@@ -29,3 +29,9 @@ XSim 2025.2 has separately executed constrained randomization and the descriptor
 covergroup in `p1_b4_s0` across three seeds. Use `scripts/run_xsim_full.py --full`
 for the verified Windows short-path launcher when the checkout contains spaces.
 These results do not change the older Questa Starter feature/license boundary.
+
+`scripts/run_xsim_standalone.py` is an additive Windows/XSim launch adapter.
+Use `--launch-compare --repeat 5 --checker dual --profile p1_b4_s0 --seed 20261029`
+for matched, interleaved complete-test timings. Do not remove memory readbacks,
+stall scenarios, monitors or either scoreboard to claim an equivalent-work
+speedup. Simulator throughput and FPGA bandwidth are separate measurements.

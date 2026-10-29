@@ -25,7 +25,7 @@ python scripts/check_portfolio.py
 python scripts/read_board_status.py --transcript evidence/hardware/2026-10-29/5_pipelined_burst4/probe.log
 ```
 
-The first command runs the 61 Python tests. The second checks the published
+The first command runs the 65 Python tests. The second checks the published
 record hashes, actual source bytes, hardware packet decoding/ratios, UVM reports
 and local documentation links. The third decodes saved digital JTAG evidence.
 These checks do not establish a fresh RTL or physical-board pass.
@@ -82,6 +82,10 @@ See [the C++ model and simulator compatibility](cpp_reference.md) and
 `g++` compiler is required for live model/DPI builds; offline evidence validation
 remains standard-library Python. XSim's Windows coverage launcher uses a
 verified short-path alias when the checkout contains spaces.
+
+For faster Windows/XSim verification launches with unchanged UVM stimulus and
+checking, use `python scripts/run_xsim_standalone.py --checker dual --profile p1_b4_s0`.
+See the [matched launch measurement and reproduction commands](simulation_performance.md).
 
 The [RTL mutation campaign](mutation.md) tests the checkers in `p1_b4_s0` with
 34 directed descriptors plus cache probes. It compiles temporary source copies,

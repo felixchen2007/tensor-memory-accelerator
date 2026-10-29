@@ -1429,7 +1429,224 @@
       "source": "build/cpp_reference/publication_index.json",
       "original_sha256": "8c0acf55e061a185aa954aba6516731c3a12b681ea0b9cd1d5fc9e006bb04080",
       "published_sha256": "e067ecce7780670d80cb8ae1d4aeb93844b086aee85be9e014b2dcdbfc64868c"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/results.json",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/results.json",
+      "original_sha256": "c821fbbd0b6f1a8c5f9b8d5e24d14c3f6b2d98580d3e7e3117212dab14ab2059",
+      "published_sha256": "c5152f07c445444ed8fdbd9de78a7adcf1d2531a8e0537cc20f80c73014e090d"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/build/compile_p1_b4_s0/elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/compile_p1_b4_s0/elaborate.log",
+      "original_sha256": "94e34a80924205de1c32f4f4f01edbf1da5edd7a3f82fbd4544fba9e470f178f",
+      "published_sha256": "6aa58e3d7cb79f5896d638e35a248dd9302577dae2ea0e6943412fcc703f43dd"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/build/compile_p1_b4_s0/elaborate.log.normal.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/compile_p1_b4_s0/elaborate.log.normal.log",
+      "original_sha256": "423257df6b2580b2b7448d656e6cc05bafeaa7a81e3549da976316fdd4e65430",
+      "published_sha256": "07bc9abad6bd95708196583337b63d0b844dbcd517d9492d49dc564ad98436d2"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/build/compile_p1_b4_s0/elaborate.log.standalone.args",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/compile_p1_b4_s0/elaborate.log.standalone.args",
+      "original_sha256": "1154285bd95954922beb22327ccf7547248de3d0327e94703f1ce0270d95d233",
+      "published_sha256": "fd512a286e7497187f22d3669b06fe4b3ce28cd8953a980bf7f99bfb408133ca"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/build/compile_p1_b4_s0/elaboration.args",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/compile_p1_b4_s0/elaboration.args",
+      "original_sha256": "856a4558a11253a1fbd5953f5d52efa2e7bb20dbfb275514635a3a49531698cc",
+      "published_sha256": "c33f6ee38ac1b2598a230a92f3dea13487ef6c0f1f7fc8ca7d2b75b9720f064e"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/0_p1_b4_s0_20261029_0_dual_console.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_0_dual/console.log",
+      "original_sha256": "e0aab4f441b9015fb58eba49bcf2bc91f23fb67098a75d381fa05ec1fd936196",
+      "published_sha256": "c8a7398a062c49ad6055876d935db0f89b5a4ecd78bc6b540bfaeeba13294e26"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/1_p1_b4_s0_20261029_1_dual_console.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_1_dual/console.log",
+      "original_sha256": "154543aa00182c2d6d38f75f171ac3bebc266e89ebf09e6ecb281ddf724423e1",
+      "published_sha256": "32885a6eb371d2fb67177b80d901d5b01e6eb354b08d20f87a93a6829b6d2e9a"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/2_p1_b4_s0_20261029_2_dual_console.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_2_dual/console.log",
+      "original_sha256": "974cc1df2c2f85bcd5910b2ba082fb48ef693b902a91ff327d81e3acabefcb3d",
+      "published_sha256": "69b20f2c2a9815878a0f418c1b71332d2a45e3890157253558fdefb1a7854f0c"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/3_p1_b4_s0_20261029_3_dual_console.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_3_dual/console.log",
+      "original_sha256": "fd914f6a92b18b72bec9221b620011bdf4e11606518dbd9150a93b9984b226e5",
+      "published_sha256": "af9c247bf7013ccb33bd853a066368bf3eeeea46016abf483e9fc5b10ce11f53"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/4_p1_b4_s0_20261029_4_dual_console.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_4_dual/console.log",
+      "original_sha256": "4969b371958f1f7054bb953d419364f8c9628bed9b2450bb683273f3b2ebe504",
+      "published_sha256": "faccb3e750e6f7f688d9518b308db6e8d897c4d3c37daa20fcd58a9fe601731b"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/5_data_fault_control_console.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/data_fault_control/console.log",
+      "original_sha256": "c7db0fc189b9037e3aa468c8af1aa9ec0c6c44974a6d2c4a965b0bb5ee71eb4b",
+      "published_sha256": "82d0766b2c1054d60778cbb85bfb0a899858cdf6995e4ec1c55b6b93f745baff"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/6_p1_b4_s0_20261029_0_dual_baseline_console.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_0_dual/baseline_console.log",
+      "original_sha256": "0d8074945e87c7225c36c2b057bc53afb3b2ab68e2f5c45bcfdc4e3d1c1b2333",
+      "published_sha256": "f3b44e18b5f230a0e8df3271cf3434e2923aadbc74acf8cfe38064e0227ef1f6"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/7_p1_b4_s0_20261029_1_dual_baseline_console.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_1_dual/baseline_console.log",
+      "original_sha256": "9ddc56107f7a14700de28ef96379e5b7b2ef764dab5fe77b2fabdfeffddef077",
+      "published_sha256": "a32b6304b54f7c6a1c021543f5e157eccc0d4d2bf06feb24f48f51562af9396c"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/8_p1_b4_s0_20261029_2_dual_baseline_console.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_2_dual/baseline_console.log",
+      "original_sha256": "576e885889f6a154f42ba6d52d71b201ccd34184d74fa81ae93fb00646684d14",
+      "published_sha256": "42571946612cb4d7377c83d9501267bcc7cfe24f34729d383805b335d01b6267"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/9_p1_b4_s0_20261029_3_dual_baseline_console.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_3_dual/baseline_console.log",
+      "original_sha256": "6ee3883ef8ba1846ac4a122764f4b04c608447899d8e93e4a3ee6b67763257ff",
+      "published_sha256": "629b71170b446f36040b02958bdf541623e32a5b56d2ae96d471267e29fcd264"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/10_p1_b4_s0_20261029_4_dual_baseline_console.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/p1_b4_s0_20261029_4_dual/baseline_console.log",
+      "original_sha256": "93558c7628f2c8cdf06d430d6eae179017f52788b6ac7cf3a832aa6c22f4f311",
+      "published_sha256": "4fecf44377286700bd89ed0655b54197a36f0108115bf7a1cf4e4d99dfe7e159"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/benchmark/11_data_fault_control_baseline_console.log",
+      "source": "build/cpp_reference/uvm/20261029T193017742935Z/data_fault_control/baseline_console.log",
+      "original_sha256": "cbb6a21f0e169b1bfde3d342a4cdcec3a5cb13aab1d0c0fc36d8a19bbf2273e2",
+      "published_sha256": "dc212812d8075232c4e24b3d024c9a592aa22664f72138bd95b8252ae6998622"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/full_features/results.json",
+      "source": "build/cpp_reference/uvm/20261029T192508921840Z/results.json",
+      "original_sha256": "fb5b9ec63f6ee0bc4fda1bff4bc849712a4ecc7847ca19569937f616bc9ca13b",
+      "published_sha256": "d9e5ba152165c5c5262bdf0c135583342e8f27c0113d281529c4ad8e21ce60f0"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/full_features/build/compile_p1_b4_s0/elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T192508921840Z/compile_p1_b4_s0/elaborate.log",
+      "original_sha256": "f5dcce289f614da64438a12c1ad8803d0927e6950f3bb26a4086112e9c2109ed",
+      "published_sha256": "0bad36f7ffea6768fe6505f0f5800f65d7201b9840981ca7623bdca21c5e023a"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/full_features/build/compile_p1_b4_s0/elaborate.log.standalone.args",
+      "source": "build/cpp_reference/uvm/20261029T192508921840Z/compile_p1_b4_s0/elaborate.log.standalone.args",
+      "original_sha256": "4229f44a396854d98c746f15bf0d17fc4f338558b0610820c813ededa2609c02",
+      "published_sha256": "616debf73066e84b2b8c39e85ac3b17c5f49021dbed1608b87488343632d83bc"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/full_features/build/compile_p1_b4_s0/elaboration.args",
+      "source": "build/cpp_reference/uvm/20261029T192508921840Z/compile_p1_b4_s0/elaboration.args",
+      "original_sha256": "7e03418904c55218fb3ab7fc8739414f8fe1e9d270f955b2731e52628d765ebc",
+      "published_sha256": "8368e3223066b890e1aeb5320425cf93cf5b3018fcf40815fca8fd2339fa8cd8"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/full_features/0_p1_b4_s0_20261029_0_dual_console.log",
+      "source": "build/cpp_reference/uvm/20261029T192508921840Z/p1_b4_s0_20261029_0_dual/console.log",
+      "original_sha256": "715268b0aff730b5d511e509240e83c5307539e1243609338799aa996c637c18",
+      "published_sha256": "cec3ed7c0f14aa6aeff5ffcd5618678e7f4a33b94b33e558215f48e5cfd394fe"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/full_features/1_p1_b4_s0_57_0_dual_console.log",
+      "source": "build/cpp_reference/uvm/20261029T192508921840Z/p1_b4_s0_57_0_dual/console.log",
+      "original_sha256": "5d94165f6a54ab19b4cd2679ce55cde1b72eab15b6d96533d95377a8feecda07",
+      "published_sha256": "ee82897ee34a46b15022e0324812b09ac3ea9bbe292e615d0a69a48762314286"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/full_features/2_p1_b4_s0_991_0_dual_console.log",
+      "source": "build/cpp_reference/uvm/20261029T192508921840Z/p1_b4_s0_991_0_dual/console.log",
+      "original_sha256": "6806f6b5b2926f672e462bfdea0e5bb64ccbf00102d9bcfde976219872874a8e",
+      "published_sha256": "20e9daaeff585875c5152cfff7246f27675b4e14a710ffeff0f6ddc4d2374ffa"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/full_features/3_data_fault_control_console.log",
+      "source": "build/cpp_reference/uvm/20261029T192508921840Z/data_fault_control/console.log",
+      "original_sha256": "16d417277cc440138e350946fdce118a2339cb2db7d50b387e0cd1f638dd91a5",
+      "published_sha256": "c7ee1cf7fcf82f5550537e98dd59bf62e39290cb9985d6ccbec0f55bd1a7fb4e"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/original_questa/results.json",
+      "source": "build/uvm/starter/results.json",
+      "original_sha256": "e5b7d4db44347afa35d6a91077eb628efb3da727b562edb303726dffcb944f60",
+      "published_sha256": "524424feee3857ac8bb0ce11328dbd834181ac9951ebd0972559a890db7756e5"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/original_questa/0_starter_p0_b1_s0_console.log",
+      "source": "build/uvm/starter/p0_b1_s0_console.log",
+      "original_sha256": "043add8a6dd1b4d31f3684e28f751918a2b1677f1172d804376bbee29e07ac1c",
+      "published_sha256": "64b886226759a58ec7704eb3da425b5333d9c37a7f388e4c64fc0456104f3f50"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/original_questa/1_starter_p0_b1_s1_console.log",
+      "source": "build/uvm/starter/p0_b1_s1_console.log",
+      "original_sha256": "4bc6f416ea35ece67c2422fe58786f2747a2369b8c08ca662e661a6d6038e4bc",
+      "published_sha256": "dc0276f63d36612bac04a1f71ddbc21b11ba0bc17507f086a1c72a0b55f87670"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/original_questa/2_starter_p0_b4_s0_console.log",
+      "source": "build/uvm/starter/p0_b4_s0_console.log",
+      "original_sha256": "5ce85402082078dfcb203b2a0a0cfdd151fda6d81a0e65f814d893dca8a728cd",
+      "published_sha256": "76da6a1ce56cabce4b1e88a7810e4c2e79b38feae65a05bb4f3281bcda854d69"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/original_questa/3_starter_p0_b4_s1_console.log",
+      "source": "build/uvm/starter/p0_b4_s1_console.log",
+      "original_sha256": "a72b55b033ddd7e4b03f4fda9c4fe9277607bfd521d5545ed9f8c15ce5df8049",
+      "published_sha256": "a77ff7bd2da082824c287815e65ce32e1eecdcde2ff1ed99d6d1abe8520b16fb"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/original_questa/4_starter_p1_b1_s0_console.log",
+      "source": "build/uvm/starter/p1_b1_s0_console.log",
+      "original_sha256": "eae241daadad4e35cc90f671536ec1368234f190030ba191fb4ad2c88be820ff",
+      "published_sha256": "0e6494a6c35318fa6bb58657d9a816b642a272bf997c16647584e28133095985"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/original_questa/5_starter_p1_b1_s1_console.log",
+      "source": "build/uvm/starter/p1_b1_s1_console.log",
+      "original_sha256": "f9716169f16b3e93fc892f86034af2ab6fcb12e1c980623f64d51f820bceb948",
+      "published_sha256": "be00e3eb4d4dcddd1e9d6da6fd78e86344fae9569f1c927c96fdd70d00ebad47"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/original_questa/6_starter_p1_b4_s0_console.log",
+      "source": "build/uvm/starter/p1_b4_s0_console.log",
+      "original_sha256": "a468c0ad9fd04966b20740e6786bb3b71e7830a4fdb327af62ed6fb0523ea360",
+      "published_sha256": "984d558d3c39a9be240a535d788d9cb9b186b51bc9780e87a7d4d2d33fef6cf8"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/original_questa/7_starter_p1_b4_s1_console.log",
+      "source": "build/uvm/starter/p1_b4_s1_console.log",
+      "original_sha256": "c8ba20c0c3a3d69b69a02ee3c661c0e9994162d0b9810cc6eb4fa1f262d7011a",
+      "published_sha256": "6798e31c5885e8fb63b366254fcccaedc74025fdf98178983a56247dcfde9372"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/original_questa/8_starter_data_fault_control_console.log",
+      "source": "build/uvm/starter/data_fault_control_console.log",
+      "original_sha256": "61945adb55263dca6a6d579005f69a70c4b5819ac3d7a38fa41a1a5ac905ab39",
+      "published_sha256": "906e1f18445e398b17c86381ee1a5fa2b9af264f9b5ba47533726397244ad97c"
+    },
+    {
+      "path": "evidence/simulation_launch/2026-10-29/index.json",
+      "source": "build/simulation_launch_index.json",
+      "original_sha256": "c3f929f0317224542684094aa715a8f813ce5d749c4a37d280e44a10d303d5e9",
+      "published_sha256": "c3f929f0317224542684094aa715a8f813ce5d749c4a37d280e44a10d303d5e9"
     }
   ],
-  "last_extended_utc": "2026-10-29T18:31:27.354664+00:00"
+  "last_extended_utc": "2026-10-29T18:31:27.354664+00:00",
+  "simulation_launch_added_utc": "2026-10-29T19:36:16.321580+00:00"
 }
