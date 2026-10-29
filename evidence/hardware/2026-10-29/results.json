@@ -1,0 +1,62 @@
+{
+  "status": "pass",
+  "scope": "paired onboard tile counters; not sustained bandwidth",
+  "operation": "32x32 sixteen-bit SDRAM-to-scratchpad transpose",
+  "payload_bytes": 2048,
+  "nominal_core_hz": 50000000,
+  "refresh_phase": "two core edges after refresh launch",
+  "engines": {
+    "serialized": {
+      "cycles": 16525,
+      "tile_us_at_nominal_clock": 330.5,
+      "tile_payload_MB_s_at_nominal_clock": 6.196671709531014,
+      "sof_sha256": "133f2550e8fd37eaa7f183fe03fd8b96a35313cf1567e54b184af2c531577357",
+      "resources": {
+        "Total logic elements": 2477,
+        "Total registers": 1652,
+        "Total memory bits": 65536,
+        "Total PLLs": 1
+      },
+      "repetitions": 2
+    },
+    "pipelined": {
+      "cycles": 13541,
+      "tile_us_at_nominal_clock": 270.82,
+      "tile_payload_MB_s_at_nominal_clock": 7.562218447677424,
+      "sof_sha256": "c7c5d74a2f5e0212b7fae51ed6731f10b47b91623b8503d7ad17848eff5d71db",
+      "resources": {
+        "Total logic elements": 2703,
+        "Total registers": 1863,
+        "Total memory bits": 65536,
+        "Total PLLs": 1
+      },
+      "repetitions": 2
+    },
+    "pipelined_burst4": {
+      "cycles": 5735,
+      "tile_us_at_nominal_clock": 114.7,
+      "tile_payload_MB_s_at_nominal_clock": 17.855274629468177,
+      "sof_sha256": "a0cb63c5051f4d418fcd3fdc5b6ad84d55f7b20af472eca72f6d6744c4162605",
+      "resources": {
+        "Total logic elements": 2856,
+        "Total registers": 1953,
+        "Total memory bits": 65536,
+        "Total PLLs": 1
+      },
+      "repetitions": 2
+    }
+  },
+  "cycle_speedup": 1.22036777195185,
+  "latency_reduction_percent": 18.05748865355522,
+  "burst_speedup_vs_serialized": 2.881429816913688,
+  "burst_speedup_vs_pipelined": 2.3611159546643417,
+  "timestamp_utc": "2026-10-29T00:58:51.094357+00:00",
+  "run_records": [
+    "build\\hardware\\20261029T005731Z_engine_benchmark\\0_serialized\\run.json",
+    "build\\hardware\\20261029T005731Z_engine_benchmark\\1_pipelined\\run.json",
+    "build\\hardware\\20261029T005731Z_engine_benchmark\\2_pipelined_burst4\\run.json",
+    "build\\hardware\\20261029T005731Z_engine_benchmark\\3_serialized\\run.json",
+    "build\\hardware\\20261029T005731Z_engine_benchmark\\4_pipelined\\run.json",
+    "build\\hardware\\20261029T005731Z_engine_benchmark\\5_pipelined_burst4\\run.json"
+  ]
+}

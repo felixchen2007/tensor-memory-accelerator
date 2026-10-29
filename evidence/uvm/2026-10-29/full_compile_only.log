@@ -1,0 +1,23 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 18:54:39 on Oct 28,2026
+vlog -sv -L uvm12 "+incdir+C:\altera_lite\24.1std\questa_fse\verilog_src\uvm-1.2\src" "+incdir+<PROJECT>\tb\uvm" "+define+TMA_UVM_FULL" <PROJECT>\rtl\tma_addr_gen.sv <PROJECT>\rtl\tma_copy_engine.sv <PROJECT>\rtl\tma_copy_engine_pipelined.sv <PROJECT>\rtl\tma_copy_engine_select.sv <PROJECT>\rtl\tma_ram_bank.sv <PROJECT>\rtl\tma_scratchpad.sv <PROJECT>\rtl\tma_scratchpad_endpoint.sv <PROJECT>\rtl\tma_sdram_controller.sv <PROJECT>\rtl\tma_sdram_copy_system.sv <PROJECT>\tb\tma_sdram_model.sv <PROJECT>\tb\uvm\tma_uvm_if.sv <PROJECT>\tb\uvm\tma_uvm_pkg.sv <PROJECT>\tb\uvm\tb_tma_uvm.sv 
+-- Compiling module tma_addr_gen
+-- Compiling module tma_copy_engine
+-- Compiling module tma_copy_engine_pipelined
+-- Compiling module tma_copy_engine_select
+-- Compiling module tma_ram_bank
+-- Compiling module tma_scratchpad
+-- Compiling module tma_scratchpad_endpoint
+-- Compiling module tma_sdram_controller
+-- Compiling module tma_sdram_copy_system
+-- Compiling module tma_sdram_model
+-- Compiling interface tma_uvm_if
+-- Compiling package tma_uvm_pkg
+-- Importing package uvm12.uvm_pkg (uvm-1.2 Built-in)
+-- Compiling module tb_tma_uvm
+-- Importing package tma_uvm_pkg
+
+Top level modules:
+	tb_tma_uvm
+End time: 18:54:40 on Oct 28,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

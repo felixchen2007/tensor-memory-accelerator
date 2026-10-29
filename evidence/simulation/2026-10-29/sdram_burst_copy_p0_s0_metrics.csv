@@ -1,0 +1,13 @@
+name,pipelined,swizzle,completed_elements,error_code,elapsed_cycles,refresh_count,read_burst_words,read_commands,read_beats
+last_word,0,0,1,0,20,26,4,1,4
+row_crossing,0,0,16,0,137,78,4,4,16
+copy32,0,0,1024,0,8849,186,4,256,1024
+transpose32,0,0,1024,0,8849,295,4,256,1024
+padded,0,0,128,0,1106,354,4,32,128
+column_gather,0,0,256,0,4906,426,4,256,1024
+broadcast,0,0,32,0,175,479,4,1,4
+small_transpose,0,0,15,0,146,531,4,5,20
+alignment,0,0,0,2,1,583,4,0,0
+empty,0,0,0,1,1,634,4,0,0
+late_destination_bounds,0,0,1,3,21,685,4,1,4
+late_source_bounds,0,0,1,3,21,736,4,1,4

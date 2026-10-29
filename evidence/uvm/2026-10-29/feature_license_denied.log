@@ -1,0 +1,39 @@
+Reading pref.tcl
+
+# 2024.3
+
+# vsim -c -coverage -L uvm12 -sv_lib C:\altera_lite\24.1std\questa_fse\uvm-1.2\win64\uvm_dpi work.top -do "run -all; coverage save smoke.ucdb; quit -code 0" 
+# Start time: 18:29:56 on Oct 28,2026
+# Loading <USER_HOME>/AppData/Local/Temp\<HOST>_dpi_78580\win64_gcc-7.4.0\export_tramp.dll
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 win64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading sv_std.std
+# Loading uvm12.uvm_pkg(fast)
+# Loading work.smoke_sv_unit(fast)
+# Loading work.top(fast)
+# Compiling <USER_HOME>/AppData/Local/Temp\<HOST>_dpi_78580\win64_gcc-7.4.0\exportwrapper.c
+# Loading <USER_HOME>/AppData/Local/Temp\<HOST>_dpi_78580\win64_gcc-7.4.0\vsim_auto_compile.dll
+# Loading C:\altera_lite\24.1std\questa_fse\uvm-1.2\win64\uvm_dpi.dll
+# ** Error: Failure to checkout svverification license feature.
+# ** Error: (vsim-1) Unable to checkout verification license - required for testbench features (randomize, randcase, randsequence, covergroup).
+#    Time: 0 ps  Iteration: 0  Instance: /top File: smoke.sv
+# Error loading design
+# End time: 18:30:13 on Oct 28,2026, Elapsed time: 0:00:17
+# Errors: 2, Warnings: 0
+Error loading design

@@ -1,0 +1,522 @@
+{
+  "status": "pass",
+  "scope": "fitted-board-build",
+  "configuration": {
+    "engine": "pipelined",
+    "operation": "transpose32",
+    "refresh_aligned": true,
+    "read_burst_words": 4
+  },
+  "timestamp_utc": "2026-10-29T00:47:40.160745+00:00",
+  "board_tested": false,
+  "external_delay_assumptions": "quartus/de10_lite.sdc: PCB min0.1/max0.5ns per clock/data leg",
+  "resources": {
+    "Total logic elements": 2856,
+    "Total registers": 1953,
+    "Total memory bits": 65536,
+    "Total PLLs": 1
+  },
+  "timing": [
+    {
+      "type": "Slow 1200mV 85C Model Setup 'sdram_clk'",
+      "slack_ns": 1.966
+    },
+    {
+      "type": "Slow 1200mV 85C Model Setup 'clocks|pll|auto_generated|pll1|clk[0]'",
+      "slack_ns": 2.592
+    },
+    {
+      "type": "Slow 1200mV 85C Model Setup 'altera_reserved_tck'",
+      "slack_ns": 17.455
+    },
+    {
+      "type": "Slow 1200mV 85C Model Hold 'altera_reserved_tck'",
+      "slack_ns": 0.341
+    },
+    {
+      "type": "Slow 1200mV 85C Model Hold 'clocks|pll|auto_generated|pll1|clk[0]'",
+      "slack_ns": 0.415
+    },
+    {
+      "type": "Slow 1200mV 85C Model Hold 'sdram_clk'",
+      "slack_ns": 13.481
+    },
+    {
+      "type": "Slow 1200mV 85C Model Recovery 'altera_reserved_tck'",
+      "slack_ns": 93.552
+    },
+    {
+      "type": "Slow 1200mV 85C Model Removal 'altera_reserved_tck'",
+      "slack_ns": 1.317
+    },
+    {
+      "type": "Slow 1200mV 85C Model Minimum Pulse Width 'clocks|pll|auto_generated|pll1|clk[0]'",
+      "slack_ns": 9.675
+    },
+    {
+      "type": "Slow 1200mV 85C Model Minimum Pulse Width 'ref_clk'",
+      "slack_ns": 9.82
+    },
+    {
+      "type": "Slow 1200mV 85C Model Minimum Pulse Width 'clocks|pll|auto_generated|pll1|clk[1]'",
+      "slack_ns": 9.853
+    },
+    {
+      "type": "Slow 1200mV 85C Model Minimum Pulse Width 'sdram_clk'",
+      "slack_ns": 12.0
+    },
+    {
+      "type": "Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'",
+      "slack_ns": 49.629
+    },
+    {
+      "type": "Slow 1200mV 0C Model Setup 'sdram_clk'",
+      "slack_ns": 1.94
+    },
+    {
+      "type": "Slow 1200mV 0C Model Setup 'clocks|pll|auto_generated|pll1|clk[0]'",
+      "slack_ns": 3.082
+    },
+    {
+      "type": "Slow 1200mV 0C Model Setup 'altera_reserved_tck'",
+      "slack_ns": 18.253
+    },
+    {
+      "type": "Slow 1200mV 0C Model Hold 'altera_reserved_tck'",
+      "slack_ns": 0.305
+    },
+    {
+      "type": "Slow 1200mV 0C Model Hold 'clocks|pll|auto_generated|pll1|clk[0]'",
+      "slack_ns": 0.335
+    },
+    {
+      "type": "Slow 1200mV 0C Model Hold 'sdram_clk'",
+      "slack_ns": 13.473
+    },
+    {
+      "type": "Slow 1200mV 0C Model Recovery 'altera_reserved_tck'",
+      "slack_ns": 94.087
+    },
+    {
+      "type": "Slow 1200mV 0C Model Removal 'altera_reserved_tck'",
+      "slack_ns": 1.21
+    },
+    {
+      "type": "Slow 1200mV 0C Model Minimum Pulse Width 'clocks|pll|auto_generated|pll1|clk[0]'",
+      "slack_ns": 9.698
+    },
+    {
+      "type": "Slow 1200mV 0C Model Minimum Pulse Width 'ref_clk'",
+      "slack_ns": 9.83
+    },
+    {
+      "type": "Slow 1200mV 0C Model Minimum Pulse Width 'clocks|pll|auto_generated|pll1|clk[1]'",
+      "slack_ns": 9.876
+    },
+    {
+      "type": "Slow 1200mV 0C Model Minimum Pulse Width 'sdram_clk'",
+      "slack_ns": 12.0
+    },
+    {
+      "type": "Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'",
+      "slack_ns": 49.658
+    },
+    {
+      "type": "Fast 1200mV 0C Model Setup 'sdram_clk'",
+      "slack_ns": 1.584
+    },
+    {
+      "type": "Fast 1200mV 0C Model Setup 'clocks|pll|auto_generated|pll1|clk[0]'",
+      "slack_ns": 5.472
+    },
+    {
+      "type": "Fast 1200mV 0C Model Setup 'altera_reserved_tck'",
+      "slack_ns": 23.542
+    },
+    {
+      "type": "Fast 1200mV 0C Model Hold 'altera_reserved_tck'",
+      "slack_ns": 0.147
+    },
+    {
+      "type": "Fast 1200mV 0C Model Hold 'clocks|pll|auto_generated|pll1|clk[0]'",
+      "slack_ns": 0.208
+    },
+    {
+      "type": "Fast 1200mV 0C Model Hold 'sdram_clk'",
+      "slack_ns": 13.594
+    },
+    {
+      "type": "Fast 1200mV 0C Model Recovery 'altera_reserved_tck'",
+      "slack_ns": 96.829
+    },
+    {
+      "type": "Fast 1200mV 0C Model Removal 'altera_reserved_tck'",
+      "slack_ns": 0.564
+    },
+    {
+      "type": "Fast 1200mV 0C Model Minimum Pulse Width 'ref_clk'",
+      "slack_ns": 9.53
+    },
+    {
+      "type": "Fast 1200mV 0C Model Minimum Pulse Width 'clocks|pll|auto_generated|pll1|clk[0]'",
+      "slack_ns": 9.713
+    },
+    {
+      "type": "Fast 1200mV 0C Model Minimum Pulse Width 'clocks|pll|auto_generated|pll1|clk[1]'",
+      "slack_ns": 9.974
+    },
+    {
+      "type": "Fast 1200mV 0C Model Minimum Pulse Width 'sdram_clk'",
+      "slack_ns": 12.0
+    },
+    {
+      "type": "Fast 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'",
+      "slack_ns": 49.415
+    }
+  ],
+  "pins": [
+    {
+      "signal": "LEDR[0]",
+      "pin": "A8",
+      "direction": "output"
+    },
+    {
+      "signal": "LEDR[1]",
+      "pin": "A9",
+      "direction": "output"
+    },
+    {
+      "signal": "LEDR[2]",
+      "pin": "A10",
+      "direction": "output"
+    },
+    {
+      "signal": "LEDR[8]",
+      "pin": "A11",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_DQ[3]",
+      "pin": "AA21",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_DQ[2]",
+      "pin": "AA22",
+      "direction": "bidir"
+    },
+    {
+      "signal": "LEDR[3]",
+      "pin": "B10",
+      "direction": "output"
+    },
+    {
+      "signal": "LEDR[9]",
+      "pin": "B11",
+      "direction": "output"
+    },
+    {
+      "signal": "LEDR[5]",
+      "pin": "C13",
+      "direction": "output"
+    },
+    {
+      "signal": "LEDR[4]",
+      "pin": "D13",
+      "direction": "output"
+    },
+    {
+      "signal": "LEDR[7]",
+      "pin": "D14",
+      "direction": "output"
+    },
+    {
+      "signal": "LEDR[6]",
+      "pin": "E14",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_DQ[15]",
+      "pin": "F22",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_DQ[14]",
+      "pin": "G19",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_DQ[13]",
+      "pin": "G20",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_DQ[12]",
+      "pin": "G22",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_DQ[10]",
+      "pin": "H21",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_DQ[11]",
+      "pin": "H22",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_UDQM",
+      "pin": "J21",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_DQ[9]",
+      "pin": "J22",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_CLK",
+      "pin": "L14",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_CKE",
+      "pin": "N22",
+      "direction": "output"
+    },
+    {
+      "signal": "MAX10_CLK1_50",
+      "pin": "P11",
+      "direction": "input"
+    },
+    {
+      "signal": "DRAM_ADDR[8]",
+      "pin": "P18",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_ADDR[9]",
+      "pin": "P19",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_ADDR[11]",
+      "pin": "P20",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_DQ[8]",
+      "pin": "P21",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_ADDR[7]",
+      "pin": "R18",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_ADDR[12]",
+      "pin": "R20",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_ADDR[5]",
+      "pin": "T18",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_ADDR[6]",
+      "pin": "T19",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_ADDR[10]",
+      "pin": "T20",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_BA[0]",
+      "pin": "T21",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_BA[1]",
+      "pin": "T22",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_ADDR[0]",
+      "pin": "U17",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_ADDR[3]",
+      "pin": "U18",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_ADDR[4]",
+      "pin": "U19",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_CS_N",
+      "pin": "U20",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_CAS_N",
+      "pin": "U21",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_RAS_N",
+      "pin": "U22",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_ADDR[2]",
+      "pin": "V18",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_WE_N",
+      "pin": "V20",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_DQ[7]",
+      "pin": "V21",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_LDQM",
+      "pin": "V22",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_ADDR[1]",
+      "pin": "W19",
+      "direction": "output"
+    },
+    {
+      "signal": "DRAM_DQ[6]",
+      "pin": "W20",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_DQ[5]",
+      "pin": "W22",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_DQ[1]",
+      "pin": "Y20",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_DQ[0]",
+      "pin": "Y21",
+      "direction": "bidir"
+    },
+    {
+      "signal": "DRAM_DQ[4]",
+      "pin": "Y22",
+      "direction": "bidir"
+    }
+  ],
+  "warnings": [
+    {
+      "report": "tma_de10_lite.fit.rpt",
+      "message": "Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature."
+    },
+    {
+      "report": "tma_de10_lite.fit.rpt",
+      "message": "Warning (332174): Ignored filter at qfit2_legacy_fmain_fitter_flow.tcl(117): *phasedone_state* could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/altera_lite/24.1std/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117"
+    },
+    {
+      "report": "tma_de10_lite.fit.rpt",
+      "message": "Warning (332049): Ignored set_false_path at qfit2_legacy_fmain_fitter_flow.tcl(117): Argument <to> is not an object ID File: C:/altera_lite/24.1std/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117"
+    },
+    {
+      "report": "tma_de10_lite.fit.rpt",
+      "message": "Warning (332174): Ignored filter at qfit2_legacy_fmain_fitter_flow.tcl(117): *internal_phasestep* could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/altera_lite/24.1std/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117"
+    },
+    {
+      "report": "tma_de10_lite.fit.rpt",
+      "message": "Warning (332049): Ignored set_false_path at qfit2_legacy_fmain_fitter_flow.tcl(117): Argument <to> is not an object ID File: C:/altera_lite/24.1std/quartus/common/tcl/internal/qfit2_legacy_fmain_fitter_flow.tcl Line: 117"
+    },
+    {
+      "report": "tma_de10_lite.fit.rpt",
+      "message": "Warning (15064): PLL \"tma_board_clocks:clocks|altpll:pll|altpll_67h1:auto_generated|pll1\" output port clk[1] feeds output pin \"DRAM_CLK~output\" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance File: <PROJECT>/build/quartus/de10_lite_burst4/db/altpll_67h1.tdf Line: 34"
+    },
+    {
+      "report": "tma_de10_lite.fit.rpt",
+      "message": "Warning (169177): 17 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems."
+    },
+    {
+      "report": "tma_de10_lite.map.rpt",
+      "message": "Warning (287013): Variable or input pin \"phasecounterselect\" is defined but never used. File: c:/altera_lite/24.1std/quartus/libraries/megafunctions/altpll.tdf Line: 512"
+    },
+    {
+      "report": "tma_de10_lite.map.rpt",
+      "message": "Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder"
+    },
+    {
+      "report": "tma_de10_lite.map.rpt",
+      "message": "Warning (13024): Output pins are stuck at VCC or GND"
+    },
+    {
+      "report": "tma_de10_lite.map.rpt",
+      "message": "Warning (13410): Pin \"DRAM_CKE\" is stuck at VCC File: <PROJECT>/rtl/tma_de10_lite.sv Line: 11"
+    },
+    {
+      "report": "tma_de10_lite.map.rpt",
+      "message": "Warning (13410): Pin \"DRAM_CS_N\" is stuck at GND File: <PROJECT>/rtl/tma_de10_lite.sv Line: 11"
+    },
+    {
+      "report": "tma_de10_lite.sta.rpt",
+      "message": "Warning (332174): Ignored filter at qsta_default_script.tcl(1297): *phasedone_state* could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/altera_lite/24.1std/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297"
+    },
+    {
+      "report": "tma_de10_lite.sta.rpt",
+      "message": "Warning (332049): Ignored set_false_path at qsta_default_script.tcl(1297): Argument <to> is not an object ID File: C:/altera_lite/24.1std/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297"
+    },
+    {
+      "report": "tma_de10_lite.sta.rpt",
+      "message": "Warning (332174): Ignored filter at qsta_default_script.tcl(1297): *internal_phasestep* could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/altera_lite/24.1std/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297"
+    },
+    {
+      "report": "tma_de10_lite.sta.rpt",
+      "message": "Warning (332049): Ignored set_false_path at qsta_default_script.tcl(1297): Argument <to> is not an object ID File: C:/altera_lite/24.1std/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297"
+    }
+  ],
+  "reviewed_empty_vendor_pll_exceptions": [
+    "Warning (332174): Ignored filter at qsta_default_script.tcl(1297): *phasedone_state* could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/altera_lite/24.1std/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297",
+    "Warning (332049): Ignored set_false_path at qsta_default_script.tcl(1297): Argument <to> is not an object ID File: C:/altera_lite/24.1std/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297",
+    "Warning (332174): Ignored filter at qsta_default_script.tcl(1297): *internal_phasestep* could not be matched with a clock or keeper or register or port or pin or cell or partition File: C:/altera_lite/24.1std/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297",
+    "Warning (332049): Ignored set_false_path at qsta_default_script.tcl(1297): Argument <to> is not an object ID File: C:/altera_lite/24.1std/quartus/common/tcl/internal/qsta_default_script.tcl Line: 1297"
+  ],
+  "sha256": {
+    "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+    "rtl/tma_board_clocks.sv": "313282c7cf3beff60798fab2e176255b093e408be587cae2cccdb91286b81ed0",
+    "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+    "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+    "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+    "rtl/tma_de10_lite.sv": "02f725b1db546cc470ae68d8abb27ff229ab29c6dca2ce21c55ada021a1c4370",
+    "rtl/tma_local_copy_system.sv": "a8d69429dce3ac425294a43efe5b6bfa9f7dc59ddea02bf54afccdeb1f886106",
+    "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+    "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+    "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+    "rtl/tma_sdram_controller.sv": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+    "rtl/tma_sdram_copy_system.sv": "cddbd836f8c44517454202559bee2bf6c0831e7568368edd3c691d42f447addf",
+    "rtl/tma_sdram_selftest.sv": "d361232e9d94a250b0a4f2071c325539c94872bbfad9bc3efe98efc5e752dfb8",
+    "quartus/build_board.tcl": "63d8ca3c181abcca9120e3d2a879fc31dd99e46c80de7339a65f6116f4244e7b",
+    "quartus/report_board.tcl": "13bb659e01a296ed647da686c6a9c9d147c3345396269c2ca8a75fa6059ab56c",
+    "quartus/de10_lite.sdc": "85ab3048f13aa616243979688a31481260612dfe14467830c95985560bd9686a",
+    "quartus/de10_lite_pins.tcl": "cc82bfc45fa07587c23d056fb93e53ad15b82c9fba6303c79668467a4494522a",
+    "scripts/build_board.py": "87b812a67851129138960595c642eb9aeeda803d338b2d68dd0946515cfd746e"
+  },
+  "sof_sha256": "a0cb63c5051f4d418fcd3fdc5b6ad84d55f7b20af472eca72f6d6744c4162605"
+}

@@ -1,0 +1,348 @@
+{
+  "exported_utc": "2026-10-29T04:07:15.498906+00:00",
+  "policy": "Selected recorded evidence. Personal project/home/host paths are replaced by placeholders; JSON is reformatted. Measurements, status packets, source/image hashes and report outcomes are retained. Original input hashes refer to local unmodified records; published hashes refer to these exports. Generated binaries and third-party library sources are excluded.",
+  "files": [
+    {
+      "path": "evidence/hardware/2026-10-29/results.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/results.json",
+      "original_sha256": "e22003a2a8c3666d83c5a9e28dd3696d540b9504a1f02ba8c9dad39229ce7acd",
+      "published_sha256": "4b6e80c4ba9e5210dac0c322ef8675b8af8b163d574ec5b021aa3da6d6f10534"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/0_serialized/run.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/0_serialized/run.json",
+      "original_sha256": "b0eed614ecaaa04b3a2dbd6df6ced7a8bfeb9a71d4cd7de9a55b6a4aee5701c1",
+      "published_sha256": "b69a96b149c52dd69d1e685762c8482a33d7c44b6aea8bd0eee7f70e0277f5f5"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/0_serialized/probe.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/0_serialized/probe.json",
+      "original_sha256": "bfe929d74edd5f58f6e70aa7d08ba2eed8417595717b5d814f3bedac34577db3",
+      "published_sha256": "20d0ce256b24686987be64d9e8982b7223515486d33913bd12d7e5c68abeea86"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/0_serialized/probe.log",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/0_serialized/probe.log",
+      "original_sha256": "4a119aa428a69234397570f5ad10d4acd94aa7acf270bce4d08d2ee49d26a40c",
+      "published_sha256": "f5130de81bfa407d6f0c2339f37c9e582e963e1f339687d64a4416538fcb3982"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/0_serialized/programming.log",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/0_serialized/programming.log",
+      "original_sha256": "296aa2253e3bbecbc28799a2af948aadad74c1e92343329a61b7ec1e1df35800",
+      "published_sha256": "28c9069743e27904d56ca5255234e2b605019a31325445d06025e597a88ef9b6"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/0_serialized/board_results.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/0_serialized/board_results.json",
+      "original_sha256": "c736e674907f1cc6d387518ca228b972cbef67d578199bfa555a1da44040349a",
+      "published_sha256": "7fcbd51b2ec4444b6f02101c943e383582e3fc31f425cc1e33b2d050eb9898f3"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/1_pipelined/run.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/1_pipelined/run.json",
+      "original_sha256": "c2f95d80dc73599bc9c02177e6cc9728cb5064a54d622e58b0ffbf2b436d10e8",
+      "published_sha256": "19d15110be6f3fc3868c528f2f42da9ce757de2cbfc737cfabbce5883c24d9bc"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/1_pipelined/probe.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/1_pipelined/probe.json",
+      "original_sha256": "8bfdd611f48428a0a0aecd464dd29fb1ad864bf28ee67839c874d3f83f6afe75",
+      "published_sha256": "5cdef4e90ef4a38217ac130229bc55877ad24c4ecc69fd5598ef6da1a7329aec"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/1_pipelined/probe.log",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/1_pipelined/probe.log",
+      "original_sha256": "db94e46722ff70d24320f8a58837cd4990c4aca1e1e98e913bdef305be907aa8",
+      "published_sha256": "a387a3a14865a46780f72bc97549ea433510a2616002bc6323caacd8e5398d00"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/1_pipelined/programming.log",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/1_pipelined/programming.log",
+      "original_sha256": "f3e21f8a8ec1aca55789a42fbb3adef08f9cba5712d56f30274a1ac7547ac0b6",
+      "published_sha256": "675692112bb8f8960ecad52c15002671e562c8e483e9a1142359e190c56d43d5"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/1_pipelined/board_results.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/1_pipelined/board_results.json",
+      "original_sha256": "54d21ab5d5e60ca2cc855d75b9093a31fb5bd7ac8380c3445aaec033ec95547b",
+      "published_sha256": "a17bcfa5d9b5a67b15852e1af4006ca8c40c4f48f84219226ec777836f005bc3"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/2_pipelined_burst4/run.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/2_pipelined_burst4/run.json",
+      "original_sha256": "6953ea78f36a1ddd9c550a3f18e408b857fa3a61eb90b183fb06de43ebc14589",
+      "published_sha256": "b8b9f2581f201b6cfffa6108c8dadda9694d254b94243630b72e52ce452c35f6"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/2_pipelined_burst4/probe.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/2_pipelined_burst4/probe.json",
+      "original_sha256": "9b56f0778fc86dfa7cc528a5b61d45887fbc8acc68dd8f33fe4e2c9f92723293",
+      "published_sha256": "443b0bec8d2b5a3911a5565881a24f26f7e02b38652d18a28a539ff88bd17b8d"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/2_pipelined_burst4/probe.log",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/2_pipelined_burst4/probe.log",
+      "original_sha256": "b4d2483df77c5f01cd864a3efb1596a8d99363eafc4c46b310b6102f844135fe",
+      "published_sha256": "10c0149b08fbaebd8fc7e709a3c752a1a76a2810b509fc5ff66d3fe9d40529b9"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/2_pipelined_burst4/programming.log",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/2_pipelined_burst4/programming.log",
+      "original_sha256": "8b2c0cfa410106d2f3376e2f1fcff068371015905f73036c2b042cbcd9b7e134",
+      "published_sha256": "30763a3fc149373655fa2083b294c37f56672bd121372d2ccea9343887da3da9"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/2_pipelined_burst4/board_results.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/2_pipelined_burst4/board_results.json",
+      "original_sha256": "da029e99307a33638fd4c4550218b5ad3e14ed1d489a12d5f31e04f92722ae78",
+      "published_sha256": "cb0b8cbe1abdcb39e92956065ea72072b4a52da5d4c1c45605e5b52fae7105b4"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/3_serialized/run.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/3_serialized/run.json",
+      "original_sha256": "dc7110b3fc25065756577b547184ad65aaafc672dd332fc57340f589c1a7b076",
+      "published_sha256": "0ec919abe1405d1c093b4e14efd20b5e7ada6ec26cac95d0aaecc0e1890714ac"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/3_serialized/probe.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/3_serialized/probe.json",
+      "original_sha256": "1638549210cbea4ececb2e3faa9f944cf6a29c0242e19cd63ed0b1bc5caf342c",
+      "published_sha256": "26a0188b54bc0db030b63da1d5d49b77e28c64ef3e81be001b005ced530859c1"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/3_serialized/probe.log",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/3_serialized/probe.log",
+      "original_sha256": "78900bbb092f8047de638847e2e1b05ffb315b8703b06bf3e0f2f449a1882b41",
+      "published_sha256": "fd4a7c678887fac7ceade6f7b595d643f93e94d36b8c1111d4982e97a4e425c1"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/3_serialized/programming.log",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/3_serialized/programming.log",
+      "original_sha256": "de78e2187275bcb29ac0fd754ea76c53f1de7a732c57bdd0567ba25688021677",
+      "published_sha256": "c48e40e92ec40d75f63dfd05fa687bf843386d612eba1b29424771bd8efa2b32"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/3_serialized/board_results.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/3_serialized/board_results.json",
+      "original_sha256": "c736e674907f1cc6d387518ca228b972cbef67d578199bfa555a1da44040349a",
+      "published_sha256": "7fcbd51b2ec4444b6f02101c943e383582e3fc31f425cc1e33b2d050eb9898f3"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/4_pipelined/run.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/4_pipelined/run.json",
+      "original_sha256": "2f86fd6eaa961d18eec44eca46a7aa67218900925503fb3cdbdbf1e5040db99e",
+      "published_sha256": "5fb13e4140acadbef024fe361e23ab057f8a693c9936a0802a207967a73cd5d6"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/4_pipelined/probe.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/4_pipelined/probe.json",
+      "original_sha256": "42402c08baeb1e9a22e1b19a556ae350eb18412c2a4092db89fc87e55e616da2",
+      "published_sha256": "f20031d5cb02343ae5582933040ecc75555ee769ac9ca311664dcb63cc5c1239"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/4_pipelined/probe.log",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/4_pipelined/probe.log",
+      "original_sha256": "364df47b67b59116ca5a13264567b715d87124ffac23c0392106cf55830e90bc",
+      "published_sha256": "f1d76295fa4d11727b558ca55cedf43fadee2bc8255b98a19b46cf74023b6a34"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/4_pipelined/programming.log",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/4_pipelined/programming.log",
+      "original_sha256": "2fcc6cfc906d388cf46c2e6ecbe24933815d944e4fe356c46b864b0244d03226",
+      "published_sha256": "efdd5e781eebf2952b5f2fba7cc64c300f527ba7388ae44fa75ea253c0fd5f1b"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/4_pipelined/board_results.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/4_pipelined/board_results.json",
+      "original_sha256": "54d21ab5d5e60ca2cc855d75b9093a31fb5bd7ac8380c3445aaec033ec95547b",
+      "published_sha256": "a17bcfa5d9b5a67b15852e1af4006ca8c40c4f48f84219226ec777836f005bc3"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/5_pipelined_burst4/run.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/5_pipelined_burst4/run.json",
+      "original_sha256": "429e153b8147338f492571f2c1879ff0eaea80b7839dfebea68465bbdef708f5",
+      "published_sha256": "e47372aed355a3641c3c457ce851142e427f52528388bf277f9c6a435423478f"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/5_pipelined_burst4/probe.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/5_pipelined_burst4/probe.json",
+      "original_sha256": "96071158878c5097e9624c14f1fde52db32978eecc39348ded867104a4f57b41",
+      "published_sha256": "1ee0e84012ab00f3ac5483994bd0617aca9753abde2a74b5a09e5168a77cac66"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/5_pipelined_burst4/probe.log",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/5_pipelined_burst4/probe.log",
+      "original_sha256": "bab15699f98dac1ec5f77825495aa40a5056db05ac51169a36e9bd0c74e70e32",
+      "published_sha256": "aaf9fa9c209bc16d535ad4a66b1de27944cb396a3e8009d1bb0ef2e989afc473"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/5_pipelined_burst4/programming.log",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/5_pipelined_burst4/programming.log",
+      "original_sha256": "2104fc84798d778213721c3eaf1ca6ef1757d8c6bec4a7730fefb020a305bfa0",
+      "published_sha256": "9a6d00d19a31abe24fd6b14bff02774d627c972377b186335ea152c7fcd03bf2"
+    },
+    {
+      "path": "evidence/hardware/2026-10-29/5_pipelined_burst4/board_results.json",
+      "source": "build/hardware/20261029T005731Z_engine_benchmark/5_pipelined_burst4/board_results.json",
+      "original_sha256": "da029e99307a33638fd4c4550218b5ad3e14ed1d489a12d5f31e04f92722ae78",
+      "published_sha256": "cb0b8cbe1abdcb39e92956065ea72072b4a52da5d4c1c45605e5b52fae7105b4"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/results.json",
+      "source": "build/sdram_sim/uvm/starter/results.json",
+      "original_sha256": "820441d8c6a29ee23fd5219c6d76959699c54cd0e1287ace00ef1115c06da235",
+      "published_sha256": "1d74a26feac1490506a7f95e46f1733665b442637bba377f3004049ab13d86a5"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/p0_b1_s0.log",
+      "source": "build/sdram_sim/uvm/starter/p0_b1_s0_simulation.log",
+      "original_sha256": "c161a125167a297d066aae016a004600e05a3c698d1af6adfdf4e1b8ca370be1",
+      "published_sha256": "789ea3a5b32f0083f5525de39c0648ec3dfe4c94b110acd5a3ae361368c528a1"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/p0_b1_s1.log",
+      "source": "build/sdram_sim/uvm/starter/p0_b1_s1_simulation.log",
+      "original_sha256": "d660cc710c8ae3c3dc6b5ee83472d87b15add15dc8c161dfe75f72ee7db627fb",
+      "published_sha256": "bece84d461b10e846a7a5496956d1824e7e4dddae31df52f7f1faf135f26a241"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/p0_b4_s0.log",
+      "source": "build/sdram_sim/uvm/starter/p0_b4_s0_simulation.log",
+      "original_sha256": "253482fad6de0aa00b37277930d49e7908a862e18abcc6964229cc9bbb0a09df",
+      "published_sha256": "9168e93d321af0f9da01989cffc48cfb6c30b382c575f0f06762abc20898aba5"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/p0_b4_s1.log",
+      "source": "build/sdram_sim/uvm/starter/p0_b4_s1_simulation.log",
+      "original_sha256": "a03a0c93d7447bf0e4ace8edc5a5a491ebf3751ef12b34a45e2b5154041ffd57",
+      "published_sha256": "dde3dd40d508614eed2e93a32b5385ed0cb4c473c4c60251364dcb008a7c4c0c"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/p1_b1_s0.log",
+      "source": "build/sdram_sim/uvm/starter/p1_b1_s0_simulation.log",
+      "original_sha256": "5e149c72b32f9f1003fe0fb36677fd9ee5dfd462cc944887ebad0ed5a6cf9475",
+      "published_sha256": "68dbd13f3e108365cf774f02b2408004b2fbcdddd7c09fd61afde05a000d1160"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/p1_b1_s1.log",
+      "source": "build/sdram_sim/uvm/starter/p1_b1_s1_simulation.log",
+      "original_sha256": "555e8eaec0bfcd39c9096d4e675e76ebb1df23edb2567e0093fd426017fc556e",
+      "published_sha256": "22855d341b77ae59a4e3617f11d35ce5daafbe0f9b4e3ad55714de57d6c90a07"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/p1_b4_s0.log",
+      "source": "build/sdram_sim/uvm/starter/p1_b4_s0_simulation.log",
+      "original_sha256": "09e59344624588dff66cc526eb5fa86891003e455b426261582ee17304464e37",
+      "published_sha256": "ef6cd0b19df69fb959fdf759421d8bddddf124679bdbf5622394fbae7f388f3f"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/p1_b4_s1.log",
+      "source": "build/sdram_sim/uvm/starter/p1_b4_s1_simulation.log",
+      "original_sha256": "0f0382fcd287057cfb8e1e000fa2e3088e307c0e67262b9dd30b70eff2d4c327",
+      "published_sha256": "179c3732fa81dc02bdff9415db07a75a9f823e371cac74ab369c77b498d2594b"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/data_fault_control.log",
+      "source": "build/sdram_sim/uvm/starter/data_fault_control_simulation.log",
+      "original_sha256": "f6bae9bcd27bbe1aa2333bc7599506b67eece910545a75dca53540fd77fa58e8",
+      "published_sha256": "5faf103b6325085e7bf3d4c1f7a45600941155095134c98a7698be8b04281ee7"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/compile.log",
+      "source": "build/sdram_sim/uvm/starter/project_compile.log",
+      "original_sha256": "0ddebe3d1c4b30e31aa3577817e6c611722db4a123c95afdff9650626c591033",
+      "published_sha256": "a15acff344961003855d849bd54e3fac1c3f1648274e39a24f74431fd97fc45c"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/full_compile_only.log",
+      "source": "build/uvm/full/project_compile.log",
+      "original_sha256": "0eb1dfdf3c0e84aa115b3fb6d7e3a2e77062a189875d09b8c3675587dd98b867",
+      "published_sha256": "e8dd83673bf13f0b29625712003c913d72b773e4a468ae7fbeb9e2248339569d"
+    },
+    {
+      "path": "evidence/uvm/2026-10-29/feature_license_denied.log",
+      "source": "build/uvm_smoke/vsim.log",
+      "original_sha256": "04cd7d8efb8bf48bd41905d614b5c4163ea5d98a88168ddbd61e9e311d6b3522",
+      "published_sha256": "4fb3fa2d0631dcc053d9bf9cb97acc6dc519b8b3b6ef6e5ccd1a9a286e4f46f3"
+    },
+    {
+      "path": "evidence/simulation/2026-10-29/results.json",
+      "source": "build/sdram_sim/results.json",
+      "original_sha256": "e2fc23e2243129054261cc5b2a302669255238ccddf682dedc24c8141dcb2a51",
+      "published_sha256": "bc377842a714c9bb0d77840d834132491b7d3be9ff7a0353cd9ac7483fc5ef77"
+    },
+    {
+      "path": "evidence/simulation/2026-10-29/burst_comparison.md",
+      "source": "build/sdram_sim/burst_comparison.md",
+      "original_sha256": "b6bfb4f4118cf08934a0bf887558a0f5de501e68a4bc4ef33abe0cf615862b2e",
+      "published_sha256": "d111bf0eafe14dcbbc62cee82fd3006750bba9f8b2b40a2d9fea19c2aff342ee"
+    },
+    {
+      "path": "evidence/simulation/2026-10-29/sdram_comparison.md",
+      "source": "build/sdram_sim/sdram_comparison.md",
+      "original_sha256": "66fd88d4805c123e72452ff434b9cc020a4d7b5adc817ff3e15e4a3c04e62a5a",
+      "published_sha256": "1b5d913b768f96743a54cde4c2df1ee34922083931e37917e2f942932ee4f1b9"
+    },
+    {
+      "path": "evidence/simulation/2026-10-29/sdram_copy_p0_s0_metrics.csv",
+      "source": "build/sdram_sim/sdram_copy_p0_s0_metrics.csv",
+      "original_sha256": "560bb25eb91eb3d661de5cc7d4c7231c18002ab5037e7d17d9596de679c82a2c",
+      "published_sha256": "409fb63b30300dc372d4c60924a9d23dce464c5ccd17e1e42006b8352f571b50"
+    },
+    {
+      "path": "evidence/simulation/2026-10-29/sdram_copy_p1_s0_metrics.csv",
+      "source": "build/sdram_sim/sdram_copy_p1_s0_metrics.csv",
+      "original_sha256": "f8a29540e0455b189398c0347bb5928c05622f9df193e363fc4d1c43fd5c8ae0",
+      "published_sha256": "17b1b7d92dc8d1c3d1d37c91aacf1198a4020fab7f24e427f3722f8e3fc14e96"
+    },
+    {
+      "path": "evidence/simulation/2026-10-29/sdram_burst_copy_p0_s0_metrics.csv",
+      "source": "build/sdram_sim/sdram_burst_copy_p0_s0_metrics.csv",
+      "original_sha256": "4f4a4194668556f0b8f6c3872f4652630b1e8521f66f810cc5124e91a0f48fad",
+      "published_sha256": "4619f911bc62e62d0f3a70675ff7d92921674f077911853ba4ac2a31d391fe7e"
+    },
+    {
+      "path": "evidence/simulation/2026-10-29/sdram_burst_copy_p1_s0_metrics.csv",
+      "source": "build/sdram_sim/sdram_burst_copy_p1_s0_metrics.csv",
+      "original_sha256": "ab3fc58214f2b1714f92904763577512aa8536466b1973f063e86a840ab3818e",
+      "published_sha256": "0767397981e87d7b6bf72f15e174c2eab722e60aa0ccfd62dbff7d4dc5754630"
+    },
+    {
+      "path": "evidence/simulation/2026-10-27/results.json",
+      "source": "build/sim/results.json",
+      "original_sha256": "61de9f1c9a4df523647dcc368e69500f50c07781e45c120b334019781851e3b0",
+      "published_sha256": "7d912696dd6d65be2a275381b7f88fa21df342bb401fab5787ec4f11bbdd8a66"
+    },
+    {
+      "path": "evidence/simulation/2026-10-27/pipeline_comparison.md",
+      "source": "build/sim/pipeline_comparison.md",
+      "original_sha256": "4c1b813d0cb1b17d46b826c473ff0b5c5693e36f1984768b3accf427c7a0839e",
+      "published_sha256": "a519fa7b505ac78fee5bfd62f02d25db8ac2aded9906d8658c36bbc2c2e6d7a9"
+    },
+    {
+      "path": "evidence/simulation/2026-10-27/pipeline_metrics.csv",
+      "source": "build/sim/pipeline_metrics.csv",
+      "original_sha256": "d3816bcf3cd3f65159ad102c1476a2a47fe7844806fe83abbe4422071030a918",
+      "published_sha256": "e7684d182cb036b1bbe634c8112e0cc1a3b316d64e1efa36bd363a80abc58819"
+    },
+    {
+      "path": "evidence/simulation/2026-10-27/pipeline_metrics.json",
+      "source": "build/sim/pipeline_metrics.json",
+      "original_sha256": "783ea19003d75acd4614529985d00ec5f22804dfd47c616b6e6268db72f7f1b5",
+      "published_sha256": "c6764663cb554ce31b6dd227b923542d07611c0d651a70f2ee3ff352d0284e1c"
+    },
+    {
+      "path": "evidence/simulation/2026-10-27/swizzle_comparison.md",
+      "source": "build/sim/swizzle_comparison.md",
+      "original_sha256": "ddfd336c114ca2dab56b4d9f2cc704aea5128a15e9b340448821ce75aa51853a",
+      "published_sha256": "67455f7bd8d38118671942f20ff6efb6624bf1a5fe8e38b69f6e8638db909e1b"
+    },
+    {
+      "path": "evidence/simulation/2026-10-27/swizzle_simulation.log",
+      "source": "build/sim/swizzle_simulation.log",
+      "original_sha256": "6ccc30af57bab7e056b6006cc8de5913fb134a7bc6701a110271614c221dd3c7",
+      "published_sha256": "8727dd04e31cbb3273297e2b1dc93284eaf0bd9b52cd19114b8e8d789c83409f"
+    }
+  ]
+}

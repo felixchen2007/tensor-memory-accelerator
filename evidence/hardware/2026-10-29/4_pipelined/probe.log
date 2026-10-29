@@ -1,0 +1,35 @@
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+Info: *******************************************************************
+Info: Running Quartus Prime Signal Tap
+    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+    Info: Copyright (C) 2025  Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus Prime License Agreement,
+    Info: the Altera IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Altera and sold by Altera or its authorized distributors.  Please
+    Info: refer to the Altera Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Wed Oct 28 17:58:32 2026
+Info: Command: quartus_stp -t "<PROJECT>\quartus\read_board_probe.tcl"
+HARDWARE={USB-Blaster [USB-0]}
+DEVICES={@1: 10M50DA(.|ES)/10M50DC (0x031050DD)}
+PROBES={0 1 256 TMAD} {1 1 256 RTRC}
+TMA_PROBE_HEX=544D03F3D040040040000000000000000000000040000000000000034E5D90CB
+TMA_READ_TRACE_HEX=5254018C01000FEE86ED86ED86ED86ED86348634863486348634863486348634
+TMA_PROBE_HEX=544D03F3D040040040000000000000000000000040000000000000034E519D0B
+TMA_READ_TRACE_HEX=5254018C01000FEE86ED86ED86ED86ED86348634863486348634863486348634
+TMA_PROBE_HEX=544D03F3D040040040000000000000000000000040000000000000034E55528B
+TMA_READ_TRACE_HEX=5254018C01000FEE86ED86ED86ED86ED86348634863486348634863486348634
+Info (23030): Evaluation of Tcl script <PROJECT>\quartus\read_board_probe.tcl was successful
+Info: Quartus Prime Signal Tap was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4582 megabytes
+    Info: Processing ended: Wed Oct 28 17:58:37 2026
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:01

@@ -1,0 +1,321 @@
+{
+  "status": "pass",
+  "timestamp_utc": "2026-10-27T01:53:21.432728+00:00",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "simulator_directory": "C:\\altera_lite\\24.1std\\questa_fse\\win64",
+  "simulator_version": "Questa Intel Starter FPGA Edition-64 vsim 2024.3 Simulator 2024.09 Sep 10 2024",
+  "model_tests": "pass",
+  "descriptor_seed": 20261025,
+  "random_descriptors": 200,
+  "directed_descriptors": 12,
+  "total_descriptors": 212,
+  "expected_address_pairs": 138170,
+  "empty_descriptors": 35,
+  "addr_width": 32,
+  "count_width": 16,
+  "stall_seed": "0x6d2b79f5",
+  "copy_engine": {
+    "seed": 32888655,
+    "random_descriptors": 100,
+    "directed_descriptors": 27,
+    "total_descriptors": 127,
+    "endpoint_words": 4096,
+    "expected_reads": 6619,
+    "expected_writes": 6606,
+    "expected_completed_elements": 6597,
+    "stall_seed": "0x91e10da5"
+  },
+  "copy_reset_stages": 6,
+  "scratchpad": {
+    "swizzle": 0,
+    "shift": 5,
+    "reads": 703,
+    "responses": 699,
+    "writes": 4304,
+    "canceled": 4,
+    "row_service_cycles": 1,
+    "column_service_cycles": 4,
+    "stream_reads": 256,
+    "stream_request_cycles": 64,
+    "stalled_response_cycles": 445,
+    "bank_conflict_cycles": 302,
+    "bank_conflict_requests": 464
+  },
+  "scratchpad_swizzled": {
+    "swizzle": 1,
+    "shift": 5,
+    "reads": 713,
+    "responses": 709,
+    "writes": 4290,
+    "canceled": 4,
+    "row_service_cycles": 1,
+    "column_service_cycles": 1,
+    "stream_reads": 256,
+    "stream_request_cycles": 64,
+    "stalled_response_cycles": 461,
+    "bank_conflict_cycles": 307,
+    "bank_conflict_requests": 431
+  },
+  "local_copy": {
+    "pipeline": 0,
+    "swizzle": 0,
+    "shift": 5,
+    "descriptors": 33,
+    "whole_memory_checks": 135168,
+    "maintenance_commands": 405512,
+    "public_port_loading": "pass",
+    "response_backpressure": "pass",
+    "invalid_accesses": "pass",
+    "reset_persistence": "pass",
+    "descriptor_priority": "pass"
+  },
+  "local_copy_pipelined": {
+    "pipeline": 1,
+    "swizzle": 0,
+    "shift": 5,
+    "descriptors": 33,
+    "whole_memory_checks": 135168,
+    "maintenance_commands": 405512,
+    "public_port_loading": "pass",
+    "response_backpressure": "pass",
+    "invalid_accesses": "pass",
+    "reset_persistence": "pass",
+    "descriptor_priority": "pass"
+  },
+  "local_copy_pipelined_swizzled": {
+    "pipeline": 1,
+    "swizzle": 1,
+    "shift": 5,
+    "descriptors": 33,
+    "whole_memory_checks": 135168,
+    "maintenance_commands": 405512,
+    "public_port_loading": "pass",
+    "response_backpressure": "pass",
+    "invalid_accesses": "pass",
+    "reset_persistence": "pass",
+    "descriptor_priority": "pass"
+  },
+  "pipeline_comparison": {
+    "descriptors": 134,
+    "whole_memory_checks": 1097728,
+    "reset_scenarios": 4,
+    "overlap_cases": 116,
+    "full_fifo_cases": 38,
+    "faster_successful_cases": 95,
+    "identical_per_transaction_timing": "pass"
+  },
+  "pipeline_timing_seed": 1973173060,
+  "swizzle_comparison": {
+    "batches": 3657,
+    "responses": 58512,
+    "writes": 4191,
+    "variants": 4,
+    "xor5_improved": 632,
+    "xor5_regressed": 42,
+    "xor5_unchanged": 2951,
+    "stalled_lane_cycles": 1195,
+    "alias_checks_per_variant": 8192
+  },
+  "sdram": {
+    "sdram_controller": {
+      "checks": 713,
+      "reads": 713,
+      "writes": 688,
+      "invalid": 4,
+      "held_cycles": 5226,
+      "dual_requests": 24,
+      "refreshes": 71,
+      "max_refresh_gap": 362,
+      "tac": "5.4"
+    },
+    "sdram_controller_early_data": {
+      "checks": 713,
+      "reads": 713,
+      "writes": 688,
+      "invalid": 4,
+      "held_cycles": 5226,
+      "dual_requests": 24,
+      "refreshes": 71,
+      "max_refresh_gap": 362,
+      "tac": "0.0"
+    },
+    "sdram_controller_board_phase": {
+      "checks": 713,
+      "reads": 713,
+      "writes": 688,
+      "invalid": 4,
+      "held_cycles": 5226,
+      "dual_requests": 24,
+      "refreshes": 71,
+      "max_refresh_gap": 362,
+      "tac": "5.4"
+    },
+    "sdram_controller_refresh_stress": {
+      "checks": 713,
+      "reads": 713,
+      "writes": 688,
+      "invalid": 4,
+      "held_cycles": 5226,
+      "dual_requests": 24,
+      "refreshes": 708,
+      "max_refresh_gap": 44,
+      "tac": "5.4"
+    },
+    "sdram_negative_refresh": {
+      "expected_failure_detected": true,
+      "check": "SDRAM_MODEL refresh deadline missed"
+    },
+    "sdram_negative_cas": {
+      "expected_failure_detected": true,
+      "check": "SDRAM data mismatch"
+    },
+    "sdram_copy_p0_s0": {
+      "cases": 12,
+      "destination_checks": 49152,
+      "host_commands": 100806,
+      "pipelined": 0,
+      "swizzle": 0,
+      "sdram_reads": 2498,
+      "sdram_writes": 2498,
+      "refreshes": 811,
+      "max_refresh_gap": 361
+    },
+    "sdram_copy_p0_s1": {
+      "cases": 12,
+      "destination_checks": 49152,
+      "host_commands": 100806,
+      "pipelined": 0,
+      "swizzle": 1,
+      "sdram_reads": 2498,
+      "sdram_writes": 2498,
+      "refreshes": 811,
+      "max_refresh_gap": 361
+    },
+    "sdram_copy_p1_s0": {
+      "cases": 12,
+      "destination_checks": 49152,
+      "host_commands": 100806,
+      "pipelined": 1,
+      "swizzle": 0,
+      "sdram_reads": 2498,
+      "sdram_writes": 2498,
+      "refreshes": 789,
+      "max_refresh_gap": 361
+    },
+    "sdram_copy_p1_s1": {
+      "cases": 12,
+      "destination_checks": 49152,
+      "host_commands": 100806,
+      "pipelined": 1,
+      "swizzle": 1,
+      "sdram_reads": 2498,
+      "sdram_writes": 2498,
+      "refreshes": 789,
+      "max_refresh_gap": 361
+    },
+    "de10_lite": {
+      "words": 1024,
+      "reads": 1024,
+      "writes": 1024,
+      "refreshes": 83,
+      "max_refresh_gap": 358,
+      "copy_cycles": 12507
+    },
+    "comparison": [
+      {
+        "name": "last_word",
+        "serialized_cycles": 16,
+        "pipelined_cycles": 17,
+        "ratio": 0.9411764705882353
+      },
+      {
+        "name": "row_crossing",
+        "serialized_cycles": 241,
+        "pipelined_cycles": 197,
+        "ratio": 1.2233502538071066
+      },
+      {
+        "name": "copy32",
+        "serialized_cycles": 15665,
+        "pipelined_cycles": 12503,
+        "ratio": 1.252899304167
+      },
+      {
+        "name": "transpose32",
+        "serialized_cycles": 15665,
+        "pipelined_cycles": 12503,
+        "ratio": 1.252899304167
+      },
+      {
+        "name": "padded",
+        "serialized_cycles": 1952,
+        "pipelined_cycles": 1565,
+        "ratio": 1.2472843450479234
+      },
+      {
+        "name": "column_gather",
+        "serialized_cycles": 3914,
+        "pipelined_cycles": 3125,
+        "ratio": 1.25248
+      },
+      {
+        "name": "broadcast",
+        "serialized_cycles": 484,
+        "pipelined_cycles": 395,
+        "ratio": 1.2253164556962026
+      },
+      {
+        "name": "small_transpose",
+        "serialized_cycles": 226,
+        "pipelined_cycles": 185,
+        "ratio": 1.2216216216216216
+      }
+    ]
+  },
+  "sha256": {
+    "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+    "tb/tb_tma_addr_gen.sv": "facfa7a76eae1023febd3e2888efd60523655182d9941e90e7c3d03744ffefa8",
+    "model/address_model.py": "558ecab3c694623045d575206abbd371a68a13a3d5487673adf61f179945dad7",
+    "tests/test_address_model.py": "00e67e1dde0e85451a308e0fa6ab17bfcc4261510eb0bae9dfd6a02010ba6440",
+    "scripts/generate_vectors.py": "78a9052ff743f8cf25e00f783c89601814d640516c5bffded3f82aa563a7a369",
+    "scripts/run_tests.py": "f75728c62b9bb479b42ffc56b088ef491bef7fc6309dc37db5a0de32e8f6d49e",
+    "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+    "tb/tb_tma_copy_engine.sv": "8fdd6846395b7a89a7c99bc74304cc85cff6b3e9ae782f330ddf22ba4d4d18d4",
+    "model/copy_model.py": "c88c9e24e65d8f00964fdb18022aa3fb40bcf7dd315e571ff24087f8641822af",
+    "tests/test_copy_model.py": "9b3c4e7fbd59634ee327e5e456a91501bb9076b6c26663dd0ecacbb5ea9fb70f",
+    "scripts/generate_copy_vectors.py": "ac2698b0da52a3b63f4783b77ee70d5265e227e88c80d26ffc7609701a75901e",
+    "scripts/generate_local_vectors.py": "05f3c73f4db701f7fa4a027bf865c1708e2b1dc9178c8f08dbb303fc718afa31",
+    "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+    "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+    "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+    "rtl/tma_local_copy_system.sv": "a8d69429dce3ac425294a43efe5b6bfa9f7dc59ddea02bf54afccdeb1f886106",
+    "tb/tb_tma_scratchpad.sv": "400ea7a60ab805f967916380baf3717b6c25b2df4be8e02849551236b5a08425",
+    "tb/tb_tma_local_copy_system.sv": "d979af0796db3667960c531b82286f2f1204a2a722e9d818b83d3817d1338fcc",
+    "quartus/synth.tcl": "c27991a5e12cedeb7a96f83f2533762d221b4ace4f25f4e052b517fd9a5da912",
+    "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+    "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+    "tb/tma_paired_memory_model.sv": "402388f65558d13df9dd6f3eff35e038636a7a77e45cd6524290204e7628e2e4",
+    "tb/tb_tma_pipeline_comparison.sv": "023dc35379a8e82a4527c0d2b9ece33c8ea8f3a6258ede9dae8cc93ee50ce389",
+    "scripts/generate_pipeline_vectors.py": "785cc9f5b22b635d95b852a68b81958458ea67a7406e18d6beebd2c8e2e401ca",
+    "model/bank_layout.py": "d9e85f1cc7e6bcefc29a87b54a0ce7b9826bb32295d9e1fcc0319e89a4898957",
+    "tests/test_bank_layout.py": "7cf1c007f834c2ec04338e38f6833f82322488d75ae9b8f105b7a640701b618d",
+    "scripts/generate_swizzle_vectors.py": "53172231d94a8efb489627faa408cd43fa004bdabb877596950b2a3c49daa428",
+    "tb/tb_tma_swizzle_comparison.sv": "453d0a72e03fec911c94eb2b996c0fc858aa7303af45aff56274bc90c9a7bc26",
+    "rtl/tma_sdram_controller.sv": "c721add1f35467b9b519bff438d3fd30f792d7300c668b63c9ef37b33c8b2e28",
+    "rtl/tma_sdram_copy_system.sv": "0b94aa4b0dfc6e6777e73d3d7ad57a05997a8876c6f0fd518b073aa08168cde5",
+    "rtl/tma_sdram_selftest.sv": "8efd6260d604b4b270d9e268c5a78bdc14bc0348bfb039ce30dcaae695686faf",
+    "rtl/tma_board_clocks.sv": "6046c2278c02972d6cbc5f87365b0d00278aa3e9ee49f4c0ed2b1f46bb5bc483",
+    "rtl/tma_de10_lite.sv": "21f9c25bb028214353fe6502c9470274fc892d9875f12246ebdef9813c5b3cdf",
+    "tb/tma_sdram_model.sv": "51dbec32de9e8d30e35c070d94b233a6138bd5542fb276c43cea46eb9ae185b2",
+    "tb/tb_tma_sdram_controller.sv": "86780ddfe7e01a198e325408cb059756d221429fb95ef3ad5a7d667057a60039",
+    "tb/tb_tma_sdram_copy_system.sv": "058cb5d34fc2252cd9925145c2e3c100efff391d621cb25e8d4451fb5567ee9c",
+    "tb/tb_tma_de10_lite.sv": "831a8bc5e1d3a86e1cadf7cf70c77951e4b065f59d415cbbb42025f66fdd7201",
+    "scripts/run_sdram_tests.py": "0cb6351d0e99438d57faa63fa794f3b8df53f0f03506c7a5b3bda6d586ae5e30",
+    "scripts/build_board.py": "36c97f6e54c46171b6eb1d9a319ebbb22f92ffbecc6074fa2ed8d3e8924c1105",
+    "tests/test_board_reports.py": "1ab7cda97446a45c10cf59e5ce68994d064b8d39baa3bef2c5a238a20a1b9556",
+    "quartus/build_board.tcl": "3f441c8975338d088852fa4179b2f694a03f8b10d6c080540a96c2da095a4133",
+    "quartus/de10_lite_pins.tcl": "2d0726e97cf3e42bea7de182c672c46391730bb5e14c859f8d43e4a1aff07fec",
+    "quartus/de10_lite.sdc": "bd176a35c88feb79f8c2bfa29a3990319fdc168db8b4de95792c04666e6b9c1f",
+    "quartus/report_board.tcl": "b1f681976c38e5c5cda967926ab62289db285cce19a53ee63f70087a34965184"
+  }
+}

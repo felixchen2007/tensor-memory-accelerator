@@ -1,0 +1,60 @@
+{
+  "scope": "hardware-probe-read",
+  "timestamp_utc": "2026-10-29T00:58:51.032313+00:00",
+  "status": {
+    "flags": 243,
+    "stage_code": 13,
+    "failure_reason": 0,
+    "checked_words": 1024,
+    "source_checked_words": 1024,
+    "scratch_checked_words": 1024,
+    "failure_word": 0,
+    "expected_data": 0,
+    "observed_data": 0,
+    "completed_elements": 1024,
+    "elapsed_cycles": 5735,
+    "refresh_count_low": 33413,
+    "format_version": 4,
+    "engine": "pipelined",
+    "operation": "transpose32",
+    "refresh_aligned": true,
+    "read_burst_words": 4,
+    "initialized": true,
+    "passed": true,
+    "failed": false,
+    "reset": false,
+    "pll_locked": true,
+    "passed_stages": 7,
+    "stage": "finished",
+    "failure": "none",
+    "status": "pass",
+    "refresh_count_low_atomic": false
+  },
+  "raw_snapshots": [
+    "544D04F3D040040040000000000000000000000040000000000000016670598F",
+    "544D04F3D040040040000000000000000000000040000000000000016673FFDF",
+    "544D04F3D040040040000000000000000000000040000000000000016678285F"
+  ],
+  "transcript": "<PROJECT>\\build\\hardware\\20261029T005851Z_probe.log",
+  "transcript_sha256": "bab15699f98dac1ec5f77825495aa40a5056db05ac51169a36e9bd0c74e70e32",
+  "read_trace": {
+    "available": true,
+    "byte_address": 16781288,
+    "consumed_sample_index": 8,
+    "samples": [
+      34761,
+      34761,
+      34761,
+      34761,
+      34761,
+      34761,
+      34761,
+      34761,
+      34694,
+      34431,
+      34356,
+      34541
+    ],
+    "consumed_value": 34694
+  }
+}

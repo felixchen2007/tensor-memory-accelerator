@@ -1,0 +1,35 @@
+name: Model and evidence checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  portable-checks:
+    name: Python ${{ matrix.python }} / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Reference models, decoders and report gates
+        run: python -m unittest discover -s tests -v
+      - name: Published evidence, source identity and documentation links
+        run: python scripts/check_portfolio.py
+
+# Questa/UVM simulation, fitting and board tests run locally with vendor tools.
+# A green hosted check does not claim a new RTL, timing or hardware pass.
