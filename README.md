@@ -14,6 +14,33 @@ passed 368 descriptors across eight configurations and detected injected data
 corruption. A separate mutation campaign detected **21/21 selected RTL defects**
 with clean nominal controls. [Results and evidence](docs/results.md) · [Reproduce](docs/reproduce.md)
 
+## RTL mutation testing: 21/21 targeted faults detected
+
+The verification environment is tested against **intentionally broken RTL**.
+Each simulation compiles an isolated source copy with one controlled defect,
+then requires a specific checker diagnosis. The accepted campaign detected all
+21 selected defects: **20 through native UVM scoreboards/monitors and one through
+the independent SDRAM pin model**.
+
+| Fault family | Detected | Examples of injected defects |
+| --- | ---: | --- |
+| FIFO data and ordering | 5/5 | Corrupted payload/address, skipped or reused entry, write from an empty FIFO |
+| Completion and bounds | 3/3 | Double-counted writes, completion before draining, disabled bounds check |
+| Source/destination addressing | 4/4 | Wrong row/column stride in each address update |
+| Burst read buffer | 5/5 | Wrong beat, missing bank/row tag bits, stale data after a write |
+| Responses and refresh | 4/4 | Missing address error, dropped/changed held response, refresh starvation |
+
+Unmodified controls passed **before and after** the campaign with zero UVM
+warnings, errors or fatals. Compile failures, simulator crashes and unrelated
+errors do not count as detections. Production source hashes remained unchanged.
+The standard **eight-configuration UVM regression passed again** afterward.
+
+This is a selected fault set in the pipelined / BL4 / linear configuration;
+it measures checker sensitivity rather than exhaustive design coverage.
+[Read the mutation report](docs/mutation.md) ·
+[Inspect every exact edit and diagnosis](evidence/mutation/2026-10-29/results.json) ·
+[Run the campaign](scripts/run_mutation_tests.py)
+
 ## Hardware result
 
 Same 2 KiB tensor, data pattern, clock, destination layout, and refresh start
