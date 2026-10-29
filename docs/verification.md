@@ -1,5 +1,11 @@
 # Verification strategy
 
+The additive [C++17/DPI-C oracle](cpp_reference.md) is cross-checked against the
+preserved Python models and can run alongside or independently of the original
+SV scoreboard. [Recorded performance](reference_performance.md) separates pure
+prediction, DPI overhead and complete RTL runtime. Protocol SVA and broader
+coverage-driven closure remain follow-up work.
+
 ## Address-generator milestone
 
 The Python reference computes each address directly from the coordinate formula.

@@ -1,0 +1,6 @@
+{"side":1,"elements":1,"loops":100,"ns_per_descriptor":[160,170,170,160,160,160,160],"process_peak_bytes":5271552}
+{"side":8,"elements":64,"loops":100,"ns_per_descriptor":[990,990,1120,990,990,1000,990],"process_peak_bytes":5271552}
+{"side":16,"elements":256,"loops":100,"ns_per_descriptor":[3510,3520,3510,3510,3610,3520,3520],"process_peak_bytes":5275648}
+{"side":32,"elements":1024,"loops":100,"ns_per_descriptor":[13980,14090,14130,13990,14020,13930,13970],"process_peak_bytes":5296128}
+{"side":64,"elements":4096,"loops":100,"ns_per_descriptor":[54200,54200,54190,54350,55010,54160,54210],"process_peak_bytes":5369856}
+NATIVE_NOOP_NS_PER_CALL=2.569 checksum=4294967295

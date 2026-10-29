@@ -1,5 +1,11 @@
 # Native UVM verification
 
+The preserved Starter-mode environment below is now also used by an additive
+[C++17/DPI-C checking path](cpp_reference.md). Eight XSim configurations passed
+dual SV/C++ checking. Separate XSim runs executed constrained randomization and
+the descriptor covergroup over three seeds in `p1_b4_s0`; the older Starter
+records keep their original procedural-stimulus scope.
+
 The [RTL mutation campaign](mutation.md) uses this same agent, passive monitors
 and independent scoreboard to test whether deliberately broken implementations
 are detected. It adds public-interface cache probes and keeps production sources

@@ -1,0 +1,36 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe -f <PROJECT>\build\cpp_reference\uvm\20261029T180646563728Z\burst_tag_ignores_bank\elaboration.args 
+Multi-threading is on. Using 30 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package work.tma_uvm_pkg
+WARNING: [XSIM 43-3373] "<PROJECT>\tb\uvm/tma_uvm_sequences.svh" Line 66. System function $value$plusargs is used as system task. This system function should have a LHS e.g. x=$value$plusargs().
+WARNING: [XSIM 43-3373] "<PROJECT>\tb\uvm/tma_uvm_sequences.svh" Line 67. System function $value$plusargs is used as system task. This system function should have a LHS e.g. x=$value$plusargs().
+WARNING: [XSIM 43-3373] "<PROJECT>\tb\uvm/tma_uvm_sequences.svh" Line 68. System function $value$plusargs is used as system task. This system function should have a LHS e.g. x=$value$plusargs().
+Compiling package work.tma_dpi_pkg
+WARNING: [XSIM 43-3373] "<PROJECT>/tb/uvm/tma_dpi_pkg.sv" Line 127. System function $value$plusargs is used as system task. This system function should have a LHS e.g. x=$value$plusargs().
+WARNING: [XSIM 43-3373] "<PROJECT>/tb/uvm/tma_dpi_pkg.sv" Line 147. System function $value$plusargs is used as system task. This system function should have a LHS e.g. x=$value$plusargs().
+WARNING: [XSIM 43-3373] "<PROJECT>/tb/uvm/tma_dpi_pkg.sv" Line 148. System function $value$plusargs is used as system task. This system function should have a LHS e.g. x=$value$plusargs().
+Compiling package work.tma_mutation_pkg
+Compiling module work.cb
+Compiling module work.mon
+Compiling module work.tma_uvm_if_default
+Compiling module work.tma_addr_gen
+Compiling module work.tma_copy_engine_pipelined(SRC_BY...
+Compiling module work.tma_copy_engine_select(PIPELINED...
+Compiling module work.tma_sdram_controller(READ_BURST_...
+Compiling module work.tma_ram_bank
+Compiling module work.tma_scratchpad_default
+Compiling module work.tma_scratchpad_endpoint_default
+Compiling module work.tma_sdram_copy_system(PIPELINED=...
+Compiling module work.tma_sdram_model
+Compiling module work.tb_tma_uvm
+Built simulation snapshot tma_dpi_snapshot

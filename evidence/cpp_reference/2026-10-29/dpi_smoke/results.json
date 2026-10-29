@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "timestamp_utc": "2026-10-29T16:38:43.310978+00:00",
+  "profiles": {
+    "questa": {
+      "status": "pass",
+      "wall_seconds": 7.426244299975224,
+      "library_sha256": "9b48f6fec1b67676189e1647e2dccd67a05b90176cc5dd34da7a7513a9df13ac",
+      "compiler": "<USER_HOME>\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BrechtSanders.WinLibs.MCF.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\mingw64\\bin\\g++.EXE",
+      "scope": "C++17 32/64-bit unsigned scalars and output argument; native UVM 1.2"
+    },
+    "xsim": {
+      "status": "pass",
+      "wall_seconds": 4.142287299968302,
+      "library_sha256": "75d3770f1cdafdcacd85a0fd8262416cbfcb51d6f50ae57688e7b55ed4088e75",
+      "compiler": "<USER_HOME>\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BrechtSanders.WinLibs.MCF.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\mingw64\\bin\\g++.EXE",
+      "scope": "C++17 32/64-bit unsigned scalars and output argument; native UVM 1.2"
+    }
+  },
+  "sha256": {
+    "tb/dpi/tma_dpi_smoke.cpp": "5080f6c7aafaee27df5bb4c4e4636d0f58a397b5a0522eaad6f1688b961eac20",
+    "tb/dpi/tb_tma_dpi_smoke.sv": "e8cec7bdc7ac99229744fc99c74f3f540c2b478689c1437e79c478e7b847ef3c",
+    "scripts/run_dpi_smoke.py": "d4a1e0ecde2e2ed4ae902acc3a826c5822e68be321cb519c5d9c0099517fd0d7",
+    "scripts/reference_tools.py": "b906b71d186f8740e83fadc57ae1894683d20d6b29b1e802dd16a549aa4f3885"
+  }
+}

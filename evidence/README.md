@@ -9,6 +9,7 @@ license files, vendor libraries and the Terasic reference image are excluded.
 | [hardware/2026-10-29](hardware/2026-10-29) | Six physical configurations, decoded/raw JTAG, programming reports and fitted build records |
 | [uvm/2026-10-29](uvm/2026-10-29) | Eight native UVM profiles, corruption control, source hashes and license/compile-only records |
 | [mutation/2026-10-29](mutation/2026-10-29) | 21 isolated RTL defects, clean controls, compile/simulation reports, rejected pilot and fresh nominal UVM matrix |
+| [cpp_reference/2026-10-29](cpp_reference/2026-10-29) | C++/Python agreement, separate DPI ABI proofs, dual-checker matrix, C++-enabled mutations, XSim full features and controlled benchmarks |
 | [simulation/2026-10-29](simulation/2026-10-29) | Current focused directed-plus-UVM regression and burst metrics |
 | [simulation/2026-10-27](simulation/2026-10-27) | Historical full/local-memory studies; not a new full-suite pass |
 
@@ -33,6 +34,14 @@ a different image hash even with matching source.
 Fitted `board_results.json` records deliberately retain `board_tested=false`:
 they describe a build at its creation time. Later physical `run.json` and probe
 records establish the hardware result separately.
+
+The C++ evidence retains a six-profile matrix record with `status=incomplete`
+after a laptop power interruption. Those six completed cold-start profile logs
+were revalidated against unchanged sources; two remaining profiles and the
+corruption control completed in a separate accepted run. The publication checker
+requires their combined eight-profile matrix and does not relabel the partial
+record as a completed suite. The new C++ results retain the old physical result
+and original SV/Python verification evidence.
 
 ## Verification of this publication
 

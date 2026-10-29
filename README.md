@@ -14,6 +14,19 @@ passed 368 descriptors across eight configurations and detected injected data
 corruption. A separate mutation campaign detected **21/21 selected RTL defects**
 with clean nominal controls. [Results and evidence](docs/results.md) · [Reproduce](docs/reproduce.md)
 
+**C++17 / DPI-C verification:** an independent golden model now runs alongside
+the preserved SV scoreboard on XSim and Questa. It agrees with Python on
+**387 complete transfer cases**. All eight XSim configurations passed dual
+checking; three additional seeds executed constrained randomization and the
+defined descriptor covergroup in one configuration.
+[Architecture and build instructions](docs/cpp_reference.md) ·
+[Measured performance](docs/reference_performance.md).
+
+For a 32x32 prediction, C++ through DPI was about **31x faster than the SV
+predictor** in the microbenchmark. The complete p1_b4_s0 RTL/UVM run showed **no speedup**:
+11.30 s SV versus 11.75 s C++ median, with overlapping ranges. The report keeps
+model computation, DPI overhead and complete simulation time separate.
+
 ## RTL mutation testing: 21/21 targeted faults detected
 
 The verification environment is tested against **intentionally broken RTL**.
@@ -107,12 +120,17 @@ SDRAM pin model through public maintenance/descriptor interfaces.
 | Corruption control | Deliberately wrong SDRAM data detected by the scoreboard |
 | RTL mutation campaign | 21/21 targeted defects detected; clean controls before/after; production sources unchanged |
 | Focused simulation regression | 35 invocations, including 10 expected-failure controls |
-| Python model/tooling tests | 58 tests passed |
+| Python model/tooling tests | 61 tests passed |
+| C++17 reference checks | 21 directed tests; 387 Python/C++ cases; 8,192 bank mappings; 100 C API lifecycles |
+| Dual SV/C++ UVM | Eight XSim configurations; 368 descriptors; both paths detect corruption |
+| C++-enabled mutation campaign | 21/21 selected faults: 17 C++ checks, 3 existing UVM protocol checks, 1 SDRAM pin check |
+| Executed XSim full-feature runs | Three seeds, 138 descriptors; 100% of the defined descriptor covergroup in p1_b4_s0 |
 
-The tested Questa Starter license runs UVM base classes with seeded procedural
+The recorded Questa Starter license runs UVM base classes with seeded procedural
 stimulus and explicit scenario counters. SV constrained randomization and
-covergroups require a suitable license; that optional branch compiled but was
-not executed. See [UVM scope and reports](docs/uvm.md) and
+covergroups were compile-only on that license. Separate XSim 2025.2 runs now
+execute those features in the scope listed above; earlier results retain their
+original labels. See [UVM scope and reports](docs/uvm.md) and
 [verification strategy](docs/verification.md). Hosted CI runs Python model and
 evidence checks; RTL simulation and FPGA fitting run locally with vendor tools.
 The [mutation report](docs/mutation.md) lists the faults, checker diagnoses,
@@ -132,6 +150,8 @@ For Windows with Questa and Quartus Prime Lite installed:
 ```powershell
 python scripts/run_uvm_tests.py
 python scripts/run_mutation_tests.py
+python scripts/run_cpp_reference.py
+python scripts/run_dpi_uvm_tests.py --sim xsim --checker dual
 python scripts/run_sdram_tests.py
 python scripts/build_board.py --engine serialized
 python scripts/build_board.py --engine pipelined

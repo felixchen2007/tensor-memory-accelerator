@@ -202,9 +202,12 @@ def main() -> int:
     hardware = check_hardware()
     descriptors = check_uvm()
     mutants = check_mutations()
+    from scripts.check_cpp_evidence import validate as check_cpp
+    cpp = check_cpp()
     links = check_links()
     print(f"PORTFOLIO_CHECK_PASS exports={exports} physical_runs=6 uvm_descriptors={descriptors} "
-          f"mutants_detected={mutants} local_links={links} measured_speedup={hardware['burst_speedup_vs_serialized']:.5f}x")
+          f"mutants_detected={mutants} cpp_matrix_descriptors={cpp['matrix_descriptors']} "
+          f"local_links={links} measured_speedup={hardware['burst_speedup_vs_serialized']:.5f}x")
     print("Scope: recorded evidence and source identity; no fresh RTL simulation or hardware access.")
     return 0
 

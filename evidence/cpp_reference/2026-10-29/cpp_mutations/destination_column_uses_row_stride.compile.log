@@ -1,0 +1,26 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/build/cpp_reference/uvm/20261029T180646563728Z/destination_column_uses_row_stride/tma_addr_gen.sv" into library work
+INFO: [VRFC 10-311] analyzing module tma_addr_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/rtl/tma_copy_engine.sv" into library work
+INFO: [VRFC 10-311] analyzing module tma_copy_engine
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/rtl/tma_copy_engine_pipelined.sv" into library work
+INFO: [VRFC 10-311] analyzing module tma_copy_engine_pipelined
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/rtl/tma_copy_engine_select.sv" into library work
+INFO: [VRFC 10-311] analyzing module tma_copy_engine_select
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/rtl/tma_ram_bank.sv" into library work
+INFO: [VRFC 10-311] analyzing module tma_ram_bank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/rtl/tma_scratchpad.sv" into library work
+INFO: [VRFC 10-311] analyzing module tma_scratchpad
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/rtl/tma_scratchpad_endpoint.sv" into library work
+INFO: [VRFC 10-311] analyzing module tma_scratchpad_endpoint
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/rtl/tma_sdram_controller.sv" into library work
+INFO: [VRFC 10-311] analyzing module tma_sdram_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/rtl/tma_sdram_copy_system.sv" into library work
+INFO: [VRFC 10-311] analyzing module tma_sdram_copy_system
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/tb/tma_sdram_model.sv" into library work
+INFO: [VRFC 10-311] analyzing module tma_sdram_model
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/tb/uvm/tma_uvm_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/tb/uvm/tma_uvm_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/tb/uvm/tma_mutation_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/tb/uvm/tma_dpi_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT>/build/cpp_reference/uvm/20261029T180646563728Z/tb_tma_dpi_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_tma_uvm

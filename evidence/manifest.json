@@ -697,7 +697,739 @@
       "source": "build/uvm/starter/data_fault_control_console.log",
       "original_sha256": "6975666670ef87c92dd309b65c5b11b2f520a44938921f9c6e56b2209e3d4d1a",
       "published_sha256": "0a0a9dc7c67be3a4ba97ec18a910aa27519df6b321b3213fff8b47dd7d8be37d"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/matrix_interrupted/results.json",
+      "source": "build/cpp_reference/uvm/20261029T165506457835Z/results.json",
+      "original_sha256": "9c4b24b497b61a0ecf1c3ba547d01b6912f1bb1d7ffed291bc89d9ac86c4b25b",
+      "published_sha256": "0304c69f58d4b1d4af6bfb241187d63a7432fe5bd3d2d1006142095f9c43d831"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/matrix_interrupted/0_p0_b1_s0_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T165506457835Z/p0_b1_s0_20261029_0_dual/console.log",
+      "original_sha256": "28b67cafaaa9d6e40419d98af32cece52b96f1e3472c043f1283fcd351be2ec6",
+      "published_sha256": "15f16e12e307769c3e64d824ada3c80b6eb478156e662060b0e3ba22b4b1c9de"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/matrix_interrupted/1_p0_b1_s1_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T165506457835Z/p0_b1_s1_20261029_0_dual/console.log",
+      "original_sha256": "b287c73c45c5079e3313ef5bd3d1f384693a1e091425921d4cc8bce072586e5a",
+      "published_sha256": "fe7e507f18b28e7b718e7782d119b5250e9f67bba5a613d0b7f0e15bf38436a5"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/matrix_interrupted/2_p0_b4_s0_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T165506457835Z/p0_b4_s0_20261029_0_dual/console.log",
+      "original_sha256": "503dd098f8ebccd5fd3a03d34be123af9ad2d7fc3ccf995c40778a2db61b655b",
+      "published_sha256": "e26590fd6492930b09a50997e586fbdb99ac655166c0e1046c090e1d0d96eac1"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/matrix_interrupted/3_p0_b4_s1_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T165506457835Z/p0_b4_s1_20261029_0_dual/console.log",
+      "original_sha256": "ec2b874f7c351f999e81e1221a064b8a4d11bd82b48dd81794dff13ea59d6455",
+      "published_sha256": "1555502ad44d704db1bb0d2988c6ab8e94c1b57cb0283aa7d45eca7018d92d6d"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/matrix_interrupted/4_p1_b1_s0_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T165506457835Z/p1_b1_s0_20261029_0_dual/console.log",
+      "original_sha256": "9f91307c2717fb1c178127c6dd54b2837f3f94f96d3cfe4a4194b9956b7ba41d",
+      "published_sha256": "1eb948cacf1dd8bc1fcc6adf32454cf28f1508c450f225290b347780ce09abec"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/matrix_interrupted/5_p1_b1_s1_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T165506457835Z/p1_b1_s1_20261029_0_dual/console.log",
+      "original_sha256": "e4422fb00aced4ec4afd256abe5a2ed399fc87bf9c6d738ecadb6d14e2f7571f",
+      "published_sha256": "07b55e1376d4fd576659c54ba770066e1fd105c56905ebe208706ed3eb870720"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/matrix_completion/results.json",
+      "source": "build/cpp_reference/uvm/20261029T180331680138Z/results.json",
+      "original_sha256": "be70274a77509c698569a990886f863e68346712f641edb65813ad09d1e65ea5",
+      "published_sha256": "d1324dc74b18675fe10a4595463d8d27a3fd0b90a28f81bdafc1a3d979d2247d"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/matrix_completion/0_p1_b4_s0_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T180331680138Z/p1_b4_s0_20261029_0_dual/console.log",
+      "original_sha256": "8f6dbcc3608f3ef3b2a7cb7a1ab62de3289786cbfa1617424c4e09363dccb25e",
+      "published_sha256": "a85fe3dd4b69e2017e90c8a47e37d72be77b43571124145c02548cbb8635b6af"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/matrix_completion/1_p1_b4_s1_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T180331680138Z/p1_b4_s1_20261029_0_dual/console.log",
+      "original_sha256": "1aef672cb9650da8e5436d131a4b3061d9529dfd938341eb3789cee9b83b6cc0",
+      "published_sha256": "b76b791c8ca225bd6de7985adb072d94de0e57cf32f120b06aef8f0d7c11aa05"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/matrix_completion/data_fault_control.log",
+      "source": "build/cpp_reference/uvm/20261029T180331680138Z/data_fault_control/console.log",
+      "original_sha256": "a0140a9eec010fc7738b73d37c9b1a6c7ff7e3c7cb15b1388ea9982685f30677",
+      "published_sha256": "7844f9e3c48e9839c0b4b28cc033bc44b4ee10f1756ce5a036ea012fe3570cd3"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/results.json",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/results.json",
+      "original_sha256": "b93f17a69f99ebabbb7160c79b6b41a16d705208e8f07c99f49a87e7e58128d0",
+      "published_sha256": "d7ba177e22170a820dcc50caf5092d8cffb5c76ba7f2bc122d762ff251b5d4c8"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/0_p1_b4_s0_20261029_cpp.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/p1_b4_s0_20261029_0_cpp/console.log",
+      "original_sha256": "b955566b9a6591dde5a0076b2f9a1f629a16985c627a77ef829d2df316e2f7ec",
+      "published_sha256": "4508999a55974e1f3563c6bd22943022b20e1d979b54e3d61cf2e88fc372401c"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/1_p1_b4_s0_20261029_cpp.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/mutation_nominal_before/console.log",
+      "original_sha256": "7cf8bdda0fbb5efdc3b1d328312fd6056bc3e83f9ecc68e41389f975ea64a5a5",
+      "published_sha256": "489da647e1685eae343081a734366410f548947da94f0a8e865766baa6693a44"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/2_p1_b4_s0_20261029_cpp.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/mutation_nominal_after/console.log",
+      "original_sha256": "b34c3f38c09263eda182540447d6d6f96a7da8701dfa336d1d654a354f43d35e",
+      "published_sha256": "534daa92d44bde13979b849fd399c60aa250dedf5dcd81535fca354b8d0446e7"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/data_fault_control.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/data_fault_control/console.log",
+      "original_sha256": "31fa758fd82624a1890494877ea0bfe8846fcf086118195c4d6c10dc6339e199",
+      "published_sha256": "2df777b71b0203d028cbe81ce3a8ab78f3a2c2e6bd1deb926b407adc801cf12f"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/fifo_data_bit_flipped.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/fifo_data_bit_flipped/console.log",
+      "original_sha256": "8bf9b51564cb53e94f9bef795bd62aceaee6e75fdcba5592bef7fdb289709092",
+      "published_sha256": "349d6a84b8e4a275247a0667dccc1df262168f074db30dc9c0fc651c220303cf"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/fifo_data_bit_flipped.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/fifo_data_bit_flipped/compile.log",
+      "original_sha256": "0ac8ffffd415f7199e8f619be9e5182219d0dfcc7a5cadc6196674a8a324903f",
+      "published_sha256": "dd29ed34a87d9b1eda1373c08a91b9406cca666e49de24fb569d281eac0abdfa"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/fifo_data_bit_flipped.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/fifo_data_bit_flipped/elaborate.log",
+      "original_sha256": "db05449762ce147423ec8053fdbcca6b7b90eaae920831b406e34acd66ff5639",
+      "published_sha256": "7b8e732fcc1eabb8bb63b65aa6a7688f48d4067a2f268966aca4b87fe8d55121"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/fifo_destination_bit_flipped.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/fifo_destination_bit_flipped/console.log",
+      "original_sha256": "3b420bbcb2c88da5eaf1b5687bfec2cbd665d479aaebb755b833c62210bd1874",
+      "published_sha256": "e90e405f12eb8239215168bb18cf48a6a24c333eb2ce20a344878645e90445fe"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/fifo_destination_bit_flipped.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/fifo_destination_bit_flipped/compile.log",
+      "original_sha256": "b2c99b7c6424913b7cb2e77fcd13d989db69d257674d84a91478fd33d13ddaa2",
+      "published_sha256": "69f6539e8f2666c7bf2e0548f375ab70b7569669d56d4c6fd568afd1771199e7"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/fifo_destination_bit_flipped.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/fifo_destination_bit_flipped/elaborate.log",
+      "original_sha256": "d321686455de360b47c0816b889ea13d091907c8961b132d2dc995a8a346a7c2",
+      "published_sha256": "64ec0e585c7244db5fcf7a01c66ccd2a18350dcc4490ba1a1480bec4d596b9ce"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/fifo_head_skips_entry.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/fifo_head_skips_entry/console.log",
+      "original_sha256": "3c0b0eaf1d486be5fa96a969183a8fd4d9f4d41b1e7739504f7b054aa0683616",
+      "published_sha256": "88a8caa08b636e08cfba28842e49421b1bdda7332393620a392bd7062749abd1"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/fifo_head_skips_entry.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/fifo_head_skips_entry/compile.log",
+      "original_sha256": "b693963c1f716943d96d5b14d7514f41c9b1e9542090a86d6374fa49cf38966e",
+      "published_sha256": "85abbf45e51219cf967422c845c5206e0e4e783605efa543105a0a133012d4e4"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/fifo_head_skips_entry.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/fifo_head_skips_entry/elaborate.log",
+      "original_sha256": "dd186f42132c78cd471305889930f89cf983b113b3a42452547326d9dfa80c92",
+      "published_sha256": "0758f8517efffa205ec398970a14e6128afa53fe52a2a5c5577bb54e0594d1c6"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/fifo_head_never_advances.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/fifo_head_never_advances/console.log",
+      "original_sha256": "dfb6c47b3707de546e401d59de77eeb09a6ba1173513a3ec783b90d4c87cf607",
+      "published_sha256": "e2390416dfb01517cd4bf854b637fa657f94f0ad94045f39d57decd853657d07"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/fifo_head_never_advances.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/fifo_head_never_advances/compile.log",
+      "original_sha256": "0e93719fe2f6eab91a8d9aa7554f04e147c3f1d13488bbdc57729a3633b71359",
+      "published_sha256": "63ae950067610b04b32fcfba4f4e11d1ed528e722752c693aa766735d6c8910a"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/fifo_head_never_advances.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/fifo_head_never_advances/elaborate.log",
+      "original_sha256": "516d2b16d4526183dc2709cf77b318dcf92ebf628093a7e6a8ea2996d26621c2",
+      "published_sha256": "e8aa0dc5a11bd34a97ad51be5dd80f12938920c7fa35297c8aff67f0f77e29d9"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/write_offered_when_fifo_empty.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/write_offered_when_fifo_empty/console.log",
+      "original_sha256": "b5d0f0163b80041281f6bbecc2ad0abc2fb75a864aed54051242ec705d770ed0",
+      "published_sha256": "823c6d419c3b313f8ff4d3eb7a5ec7eb6810019f0603ce4bf8290a144f8ce08a"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/write_offered_when_fifo_empty.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/write_offered_when_fifo_empty/compile.log",
+      "original_sha256": "d06731de572bedb4464ca218712b7da9bb4d82e132bd0ade16eaaad934ca166c",
+      "published_sha256": "3ad1a02ad14da3b6599b7bfc4254be70582020f0c0c47499942781dd3e43dcda"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/write_offered_when_fifo_empty.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/write_offered_when_fifo_empty/elaborate.log",
+      "original_sha256": "9f995c8a3698efc37e7e83d87fe2a066f1e38f06a9500f3cd53831ee7f9ea707",
+      "published_sha256": "e29c2e017793fbde835ca2a4d5f4537a975f6fdb9d44787445e5fb202756c1cf"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/completion_count_increments_twice.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/completion_count_increments_twice/console.log",
+      "original_sha256": "20b319b2c06020353643a1e6d58af5b4a4100722d8c50301aa48bc28587ea8ed",
+      "published_sha256": "607d067084a93e7319d23b133776a4e89eac83c9e534de192e2b300dbc763647"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/completion_count_increments_twice.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/completion_count_increments_twice/compile.log",
+      "original_sha256": "66912b4b14565da3cd922dffe66d06cc4708621480f67091048cde2ee33b999d",
+      "published_sha256": "be8545ecec5ff57e5b871eded4e159d1878e066145b2a736ca6dac8f75f406d7"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/completion_count_increments_twice.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/completion_count_increments_twice/elaborate.log",
+      "original_sha256": "6397d8cfd4ed429dee02ac60816f160140d972ece716d3cb1768e0167e16ee14",
+      "published_sha256": "4d98e05c0114b78a442ae24665c776437118d8de2e25ecec65a04e726e152a01"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/completion_before_drain.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/completion_before_drain/console.log",
+      "original_sha256": "762d23fa3aaea7d334a3c30bd3f5c80fe5a1b6278371e6df814f32470b0f87e0",
+      "published_sha256": "2b256410743c9ab908c135459cf55440f28f92cb873a286ad9f296b131c08a48"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/completion_before_drain.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/completion_before_drain/compile.log",
+      "original_sha256": "8f20a03a927c86ddbb47fff75dd7e0bae11ba5b443e433b827038fff5ddb6432",
+      "published_sha256": "f2fd7a9edf2e6a9ed9aac8b3407d684076854c4621ba0a9e810521b28f4f9ce8"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/completion_before_drain.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/completion_before_drain/elaborate.log",
+      "original_sha256": "086a8dd93a94c27a9dc90733acb1708abc0a23ca395cb3a1f8734dc06b34816e",
+      "published_sha256": "a24960ab16666e445e4e2c0eaaf0d5a24c1a639abc305843a93c1dd3da60a1b6"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/late_bounds_check_disabled.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/late_bounds_check_disabled/console.log",
+      "original_sha256": "d75620467c01312445a96824c02d8570f53a43d44176f473af664305f567e1a0",
+      "published_sha256": "a61adaa19032f1a2f07de5586652a083f168fee16d2d7fbd2277bbc98e35d0db"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/late_bounds_check_disabled.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/late_bounds_check_disabled/compile.log",
+      "original_sha256": "7225e7c1eaa9d3fe1bf899cf2a96368ea9f508791417cb01b0e6f361fbcd72ca",
+      "published_sha256": "a23ffb449d708e48c8077df112fa17b12b874bb8efeed305ad1331f8f39f9fcb"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/late_bounds_check_disabled.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/late_bounds_check_disabled/elaborate.log",
+      "original_sha256": "e23c6a094540cbef2ee465e3731ab2fd4752860fe0af157a4f8234ad670d4ed2",
+      "published_sha256": "3b2b8b0496d2fdaf9ff03e9db220ed5f8443fde61c1a54d45d6eceaa0102f54d"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/source_column_uses_row_stride.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/source_column_uses_row_stride/console.log",
+      "original_sha256": "812dabd73f90f24520e6859e7d8c8cb50818f8ec74b0e46ff1268c2da568f39d",
+      "published_sha256": "4c8b747311ef7da8a290d5d0b723aa2f9a2a0df6df1dd5e1aa771e12bd42dcf4"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/source_column_uses_row_stride.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/source_column_uses_row_stride/compile.log",
+      "original_sha256": "09c01b585c176c60378955a27107900c41ed7450384f52e4136d446dee36c39b",
+      "published_sha256": "7531c214bffcad9697677597a70cd72974c5c46865500750631cb72cdfd45a14"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/source_column_uses_row_stride.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/source_column_uses_row_stride/elaborate.log",
+      "original_sha256": "03c5c0d5de70110f3b0095a72059dae9bfded065140886a789c87e257226d558",
+      "published_sha256": "5aa6e5abeb5f20fb10b866f003d50cd6313f49dd0f5d2996bc3f617e2d753fe8"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/destination_column_uses_row_stride.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/destination_column_uses_row_stride/console.log",
+      "original_sha256": "2f576a4382db03a4e206f56ea9e8ebd1718e24a1e9777f696e3691b7f011dc20",
+      "published_sha256": "ab0d26fee408e8a3eb54119c6929ebd04f185143526378f2b965d060d18ff02e"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/destination_column_uses_row_stride.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/destination_column_uses_row_stride/compile.log",
+      "original_sha256": "f88eb62d512706baa6c38580dd7d2a409b68bd6affd595831267e13235cbcb31",
+      "published_sha256": "6f21a6018926af5a6f3444067ec53687cef2ad96ad85ba2c851d2a3ad200ff31"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/destination_column_uses_row_stride.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/destination_column_uses_row_stride/elaborate.log",
+      "original_sha256": "d88eed5b72fbde646a4bbab9efb87fc678be33f4107023dc6997bdcc5d9b5dab",
+      "published_sha256": "d6d4d1b8cf47b5042266259a2e7e1da360aa6a8d0e6b12b5b1b26d6a842d1c87"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/source_row_uses_column_stride.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/source_row_uses_column_stride/console.log",
+      "original_sha256": "df4955478514c46aa9676245aee46e1130c1ba59020f6a0d9c19699c3f96edd5",
+      "published_sha256": "f00fa251fd88e0f5bd4192fe9c490414b61eba9570c0399186f543b9f9f9aaea"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/source_row_uses_column_stride.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/source_row_uses_column_stride/compile.log",
+      "original_sha256": "8b7f6430f72fcd88fd6484b821a0fc61dea3bf85e972d5397f8842564c7428c1",
+      "published_sha256": "900115d1c06b510736f6b0fc2aa5ed1d6f9ad9498ab60c917c1790c1263b14b9"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/source_row_uses_column_stride.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/source_row_uses_column_stride/elaborate.log",
+      "original_sha256": "5a14d4273a31d133eebac6002ddcad031c58ae347a56f306aaab51b9b172961e",
+      "published_sha256": "f55807df883da139d53ab209ffbdad10b143d7e20e6e81426688a2f674991a1e"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/destination_row_uses_column_stride.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/destination_row_uses_column_stride/console.log",
+      "original_sha256": "f4a079ee4f434b45b195e6a7f5bc773b4fa9acc08423899e973547085bc414b3",
+      "published_sha256": "e6b9566aeb928e73c9e5a2d0ce73fe4e5660a1380a48da4428f7739a8945031d"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/destination_row_uses_column_stride.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/destination_row_uses_column_stride/compile.log",
+      "original_sha256": "2910ca7044c95810adb88ba92f2b16266f475f73fbfcdaa57650ce7ce1a1dbbd",
+      "published_sha256": "931bb331d296a3e6491fc4e5bc375f2af63d5e6b67e792516f7e27f578c14f28"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/destination_row_uses_column_stride.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/destination_row_uses_column_stride/elaborate.log",
+      "original_sha256": "d3bdb31f6919e9e95d957923a7c0f7bc14043a2b46e2d1e4108443b01b72bf22",
+      "published_sha256": "89553abc20b05b9f069fd3fec8e227044a4ddaa34964ae52d505432be5f8652e"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/burst_hit_returns_word_zero.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/burst_hit_returns_word_zero/console.log",
+      "original_sha256": "29729577f6348809727adc9b0d773f08e1f5befb26cee65dd9df0b457e2eea1e",
+      "published_sha256": "acdabf5d7822d9f0e7d8828251b6a83503345cde9ae0f056dbdcc73c9097c9a8"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/burst_hit_returns_word_zero.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/burst_hit_returns_word_zero/compile.log",
+      "original_sha256": "4ccbf53aaf68482bdabb47bc5143a379602cd37c86737cdcce394b34363946ed",
+      "published_sha256": "e14a4f82d25e085e0fee9a1aba7fbfd6c935864bd73dc59af498f401a9ef4cd5"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/burst_hit_returns_word_zero.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/burst_hit_returns_word_zero/elaborate.log",
+      "original_sha256": "12bec7ee31c891c071f9faa66c047f66fe419bc726cf7bc4282a03eedf8f98b9",
+      "published_sha256": "cdc96af871e7742eaa1dba01839647f85908e9cf4207771fe7b38c9f54302143"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/burst_tag_ignores_bank.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/burst_tag_ignores_bank/console.log",
+      "original_sha256": "1dacd35cd3816a6c839b1ac59c6bedb00994aae40ea1e369919a16fa810961a0",
+      "published_sha256": "d8566cf33fb882f3a075da5b2bc1a12d73cc2a9e24230cc9557a8eafac0010d6"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/burst_tag_ignores_bank.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/burst_tag_ignores_bank/compile.log",
+      "original_sha256": "0e864c10ae06b81c0636ae977112c0d0bfeadb82835ef235af69bf995ef2105d",
+      "published_sha256": "dc0555c087236d8747f9c8aecfd8f866dfc592b8551248f092a1691b38a2decc"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/burst_tag_ignores_bank.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/burst_tag_ignores_bank/elaborate.log",
+      "original_sha256": "49b06ca2161a30d176311d8953f034b9c24f8acbe65984a18e7c06e1ec831d95",
+      "published_sha256": "1e5e1e4cb10587e7a95a004c6594453d56bc9acbae95d084cca655bc76a11140"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/burst_tag_ignores_row.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/burst_tag_ignores_row/console.log",
+      "original_sha256": "94909e32616522df0981c5f3e2cfcc76c1c718e510a78242e778a48045522e90",
+      "published_sha256": "8226d2386f0ba895c012556ef82ac33889d1c52c46f9d804bcd2eea32d70023a"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/burst_tag_ignores_row.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/burst_tag_ignores_row/compile.log",
+      "original_sha256": "f84906df53d1e902f12245355c0178b6f1714f235e29a2ad70fcb8f1bcc7e607",
+      "published_sha256": "83c10c6d915ca3d99fe827e1fa75b00bf502a6261b53d4ebd3963eeebf0fbc52"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/burst_tag_ignores_row.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/burst_tag_ignores_row/elaborate.log",
+      "original_sha256": "16f29bd20d62b2ae89cda1e58e51da1531eb675a8d51e575e8173799d7f6f3e3",
+      "published_sha256": "3f504beb17f676b2ad00e0865875e53294428743cb0688de37e2170aae5ec048"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/write_does_not_invalidate_buffer.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/write_does_not_invalidate_buffer/console.log",
+      "original_sha256": "60bfd114a86322c474087c782b3af0efa08ea558796be67fee9f801f9c2ab142",
+      "published_sha256": "a548123a45686a6d8a78af811eabff1b99d5e8c0e74f5ce603bc530adfe78b64"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/write_does_not_invalidate_buffer.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/write_does_not_invalidate_buffer/compile.log",
+      "original_sha256": "303c1c1fa0f679456fbe4799d1a3580a4dc8867bbd1ab32e48a20a82d537fb70",
+      "published_sha256": "a039a594fa26b748ff2637c07e2b37f2386a6ba3d3554cea506410999d379bc3"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/write_does_not_invalidate_buffer.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/write_does_not_invalidate_buffer/elaborate.log",
+      "original_sha256": "9ff610e70f95a7b437a4ddaa37a443d8cf8cb65ee0d8a4ce3b440ac8df41c607",
+      "published_sha256": "82034528eb5948de9816b109fe4a828657e10dd96550749100c88775657224c0"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/burst_miss_selects_wrong_beat.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/burst_miss_selects_wrong_beat/console.log",
+      "original_sha256": "847be27d6aec15f9c4e9dbf5cc852e1c809cd5fc565b867a5962eeaf0ee3838e",
+      "published_sha256": "8dda6af37fa333a677604eeda67e3074bbda3584c7ca905afec028136e569d19"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/burst_miss_selects_wrong_beat.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/burst_miss_selects_wrong_beat/compile.log",
+      "original_sha256": "76e5981c9a2877a3a4850ef77bedd6aaf0114ff411a09816421596b39f549fd7",
+      "published_sha256": "437af6ae7388f698232f7ae54459e4ecf2e6f71c4cf10b05de8cdf4f73840d8b"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/burst_miss_selects_wrong_beat.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/burst_miss_selects_wrong_beat/elaborate.log",
+      "original_sha256": "6723a78ad353045ddcd79c246263d2c92f727ca2fdd8ead4124dee37daf741c9",
+      "published_sha256": "aad9845cd177a29c6a46ae53e06d260cb6339ca8d5a69e37c5d043c8a6118d49"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/invalid_write_reports_success.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/invalid_write_reports_success/console.log",
+      "original_sha256": "168525a39c2835f09ffc30e085a972330af3d195b2137b344b8a6c1a526dc8ca",
+      "published_sha256": "54c8fcfd697657d1b30cb44d9ba0ab9ff237093e9fdcfc9fafefbb1c566d64d7"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/invalid_write_reports_success.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/invalid_write_reports_success/compile.log",
+      "original_sha256": "35f18b38a24793c5bc82e90d065d6fdc634f63225e11dad2a6a16dab49b54a4a",
+      "published_sha256": "e7de36167f69321a46fba18e7d5ac856b4515bbdf6cd78b7cf259d8bfa3e0871"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/invalid_write_reports_success.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/invalid_write_reports_success/elaborate.log",
+      "original_sha256": "0f6e3c11f69a7137d288d898ca26b65ed0bf7969fb481207fa6037dd5db1a55e",
+      "published_sha256": "2e29a0107cd02a4390641ab3b203a48a5c92e009b39c55b43df2999bd9034e94"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/held_response_valid_dropped.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/held_response_valid_dropped/console.log",
+      "original_sha256": "1d6b10eaec413b4cbc8bf8dafa91e45e081bfce9cd73bb6ed9f830273394cb3d",
+      "published_sha256": "0069bca3dd3925b46aee77d2ee9022275b624360286960239a3a354836d013f0"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/held_response_valid_dropped.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/held_response_valid_dropped/compile.log",
+      "original_sha256": "6b8722293701369f65a66ee52b086a0514988a01188875a63a6802453d07dd0c",
+      "published_sha256": "ba2de99422c41b07a3db4619e4b18c2cd9f0bf58ff76fa80f36278313856d1dd"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/held_response_valid_dropped.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/held_response_valid_dropped/elaborate.log",
+      "original_sha256": "f827d27515933d0a16d83e6bdd872062dcd1baf966b76f33f2f62565c2ccf474",
+      "published_sha256": "341022b06842ac54f5aa20cddaf552beb9253f12aed1893043fc660aabbe13b5"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/held_response_data_changes.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/held_response_data_changes/console.log",
+      "original_sha256": "859471863f49f17b2fbe2c8aa78703f9eb7eb499dee8669e54930ad93a64bba0",
+      "published_sha256": "dead7049a6fb3eebfe3fc8563b8c9c7ff642aebcc9c77cdd7f64c7b1a3940502"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/held_response_data_changes.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/held_response_data_changes/compile.log",
+      "original_sha256": "c180874a8d572ef362f84f2d372fa9aace880837edd4810e35f12193bdbf2b43",
+      "published_sha256": "4310465285f51ca769766b3dab79ca057487f00c385732cf9f0024a807dce172"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/held_response_data_changes.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/held_response_data_changes/elaborate.log",
+      "original_sha256": "e37afe8aee21b14f1983b654bab1572690974791fd5f4b86bf1ce1375aca82a1",
+      "published_sha256": "6acbf42a456410da3e8dfeafcd9d77473aef1576e6ed49d6ad9e535dbaa440bd"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/refresh_blocked_by_held_response.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/refresh_blocked_by_held_response/console.log",
+      "original_sha256": "e87caf0b3a47af911be1e770b65ad01bb353f0e624264b9618a62733507c3593",
+      "published_sha256": "b03e57ded267a6678763deea6cc05fe2cd94224d92cd0b595e56a064f19a4add"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/refresh_blocked_by_held_response.compile.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/refresh_blocked_by_held_response/compile.log",
+      "original_sha256": "7497a6d2f9894cac85ffbd4ca45e5fc788dd0653c357e442c71262141ab6d3c9",
+      "published_sha256": "550988097dea6d6f5056fc493526bdc9d4b0ed261c464ebfb152e1d29f9dfdc7"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/cpp_mutations/refresh_blocked_by_held_response.elaborate.log",
+      "source": "build/cpp_reference/uvm/20261029T180646563728Z/refresh_blocked_by_held_response/elaborate.log",
+      "original_sha256": "6fc1f1d6f7a92b3ff9673bb295a58c99dfb19d7aa6d4354e6f681abcec17c177",
+      "published_sha256": "41ea368aea66d63c331067cb89b5f561084c74161ca5605a401d5be084faba97"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/full_features/results.json",
+      "source": "build/cpp_reference/uvm/20261029T181543928380Z/results.json",
+      "original_sha256": "b82450ce845c8a3781923dca4f2c94a8b5dbf8b1776a17c4782aafbe10c0551e",
+      "published_sha256": "aae770725d2aead557d8dd4e76d5ec4f3a4b2fd7d15fc04d9053a3dcc453cd8f"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/full_features/0_p1_b4_s0_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T181543928380Z/p1_b4_s0_20261029_0_dual/console.log",
+      "original_sha256": "fe076f07dd828b8901e014d1693e52c2a2d61846424a96d8af8b34a0bf9384a6",
+      "published_sha256": "046c3f0244e3543c1719f47f32a9105787302142cbdc12abda033cc86c14fda8"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/full_features/1_p1_b4_s0_57_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T181543928380Z/p1_b4_s0_57_0_dual/console.log",
+      "original_sha256": "0ae7797e4cacf1dfb284e483ad18f3e1ad7bfb225609aa88431832bcca8863b5",
+      "published_sha256": "8ed4d256c742e491d56169d30e8505b2d97cb9f3b339ed2a50994de370b245b4"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/full_features/2_p1_b4_s0_991_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T181543928380Z/p1_b4_s0_991_0_dual/console.log",
+      "original_sha256": "1c31386fa9779f5120fd680dd026b076182f5953b2f9d1645c6c8b4315ddb063",
+      "published_sha256": "292df3a9eea3f3aad8c8bcaf568672d585776194772d9b3a5c6c7bf533905ee3"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/full_features/data_fault_control.log",
+      "source": "build/cpp_reference/uvm/20261029T181543928380Z/data_fault_control/console.log",
+      "original_sha256": "c2c709b868fdc88ff0fd58ca5b9c9e88a6b5ee82d6222f17c3fbac702e904122",
+      "published_sha256": "aa9fd105382c5b00b1b0218aeb169cc435f66fa48e9c91504d71111f116d6faa"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/questa_dpi/results.json",
+      "source": "build/cpp_reference/uvm/20261029T181113833294Z/results.json",
+      "original_sha256": "338f205c3b1e2b7c2a2b8cccbb3ec574a3dd7e2779c7c6d985fc166062c9751a",
+      "published_sha256": "fd0ded6e2f03ee205f17a577245091a62797c269c8139b84b12997c46fbc4b61"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/questa_dpi/0_p1_b4_s0_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T181113833294Z/p1_b4_s0_20261029_0_dual/console.log",
+      "original_sha256": "8a8925a6f66ebf4671cd813a94b91e78cbf574f006524c17ffa8b5e44e125625",
+      "published_sha256": "dd097d6c8ade3264121a2d593d59979b787428deb133fe3b37ef5428e98ffcee"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/questa_dpi/data_fault_control.log",
+      "source": "build/cpp_reference/uvm/20261029T181113833294Z/data_fault_control/console.log",
+      "original_sha256": "7e430b25dbbbe7337bb41ba22299c3329440c922d8e6c0b0ebe1b54be1c982f6",
+      "published_sha256": "86c4eb4c9e83f24f7f622f6de88f8e93df5db1a172687c8419f251d94532f5a3"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/runtime_benchmark/results.json",
+      "source": "build/cpp_reference/uvm/20261029T182524704794Z/results.json",
+      "original_sha256": "d806f322e6a24c0e5da7ee1ea62ce5fea88bdcd768bfe89b54939cf1cde8bb07",
+      "published_sha256": "ac59156681e268cc1e3d46bbfac8834f5600009f5bb7548e25a79cf15947a63d"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/runtime_benchmark/0_p1_b4_s0_20261029_sv.log",
+      "source": "build/cpp_reference/uvm/20261029T182524704794Z/p1_b4_s0_20261029_0_sv/console.log",
+      "original_sha256": "eeb38247b99159ef4075010fc81de976464e22831445a633e3d1a827fb56fa2e",
+      "published_sha256": "da5aae9f7dc2b21b3f5a4a39a7c758f0c24e06ec6a697393736b1406a31888cd"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/runtime_benchmark/1_p1_b4_s0_20261029_cpp.log",
+      "source": "build/cpp_reference/uvm/20261029T182524704794Z/p1_b4_s0_20261029_0_cpp/console.log",
+      "original_sha256": "6cdf580f515533b59bce5b1ff73b56567edc6ef09b7717f474436cd2a8b3b206",
+      "published_sha256": "7d9b2c0ece067e4cc6fab941f25ce80ee62e8e5874a8a2844e7663a4c945ef9d"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/runtime_benchmark/2_p1_b4_s0_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T182524704794Z/p1_b4_s0_20261029_0_dual/console.log",
+      "original_sha256": "35cd2b934445db935f05f615ae21455c80eaa0e0d9315b18147512b098264b33",
+      "published_sha256": "de925e400431f6be6538397fcc91b8abbc5db7ab891b7f5d7a068e6d11eadcd1"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/runtime_benchmark/3_p1_b4_s0_20261029_sv.log",
+      "source": "build/cpp_reference/uvm/20261029T182524704794Z/p1_b4_s0_20261029_1_sv/console.log",
+      "original_sha256": "da352eb0ded1d407ced8603a7fc52dcbcc5fcdb1843b97fcdbe4cc612baf2970",
+      "published_sha256": "1b08c8833e8dbe21991e1390787acd77d38194a89b3217d1126c96aa5f69a874"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/runtime_benchmark/4_p1_b4_s0_20261029_cpp.log",
+      "source": "build/cpp_reference/uvm/20261029T182524704794Z/p1_b4_s0_20261029_1_cpp/console.log",
+      "original_sha256": "60f3feaf652901c89ec4d474d1ffe824472881ef8c32b9ea38230f46d0dca0f4",
+      "published_sha256": "855ff9e61e8729ffe72316000ac3a315adf6e9d7666980e5851bbb562cbed7b6"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/runtime_benchmark/5_p1_b4_s0_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T182524704794Z/p1_b4_s0_20261029_1_dual/console.log",
+      "original_sha256": "1cdbafbf579f5c3135ba97fdba3157498961e6c331ab3de450c26f4d5d540151",
+      "published_sha256": "c7b64e35df649e3e7683fca64818763d3e7dde6b5d1781122a48ea35e54708a8"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/runtime_benchmark/6_p1_b4_s0_20261029_sv.log",
+      "source": "build/cpp_reference/uvm/20261029T182524704794Z/p1_b4_s0_20261029_2_sv/console.log",
+      "original_sha256": "ab6c8c147e4eb9c4a3c161cc392c0806f84826ba0e8416d71c1e419d79644717",
+      "published_sha256": "f196102b6d0f4df3556e449876cfd7c6a69b281f93be7ff90275d28750547f1d"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/runtime_benchmark/7_p1_b4_s0_20261029_cpp.log",
+      "source": "build/cpp_reference/uvm/20261029T182524704794Z/p1_b4_s0_20261029_2_cpp/console.log",
+      "original_sha256": "c72f2ba54ce0ba22160275d1d31a671f996718db5a82758a495001f61b60551a",
+      "published_sha256": "f856862d4bc028dcf9e254575aa7d825b68ac45643021384744215fb00590f37"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/runtime_benchmark/8_p1_b4_s0_20261029_dual.log",
+      "source": "build/cpp_reference/uvm/20261029T182524704794Z/p1_b4_s0_20261029_2_dual/console.log",
+      "original_sha256": "7b51858d194d1b4251fa94e888a55f8e68987ae186d1ebe8cdb8e1648fd60ea3",
+      "published_sha256": "e1db0ba6cb9de8c72b3fd5b601b60da0694728eacba8196b9e722d3d3ecffdf7"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/runtime_benchmark/data_fault_control.log",
+      "source": "build/cpp_reference/uvm/20261029T182524704794Z/data_fault_control/console.log",
+      "original_sha256": "98cd3d97d66d43470da3cbc4d6c052985ac99eba640137aa5e556cd997f01093",
+      "published_sha256": "1066a36650575bfc57dcd3e1c89577aeb10c8df938a91e33cd02991af7c12faa"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/standalone/results.json",
+      "source": "build/cpp_reference/standalone/20261029T182932449277Z/results.json",
+      "original_sha256": "d57b86b1d302c88c5a3b379bf6a351ac9d02f940d41d8cb22ccf8ff55d9d0f86",
+      "published_sha256": "0aa7dedd4a83132f3b05b94ab62bc8f03d3917fe1b943d25eced4c18234df51b"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/standalone/selftest.log",
+      "source": "build/cpp_reference/standalone/20261029T182932449277Z/selftest.log",
+      "original_sha256": "fdcc958e7a27ec2ee762582f560b627c1af06070dec00ae4071a05dff075599c",
+      "published_sha256": "fdcc958e7a27ec2ee762582f560b627c1af06070dec00ae4071a05dff075599c"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/standalone/compiler_version.log",
+      "source": "build/cpp_reference/standalone/20261029T182932449277Z/compiler_version.log",
+      "original_sha256": "e86b465bd4c09bc14a00aa7a0bbb90bc3198d3ae6576433ef5d80e905f962647",
+      "published_sha256": "e86b465bd4c09bc14a00aa7a0bbb90bc3198d3ae6576433ef5d80e905f962647"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/standalone/vectors.log",
+      "source": "build/cpp_reference/standalone/20261029T182932449277Z/vectors.log",
+      "original_sha256": "4862ef326390068cb05b34c8ee0b0950189a02356f21639a5b20f14d7dbd39e0",
+      "published_sha256": "4862ef326390068cb05b34c8ee0b0950189a02356f21639a5b20f14d7dbd39e0"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/standalone/cpp_benchmark.jsonl",
+      "source": "build/cpp_reference/standalone/20261029T182932449277Z/cpp_benchmark.jsonl",
+      "original_sha256": "896e3ae5ce0ed44af2f208fcbb3525e0c48d3902554be893fa4d760fbcefea68",
+      "published_sha256": "896e3ae5ce0ed44af2f208fcbb3525e0c48d3902554be893fa4d760fbcefea68"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/standalone/cross_model_checks.json",
+      "source": "build/cpp_reference/publication_vectors/cross_model_checks.json",
+      "original_sha256": "973760a940383ad617796421d654df19dcf2e8cb15dd0dffd4e3c11b64120c87",
+      "published_sha256": "04236e30098a0a59b2ddf4bf13f3c507239aba66b6d23e7de534c899d0c50da1"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/microbenchmark/results.json",
+      "source": "build/cpp_reference/microbenchmark/20261029T182418282036Z/results.json",
+      "original_sha256": "b072cc6d161011300ca5412083e7a7804f92873300fe9e76a73019b194349620",
+      "published_sha256": "e46f7417a0ea2779d62f76840291fa6061642232f5b4c77cfa9930bba441231b"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/microbenchmark/simulation.log",
+      "source": "build/cpp_reference/microbenchmark/20261029T182418282036Z/simulation.log",
+      "original_sha256": "7d360074f2de56d3ec2e5fcbd51c5da69240aeb70b9f403dd7e6f9d8dc0e8627",
+      "published_sha256": "f079098ac460673bb90381d1087a7042e6cc4fa8b7a220d9927e39202a42e948"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/microbenchmark/native_prediction.log",
+      "source": "build/cpp_reference/microbenchmark/20261029T182418282036Z/native_prediction.log",
+      "original_sha256": "848b8d0f56b975ec6ae9629bccf9b7ec6d24bd7c83329b6dfb6e77641dc59a6e",
+      "published_sha256": "848b8d0f56b975ec6ae9629bccf9b7ec6d24bd7c83329b6dfb6e77641dc59a6e"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/dpi_smoke/results.json",
+      "source": "build/cpp_reference/dpi_smoke/results.json",
+      "original_sha256": "afeb68ca8d31f63cfe7a3fb2bcfb374e29540a28b16cc2c7e8a4d2c01e9f0445",
+      "published_sha256": "5aee27c9864c47dee4cfe2509c6d07455645a6069d3175806efa4a3582dd2d5d"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/dpi_smoke/questa.log",
+      "source": "build/cpp_reference/dpi_smoke/questa/simulation.log",
+      "original_sha256": "0e8e497dbed47289f8bc4c333e7fde96a1548b69a7ae5eadf8970bd047d5ae8a",
+      "published_sha256": "34d8ccce730985c88231433cfc01785ee2e18f1d7edd9933f1a45527a8021e15"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/dpi_smoke/xsim.log",
+      "source": "build/cpp_reference/dpi_smoke/xsim/simulation.log",
+      "original_sha256": "af0e83faaf8bda9d2c325849c30d564d6d787146bda4c2506366a4440b17ca2e",
+      "published_sha256": "7a98e62e0f64d9a03ccc07f18f0973173e23ffe1700a4939af294b330e73e180"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/original_questa/results.json",
+      "source": "build/uvm/starter/results.json",
+      "original_sha256": "e40b0e0cbdf6cb7916ddaaf9276fa65d33501b565a7af59aeb6b6bc455bcaad3",
+      "published_sha256": "81cb10487e1bad9faf8aa358fc4df8e1c21118da566755a4b743f50f21333bdd"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/original_questa/p0_b1_s0.log",
+      "source": "build/uvm/starter/p0_b1_s0_console.log",
+      "original_sha256": "89060400e8c25c89482c3fb79c2aa8ad93d4ba65acd99c811db2fdd69f738236",
+      "published_sha256": "afd8b9baa3c88a41b813dc54ba12e3efbb25d26bcc99cdbfefe6b9b8d7bb5408"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/original_questa/p0_b1_s1.log",
+      "source": "build/uvm/starter/p0_b1_s1_console.log",
+      "original_sha256": "0ab998a8d0c6d3541e3cc6218d46c33632cf5e2a060a72fdaf01f51d23d69980",
+      "published_sha256": "3b84af3995ce6bd864f8929d2a7ee1ef4fbbcf6a36077d58ca6e951a5b1b00ac"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/original_questa/p0_b4_s0.log",
+      "source": "build/uvm/starter/p0_b4_s0_console.log",
+      "original_sha256": "21e6b3523c4a713692d78ff08bd4bf970d6272009f1003f591c9391bf68baa17",
+      "published_sha256": "59e03fc1ace6200cad1c62084160242ea97641690e81a29028bc4249d383d0e0"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/original_questa/p0_b4_s1.log",
+      "source": "build/uvm/starter/p0_b4_s1_console.log",
+      "original_sha256": "6e25f05ff6b9bc997b7a91ae868bc43d177242648d6209cb76e473f2116efbfc",
+      "published_sha256": "025fac31803a8aea3b4e37edde8b37f4bf6eabdc5691ea672f8d977c8520a122"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/original_questa/p1_b1_s0.log",
+      "source": "build/uvm/starter/p1_b1_s0_console.log",
+      "original_sha256": "4faa12441cace9a61a56864fc05deafce15cfd4328195325173a31d9355aefdc",
+      "published_sha256": "354bb8e0d95d02209943fd4625ab3a60470d90372865a4c58d489e6fdb2159cb"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/original_questa/p1_b1_s1.log",
+      "source": "build/uvm/starter/p1_b1_s1_console.log",
+      "original_sha256": "97dd8a2593a1e74b5118d63a0e33f6d96befd89c86f6d1f92af948eca8c13231",
+      "published_sha256": "d428ec867bd2184e721e84d7b6dc1432e7d0be71778795595192b707c2e9cba3"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/original_questa/p1_b4_s0.log",
+      "source": "build/uvm/starter/p1_b4_s0_console.log",
+      "original_sha256": "56a605230d572df05368f92d37e7c2b28ac5abc7bf8ba68ee9a6d9a3ac4f2d89",
+      "published_sha256": "a6b64d9dbe35adf9aa986977e389651b88a433e17f120a0524c06998b4857649"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/original_questa/p1_b4_s1.log",
+      "source": "build/uvm/starter/p1_b4_s1_console.log",
+      "original_sha256": "5b6adeba8ea9b39b7a853e6a5ea6335035a06fd6da66e39a9c116a0540b06162",
+      "published_sha256": "73fe4c1c1d7e39913d7c3c54cc6afad2f50828ceaf79e3556b2e515219ba261a"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/original_questa/data_fault_control.log",
+      "source": "build/uvm/starter/data_fault_control_console.log",
+      "original_sha256": "f1ab8314b0d34166b398bbda3ef625a0ab759fa468c5162cfb8586081b6402fc",
+      "published_sha256": "0a11df3e052fbf430b217d99a411279041490fed619d3cf77dcf492ff21b74e9"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/original_python/results.json",
+      "source": "build/cpp_reference/baseline/results.json",
+      "original_sha256": "3580ae40f3745ea079d35ad197b55f5143ccb8e015c36de3e453c44f2dd9a6b0",
+      "published_sha256": "6048b3114b8a98df36cc69cc115da34594aa62d6851bc50f76e6330cdd647db2"
+    },
+    {
+      "path": "evidence/cpp_reference/2026-10-29/index.json",
+      "source": "build/cpp_reference/publication_index.json",
+      "original_sha256": "8c0acf55e061a185aa954aba6516731c3a12b681ea0b9cd1d5fc9e006bb04080",
+      "published_sha256": "e067ecce7780670d80cb8ae1d4aeb93844b086aee85be9e014b2dcdbfc64868c"
     }
   ],
-  "last_extended_utc": "2026-10-29T05:11:03.918548+00:00"
+  "last_extended_utc": "2026-10-29T18:31:27.354664+00:00"
 }

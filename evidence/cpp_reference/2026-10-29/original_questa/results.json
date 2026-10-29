@@ -1,0 +1,118 @@
+{
+  "status": "pass",
+  "scope": "native UVM simulation; no hardware access",
+  "uvm_version": "1.2",
+  "mode": "starter-seeded-procedural-stimulus",
+  "sv_constrained_randomization_executed": false,
+  "sv_covergroups_executed": false,
+  "timestamp_utc": "2026-10-29T18:10:59.559411+00:00",
+  "seed": 20261029,
+  "random_cases": 12,
+  "profiles": {
+    "p0_b1_s0": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "bank_family_bins": 20,
+      "pipelined": 0,
+      "swizzle": 0,
+      "burst_words": 1
+    },
+    "p0_b1_s1": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "bank_family_bins": 20,
+      "pipelined": 0,
+      "swizzle": 1,
+      "burst_words": 1
+    },
+    "p0_b4_s0": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "bank_family_bins": 20,
+      "pipelined": 0,
+      "swizzle": 0,
+      "burst_words": 4
+    },
+    "p0_b4_s1": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "bank_family_bins": 20,
+      "pipelined": 0,
+      "swizzle": 1,
+      "burst_words": 4
+    },
+    "p1_b1_s0": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "bank_family_bins": 20,
+      "pipelined": 1,
+      "swizzle": 0,
+      "burst_words": 1
+    },
+    "p1_b1_s1": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "bank_family_bins": 20,
+      "pipelined": 1,
+      "swizzle": 1,
+      "burst_words": 1
+    },
+    "p1_b4_s0": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "bank_family_bins": 20,
+      "pipelined": 1,
+      "swizzle": 0,
+      "burst_words": 4
+    },
+    "p1_b4_s1": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "bank_family_bins": 20,
+      "pipelined": 1,
+      "swizzle": 1,
+      "burst_words": 4
+    },
+    "data_fault_control": {
+      "expected_scoreboard_error_detected": true,
+      "id": "TMA_READ_DATA"
+    }
+  },
+  "sha256": {
+    "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+    "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+    "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+    "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+    "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+    "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+    "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+    "rtl/tma_sdram_controller.sv": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+    "rtl/tma_sdram_copy_system.sv": "cddbd836f8c44517454202559bee2bf6c0831e7568368edd3c691d42f447addf",
+    "tb/tma_sdram_model.sv": "49df16b3595093d1a8467d05f28b6f5202eb17b81bcd4942876a9a009c917219",
+    "tb/uvm/tma_uvm_if.sv": "d4dc617e0b681286e77d7d5fbd5c348e3117442ded38db9fe22ffa85fabbe04f",
+    "tb/uvm/tma_uvm_pkg.sv": "6940ab04fefbda768cb8714135e5b30436325f68b8deefa9d2ee105b5c308873",
+    "tb/uvm/tma_uvm_agent.svh": "d5fb058b79791b4948bfff860395024d61e39a40c0536ed513d5c9191b24f287",
+    "tb/uvm/tma_uvm_scoreboard.svh": "4ed5026c6cf50a3ed8a5c1addf7512c1974dda7266b5b8deb218ea55d0a317d9",
+    "tb/uvm/tma_uvm_coverage.svh": "5d83e6d5971dee1a7532c9228df17934b3b0fbf6e377515ed6f9585f9310775e",
+    "tb/uvm/tma_uvm_sequences.svh": "b3dab6439feb6865280a17321d620aa5737cc8a8772d866af2a7778b57df380b",
+    "tb/uvm/tb_tma_uvm.sv": "a160c24359c21ace7cab7f59b94b236a2e2f83652162f0c4620e6c5f800f8ad3",
+    "scripts/run_uvm_tests.py": "df9632aa37331071cbae4041893b5ea806f6bf94e1e3b600c4fab9f55f9617cc"
+  },
+  "uvm_package_sha256": "53db9b260a652c160e5733c2e9d53f9e5ef5fe60080d8d7115efc929775a1aa2"
+}

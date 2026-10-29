@@ -25,7 +25,7 @@ python scripts/check_portfolio.py
 python scripts/read_board_status.py --transcript evidence/hardware/2026-10-29/5_pipelined_burst4/probe.log
 ```
 
-The first command runs the 58 Python tests. The second checks the published
+The first command runs the 61 Python tests. The second checks the published
 record hashes, actual source bytes, hardware packet decoding/ratios, UVM reports
 and local documentation links. The third decodes saved digital JTAG evidence.
 These checks do not establish a fresh RTL or physical-board pass.
@@ -66,6 +66,22 @@ control succeeds only when the designated checker detects the intended fault.
 Logs and hashes are written under `build/`; a failed run cannot retain a stale
 successful summary. The published current focused result is separate from the
 historical full-project run.
+
+The additive C++17/DPI workflow has separate commands and measured results:
+
+```powershell
+python scripts/run_cpp_reference.py
+python scripts/run_dpi_smoke.py
+python scripts/run_dpi_uvm_tests.py --sim xsim --checker dual
+python scripts/run_xsim_full.py --checker dual --profile p1_b4_s0 --full --seed 20261029 --seed 57 --seed 991
+python scripts/check_cpp_evidence.py
+```
+
+See [the C++ model and simulator compatibility](cpp_reference.md) and
+[the controlled performance comparison](reference_performance.md). A C++17
+`g++` compiler is required for live model/DPI builds; offline evidence validation
+remains standard-library Python. XSim's Windows coverage launcher uses a
+verified short-path alias when the checkout contains spaces.
 
 The [RTL mutation campaign](mutation.md) tests the checkers in `p1_b4_s0` with
 34 directed descriptors plus cache probes. It compiles temporary source copies,
