@@ -25,7 +25,7 @@ python scripts/check_portfolio.py
 python scripts/read_board_status.py --transcript evidence/hardware/2026-10-29/5_pipelined_burst4/probe.log
 ```
 
-The first command runs the 52 Python tests. The second checks the published
+The first command runs the 58 Python tests. The second checks the published
 record hashes, actual source bytes, hardware packet decoding/ratios, UVM reports
 and local documentation links. The third decodes saved digital JTAG evidence.
 These checks do not establish a fresh RTL or physical-board pass.
@@ -52,6 +52,8 @@ procedural stimulus and scenario counters. [UVM details](uvm.md).
 python scripts/run_uvm_tests.py
 # Single profile and explicit stimulus seed
 python scripts/run_uvm_tests.py --profile p1_b4_s0 --seed 20261029 --random-cases 12
+# Native UVM against isolated RTL defects, with clean controls
+python scripts/run_mutation_tests.py
 # Focused SDRAM/board regression, including UVM: 35 invocations
 python scripts/run_sdram_tests.py
 # Full project regression, including local studies and UVM: 44 invocations
@@ -64,6 +66,11 @@ control succeeds only when the designated checker detects the intended fault.
 Logs and hashes are written under `build/`; a failed run cannot retain a stale
 successful summary. The published current focused result is separate from the
 historical full-project run.
+
+The [RTL mutation campaign](mutation.md) tests the checkers in `p1_b4_s0` with
+34 directed descriptors plus cache probes. It compiles temporary source copies,
+requires a specific checker diagnosis for every defect and verifies unchanged
+canonical source hashes. It is separate from the eight-profile nominal matrix.
 
 Optional licensed features:
 

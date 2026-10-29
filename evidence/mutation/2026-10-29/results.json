@@ -1,0 +1,483 @@
+{
+  "status": "pass",
+  "scope": "native UVM RTL mutation campaign; p1_b4_s0 only; no hardware access",
+  "timestamp_utc": "2026-10-29T04:56:05.932721+00:00",
+  "seed": 20261029,
+  "configuration": {
+    "pipelined": 1,
+    "burst_words": 4,
+    "swizzle": 0
+  },
+  "simulator": "Questa Intel Starter FPGA Edition-64 vsim 2024.3 Simulator 2024.09 Sep 10 2024",
+  "uvm_version": "1.2",
+  "random_cases": 0,
+  "sv_constrained_randomization_executed": false,
+  "sv_covergroups_executed": false,
+  "sha256": {
+    "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+    "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+    "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+    "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+    "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+    "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+    "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+    "rtl/tma_sdram_controller.sv": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+    "rtl/tma_sdram_copy_system.sv": "cddbd836f8c44517454202559bee2bf6c0831e7568368edd3c691d42f447addf",
+    "tb/tma_sdram_model.sv": "49df16b3595093d1a8467d05f28b6f5202eb17b81bcd4942876a9a009c917219",
+    "tb/uvm/tma_uvm_if.sv": "d4dc617e0b681286e77d7d5fbd5c348e3117442ded38db9fe22ffa85fabbe04f",
+    "tb/uvm/tma_uvm_pkg.sv": "6940ab04fefbda768cb8714135e5b30436325f68b8deefa9d2ee105b5c308873",
+    "tb/uvm/tma_uvm_agent.svh": "d5fb058b79791b4948bfff860395024d61e39a40c0536ed513d5c9191b24f287",
+    "tb/uvm/tma_uvm_scoreboard.svh": "4ed5026c6cf50a3ed8a5c1addf7512c1974dda7266b5b8deb218ea55d0a317d9",
+    "tb/uvm/tma_uvm_coverage.svh": "5d83e6d5971dee1a7532c9228df17934b3b0fbf6e377515ed6f9585f9310775e",
+    "tb/uvm/tma_uvm_sequences.svh": "b3dab6439feb6865280a17321d620aa5737cc8a8772d866af2a7778b57df380b",
+    "tb/uvm/tb_tma_uvm.sv": "a160c24359c21ace7cab7f59b94b236a2e2f83652162f0c4620e6c5f800f8ad3",
+    "scripts/run_uvm_tests.py": "df9632aa37331071cbae4041893b5ea806f6bf94e1e3b600c4fab9f55f9617cc",
+    "tb/uvm/tma_mutation_pkg.sv": "e43fd9dc3a57728f1f3898f90e0ed7a8fc3aa43dcaf45bf82ed84cc4204133e0",
+    "scripts/mutation_catalog.py": "515183e327a69a7b29116992a172f01cdfdfc62c6e99e08a33f6fe0e48fc0aae",
+    "scripts/run_mutation_tests.py": "5013343e2cbac8a3c14ef2a79dee467b5853dc67a532a4f80e8234c728d25407"
+  },
+  "uvm_package_sha256": "53db9b260a652c160e5733c2e9d53f9e5ef5fe60080d8d7115efc929775a1aa2",
+  "generated_top_sha256": "23c946e72a0d7a0bfc767b27580518fd60c5aa451f50a6b1437c7542e84634ee",
+  "controls": {
+    "before": {
+      "name": "nominal_before",
+      "outcome": "pass",
+      "summary": {
+        "descriptors": 34,
+        "read_checks": 2686,
+        "write_checks": 2686,
+        "memory_checks": 25352,
+        "bank_family_bins": 20,
+        "pipelined": 1,
+        "swizzle": 0,
+        "burst_words": 4
+      },
+      "elapsed_seconds": 39.844,
+      "returncode": 0
+    },
+    "after": {
+      "name": "nominal_after",
+      "outcome": "pass",
+      "summary": {
+        "descriptors": 34,
+        "read_checks": 2686,
+        "write_checks": 2686,
+        "memory_checks": 25352,
+        "bank_family_bins": 20,
+        "pipelined": 1,
+        "swizzle": 0,
+        "burst_words": 4
+      },
+      "elapsed_seconds": 37.391,
+      "returncode": 0
+    }
+  },
+  "mutations": [
+    {
+      "name": "fifo_data_bit_flipped",
+      "source": "rtl/tma_copy_engine_pipelined.sv",
+      "before": "fifo_data[tail_q] <= rd_rsp_data;",
+      "after": "fifo_data[tail_q] <= rd_rsp_data ^ 16'h0001;",
+      "checker_ids": [
+        "TMA_WRITE_DATA"
+      ],
+      "requirement": "FIFO data must equal the ordered read response",
+      "model_diagnostic": "",
+      "source_sha256": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+      "mutated_sha256": "9b24da08cea16f54cd04270b80095daee4354f801b8f36f188e9a101e40af508",
+      "outcome": "detected",
+      "checker": "TMA_WRITE_DATA",
+      "severity": "ERROR",
+      "diagnostic": "DMA write addr=00000000 data=a55b expected_addr=00000000 data=a55a",
+      "elapsed_seconds": 20.765,
+      "returncode": 0
+    },
+    {
+      "name": "fifo_destination_bit_flipped",
+      "source": "rtl/tma_copy_engine_pipelined.sv",
+      "before": "fifo_dst[tail_q] <= pending_dst_q;",
+      "after": "fifo_dst[tail_q] <= pending_dst_q ^ ADDR_W'(2);",
+      "checker_ids": [
+        "TMA_WRITE_DATA"
+      ],
+      "requirement": "FIFO must retain each response's destination address",
+      "model_diagnostic": "",
+      "source_sha256": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+      "mutated_sha256": "041c6c65883148fc19f1403e0b3530d92c50fd7f047e5b66aa9b1c73d2c0139b",
+      "outcome": "detected",
+      "checker": "TMA_WRITE_DATA",
+      "severity": "ERROR",
+      "diagnostic": "DMA write addr=00000002 data=a55a expected_addr=00000000 data=a55a",
+      "elapsed_seconds": 20.485,
+      "returncode": 0
+    },
+    {
+      "name": "fifo_head_skips_entry",
+      "source": "rtl/tma_copy_engine_pipelined.sv",
+      "before": "if (pop) head_q <= head_q + 1'b1;",
+      "after": "if (pop) head_q <= head_q + 2'd2;",
+      "checker_ids": [
+        "TMA_WRITE_DATA"
+      ],
+      "requirement": "Write ordering must advance exactly one FIFO entry",
+      "model_diagnostic": "",
+      "source_sha256": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+      "mutated_sha256": "482309f57d34cbd54df79bea139d486be28db00fc3aa45aa9e612c926f89922f",
+      "outcome": "detected",
+      "checker": "TMA_WRITE_DATA",
+      "severity": "ERROR",
+      "diagnostic": "DMA write addr=xxxxxxxx data=xxxx expected_addr=00000002 data=a513",
+      "elapsed_seconds": 20.735,
+      "returncode": 0
+    },
+    {
+      "name": "fifo_head_never_advances",
+      "source": "rtl/tma_copy_engine_pipelined.sv",
+      "before": "if (pop) head_q <= head_q + 1'b1;",
+      "after": "if (pop) head_q <= head_q;",
+      "checker_ids": [
+        "TMA_WRITE_DATA"
+      ],
+      "requirement": "Consecutive writes must not reuse a consumed FIFO entry",
+      "model_diagnostic": "",
+      "source_sha256": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+      "mutated_sha256": "cb7b8f860e08bc7c2c314cb49522ce859f9dbbb134aee1f2d2474b8065351d7b",
+      "outcome": "detected",
+      "checker": "TMA_WRITE_DATA",
+      "severity": "ERROR",
+      "diagnostic": "DMA write addr=00000000 data=a55a expected_addr=00000002 data=a513",
+      "elapsed_seconds": 20.5,
+      "returncode": 0
+    },
+    {
+      "name": "write_offered_when_fifo_empty",
+      "source": "rtl/tma_copy_engine_pipelined.sv",
+      "before": "!drop_writes_q && (used_q != 0)",
+      "after": "!drop_writes_q && (used_q == 0)",
+      "checker_ids": [
+        "TMA_WRITE_DATA",
+        "TMA_WRITE_COUNT"
+      ],
+      "requirement": "An empty FIFO must never produce a write",
+      "model_diagnostic": "",
+      "source_sha256": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+      "mutated_sha256": "902b601611972a9d49d7f70bd096b492676d1ed9a93f63a0b9b049ad69f1e336",
+      "outcome": "detected",
+      "checker": "TMA_WRITE_DATA",
+      "severity": "ERROR",
+      "diagnostic": "DMA write addr=xxxxxxxx data=xxxx expected_addr=00000000 data=a55a",
+      "elapsed_seconds": 20.515,
+      "returncode": 0
+    },
+    {
+      "name": "completion_count_increments_twice",
+      "source": "rtl/tma_copy_engine_pipelined.sv",
+      "before": "completed_elements <= completed_elements + 1'b1;",
+      "after": "completed_elements <= completed_elements + 2'd2;",
+      "checker_ids": [
+        "TMA_STATUS"
+      ],
+      "requirement": "Completed elements count acknowledged writes exactly once",
+      "model_diagnostic": "",
+      "source_sha256": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+      "mutated_sha256": "b272d1be09addd96f2ef3845f6deb8e8866677104b98fb476d72ef92d7844766",
+      "outcome": "detected",
+      "checker": "TMA_STATUS",
+      "severity": "ERROR",
+      "diagnostic": "status code=0 count=24 expected_code=0 count=12",
+      "elapsed_seconds": 20.719,
+      "returncode": 0
+    },
+    {
+      "name": "completion_before_drain",
+      "source": "rtl/tma_copy_engine_pipelined.sv",
+      "before": "if (allocation_done_q && !slot_valid_q && !read_pending_q &&\n                        (used_q == 0) && !write_pending_q)",
+      "after": "if (allocation_done_q)",
+      "checker_ids": [
+        "TMA_READ_STABILITY",
+        "TMA_STATUS",
+        "TMA_INCOMPLETE"
+      ],
+      "requirement": "Descriptor completion must wait for all reads and writes to drain",
+      "model_diagnostic": "",
+      "source_sha256": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+      "mutated_sha256": "59b48c00628033836f0d6f0a27c2fa1b7d5df73d9d895954dba34e811eb0f69f",
+      "outcome": "detected",
+      "checker": "TMA_READ_STABILITY",
+      "severity": "ERROR",
+      "diagnostic": "Stalled DMA read request changed",
+      "elapsed_seconds": 20.641,
+      "returncode": 0
+    },
+    {
+      "name": "late_bounds_check_disabled",
+      "source": "rtl/tma_copy_engine_pipelined.sv",
+      "before": "wire bad_pair = (gen_src > SRC_LAST) || (gen_dst > DST_LAST);",
+      "after": "wire bad_pair = 1'b0;",
+      "checker_ids": [
+        "TMA_READ_COUNT",
+        "TMA_WRITE_COUNT",
+        "TMA_STATUS"
+      ],
+      "requirement": "Out-of-bounds descriptors must stop at the legal committed prefix",
+      "model_diagnostic": "",
+      "source_sha256": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+      "mutated_sha256": "67d77c876e694b9469d38e7cd478ef3f7fe90d7eda4a881391426a76196f6b42",
+      "outcome": "detected",
+      "checker": "TMA_READ_COUNT",
+      "severity": "ERROR",
+      "diagnostic": "Unexpected DMA read request",
+      "elapsed_seconds": 35.093,
+      "returncode": 0
+    },
+    {
+      "name": "source_column_uses_row_stride",
+      "source": "rtl/tma_addr_gen.sv",
+      "before": "src_addr <= src_addr + src_col_stride_q;",
+      "after": "src_addr <= src_addr + src_row_stride_q;",
+      "checker_ids": [
+        "TMA_READ_ADDRESS"
+      ],
+      "requirement": "Source column addresses use the source column stride",
+      "model_diagnostic": "",
+      "source_sha256": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+      "mutated_sha256": "3c444b81dd95ea2ef871c842293fad8e22585e1a342e5fb77b8a5ebc947b0201",
+      "outcome": "detected",
+      "checker": "TMA_READ_ADDRESS",
+      "severity": "ERROR",
+      "diagnostic": "Read addr=00000008 expected=00000002",
+      "elapsed_seconds": 20.641,
+      "returncode": 0
+    },
+    {
+      "name": "destination_column_uses_row_stride",
+      "source": "rtl/tma_addr_gen.sv",
+      "before": "dst_addr <= dst_addr + dst_col_stride_q;",
+      "after": "dst_addr <= dst_addr + dst_row_stride_q;",
+      "checker_ids": [
+        "TMA_WRITE_DATA"
+      ],
+      "requirement": "Destination column addresses use the destination column stride",
+      "model_diagnostic": "",
+      "source_sha256": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+      "mutated_sha256": "a0cbb022f0ef9b92e0142886ebe552f5008f8f5117c6ba10472428db7367add7",
+      "outcome": "detected",
+      "checker": "TMA_WRITE_DATA",
+      "severity": "ERROR",
+      "diagnostic": "DMA write addr=00000008 data=a513 expected_addr=00000002 data=a513",
+      "elapsed_seconds": 20.297,
+      "returncode": 0
+    },
+    {
+      "name": "source_row_uses_column_stride",
+      "source": "rtl/tma_addr_gen.sv",
+      "before": "src_addr <= src_row_base_q + src_row_stride_q;",
+      "after": "src_addr <= src_row_base_q + src_col_stride_q;",
+      "checker_ids": [
+        "TMA_READ_ADDRESS"
+      ],
+      "requirement": "The first source element in a row uses the row base",
+      "model_diagnostic": "",
+      "source_sha256": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+      "mutated_sha256": "2381d68e9e3ba7ef6e3edb4baaf0ff881d985eb3959c8b45c11950ab97374ca7",
+      "outcome": "detected",
+      "checker": "TMA_READ_ADDRESS",
+      "severity": "ERROR",
+      "diagnostic": "Read addr=00000002 expected=00000008",
+      "elapsed_seconds": 20.516,
+      "returncode": 0
+    },
+    {
+      "name": "destination_row_uses_column_stride",
+      "source": "rtl/tma_addr_gen.sv",
+      "before": "dst_addr <= dst_row_base_q + dst_row_stride_q;",
+      "after": "dst_addr <= dst_row_base_q + dst_col_stride_q;",
+      "checker_ids": [
+        "TMA_WRITE_DATA"
+      ],
+      "requirement": "The first destination element in a row uses the row base",
+      "model_diagnostic": "",
+      "source_sha256": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+      "mutated_sha256": "81a4887c8ac532772ece24ed719a4717b58fe89515e774b68025a085d6300df8",
+      "outcome": "detected",
+      "checker": "TMA_WRITE_DATA",
+      "severity": "ERROR",
+      "diagnostic": "DMA write addr=00000002 data=a47e expected_addr=00000008 data=a47e",
+      "elapsed_seconds": 20.562,
+      "returncode": 0
+    },
+    {
+      "name": "burst_hit_returns_word_zero",
+      "source": "rtl/tma_sdram_controller.sv",
+      "before": "rd_rsp_data <= line_words_q[rd_req_addr[2:1]];",
+      "after": "rd_rsp_data <= line_words_q[2'b00];",
+      "checker_ids": [
+        "TMA_MEMORY_DATA"
+      ],
+      "requirement": "Each buffered burst offset must return its own word",
+      "model_diagnostic": "",
+      "source_sha256": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+      "mutated_sha256": "6770442f6d94dc38865ccc92c450fbf5467bd3006b26d7a0a13d2f16bd1c3fd9",
+      "outcome": "detected",
+      "checker": "TMA_MEMORY_DATA",
+      "severity": "ERROR",
+      "diagnostic": "Maintenance addr=00000402 got=6a00 expected=6a01",
+      "elapsed_seconds": 16.109,
+      "returncode": 0
+    },
+    {
+      "name": "burst_tag_ignores_bank",
+      "source": "rtl/tma_sdram_controller.sv",
+      "before": "line_tag_q==rd_req_addr[25:3]",
+      "after": "line_tag_q[20:0]==rd_req_addr[23:3]",
+      "checker_ids": [
+        "TMA_MEMORY_DATA"
+      ],
+      "requirement": "Read-buffer identity includes the physical SDRAM bank",
+      "model_diagnostic": "",
+      "source_sha256": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+      "mutated_sha256": "b74f23d95c0bc35fd7b0838fde9dfa58972ddac06cccb3f97e5731127af3b5c1",
+      "outcome": "detected",
+      "checker": "TMA_MEMORY_DATA",
+      "severity": "ERROR",
+      "diagnostic": "Maintenance addr=01000400 got=1357 expected=2468",
+      "elapsed_seconds": 15.516,
+      "returncode": 0
+    },
+    {
+      "name": "burst_tag_ignores_row",
+      "source": "rtl/tma_sdram_controller.sv",
+      "before": "line_tag_q==rd_req_addr[25:3]",
+      "after": "{line_tag_q[22:21],line_tag_q[7:0]}=={rd_req_addr[25:24],rd_req_addr[10:3]}",
+      "checker_ids": [
+        "TMA_MEMORY_DATA"
+      ],
+      "requirement": "Read-buffer identity includes the physical SDRAM row",
+      "model_diagnostic": "",
+      "source_sha256": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+      "mutated_sha256": "afcecf281f8720c298081fe414456e9ce41d7f04d46ff009a91102c5d327cfd1",
+      "outcome": "detected",
+      "checker": "TMA_MEMORY_DATA",
+      "severity": "ERROR",
+      "diagnostic": "Maintenance addr=00000c00 got=1357 expected=369c",
+      "elapsed_seconds": 15.516,
+      "returncode": 0
+    },
+    {
+      "name": "write_does_not_invalidate_buffer",
+      "source": "rtl/tma_sdram_controller.sv",
+      "before": "// Every write invalidates the read-only prefetch line.\n                            line_valid_q <= 0;",
+      "after": "// Every write invalidates the read-only prefetch line.\n                            line_valid_q <= line_valid_q;",
+      "checker_ids": [
+        "TMA_MEMORY_DATA"
+      ],
+      "requirement": "Every accepted write invalidates the prefetch line",
+      "model_diagnostic": "",
+      "source_sha256": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+      "mutated_sha256": "32d5227b483dbb3f31b29eeebb8cd5c3c42e5ae61f26f963d0968e81d0ac4964",
+      "outcome": "detected",
+      "checker": "TMA_MEMORY_DATA",
+      "severity": "ERROR",
+      "diagnostic": "Maintenance addr=00000400 got=1357 expected=55aa",
+      "elapsed_seconds": 15.656,
+      "returncode": 0
+    },
+    {
+      "name": "burst_miss_selects_wrong_beat",
+      "source": "rtl/tma_sdram_controller.sv",
+      "before": "if(read_beat_q==word_q[1:0]) read_data_q <= dq_capture_q;",
+      "after": "if(read_beat_q==(word_q[1:0]^2'b01)) read_data_q <= dq_capture_q;",
+      "checker_ids": [
+        "TMA_MEMORY_DATA"
+      ],
+      "requirement": "A burst miss returns the requested beat",
+      "model_diagnostic": "",
+      "source_sha256": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+      "mutated_sha256": "27879ede12d7b90fb3b2440883175a9afac5655091b15e217c71b3c6976503ed",
+      "outcome": "detected",
+      "checker": "TMA_MEMORY_DATA",
+      "severity": "ERROR",
+      "diagnostic": "Maintenance addr=00000400 got=xxxx expected=1357",
+      "elapsed_seconds": 15.625,
+      "returncode": 0
+    },
+    {
+      "name": "invalid_write_reports_success",
+      "source": "rtl/tma_sdram_controller.sv",
+      "before": "wr_rsp_error <= wr_req_addr[0] || |wr_req_addr[31:26];",
+      "after": "wr_rsp_error <= 1'b0;",
+      "checker_ids": [
+        "TMA_MAINT_ERROR"
+      ],
+      "requirement": "Invalid maintenance writes must return an address error",
+      "model_diagnostic": "",
+      "source_sha256": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+      "mutated_sha256": "e1cb1e707cc609915eff5d61de11d15a5c98ddc38cd434d881e9f39beeb799ab",
+      "outcome": "detected",
+      "checker": "TMA_MAINT_ERROR",
+      "severity": "ERROR",
+      "diagnostic": "Maintenance address-error response is incorrect",
+      "elapsed_seconds": 20.359,
+      "returncode": 0
+    },
+    {
+      "name": "held_response_valid_dropped",
+      "source": "rtl/tma_sdram_controller.sv",
+      "before": "if (rd_rsp_valid && rd_rsp_ready) rd_rsp_valid <= 0;",
+      "after": "if (rd_rsp_valid) rd_rsp_valid <= 0;",
+      "checker_ids": [
+        "TMA_RESPONSE_STABILITY"
+      ],
+      "requirement": "Read response valid remains asserted until accepted",
+      "model_diagnostic": "",
+      "source_sha256": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+      "mutated_sha256": "8cbeb614d338f6b1fb7a454b139c31696985de1775e9a57fdc4575f46849229f",
+      "outcome": "detected",
+      "checker": "TMA_RESPONSE_STABILITY",
+      "severity": "ERROR",
+      "diagnostic": "Stalled maintenance response changed",
+      "elapsed_seconds": 21.093,
+      "returncode": 0
+    },
+    {
+      "name": "held_response_data_changes",
+      "source": "rtl/tma_sdram_controller.sv",
+      "before": "if (rd_rsp_valid && rd_rsp_ready) rd_rsp_valid <= 0;",
+      "after": "if (rd_rsp_valid && rd_rsp_ready) rd_rsp_valid <= 0;\n            if (rd_rsp_valid && !rd_rsp_ready) rd_rsp_data <= rd_rsp_data + 16'd1;",
+      "checker_ids": [
+        "TMA_RESPONSE_STABILITY"
+      ],
+      "requirement": "Held read response data must remain stable",
+      "model_diagnostic": "",
+      "source_sha256": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+      "mutated_sha256": "aae08e0419db1740d1512f8c740db0826a43619c005b534da7cb0ea4f35a404c",
+      "outcome": "detected",
+      "checker": "TMA_RESPONSE_STABILITY",
+      "severity": "ERROR",
+      "diagnostic": "Stalled maintenance response changed",
+      "elapsed_seconds": 20.563,
+      "returncode": 0
+    },
+    {
+      "name": "refresh_blocked_by_held_response",
+      "source": "rtl/tma_sdram_controller.sv",
+      "before": "if (due) state_q <= REFRESH;",
+      "after": "if (due && !rd_rsp_valid && !wr_rsp_valid) state_q <= REFRESH;",
+      "checker_ids": [],
+      "requirement": "Refresh continues while a completed response is held",
+      "model_diagnostic": "SDRAM_MODEL refresh deadline missed",
+      "source_sha256": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+      "mutated_sha256": "78547292816ebf27adcb8138edfefc24aadac209cd28f8e25a2e7f011b9341a5",
+      "outcome": "detected",
+      "checker": "SDRAM_PIN_MODEL",
+      "severity": "Fatal",
+      "diagnostic": "SDRAM_MODEL refresh deadline missed gap=391",
+      "elapsed_seconds": 20.281,
+      "returncode": 0
+    }
+  ],
+  "source_files_unchanged": true,
+  "detected": 21,
+  "total": 21,
+  "completed_utc": "2026-10-29T05:04:25.399316+00:00"
+}

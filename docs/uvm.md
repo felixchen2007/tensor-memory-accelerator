@@ -1,5 +1,10 @@
 # Native UVM verification
 
+The [RTL mutation campaign](mutation.md) uses this same agent, passive monitors
+and independent scoreboard to test whether deliberately broken implementations
+are detected. It adds public-interface cache probes and keeps production sources
+unchanged; its results are separate from the nominal matrix below.
+
 The verification environment uses the native UVM 1.2
 library supplied with Questa, compiled and linked to its native DPI library.
 The UVM testbench drives `tma_sdram_copy_system`: both transfer engines, SDRAM

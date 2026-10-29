@@ -343,6 +343,361 @@
       "source": "build/sim/swizzle_simulation.log",
       "original_sha256": "6ccc30af57bab7e056b6006cc8de5913fb134a7bc6701a110271614c221dd3c7",
       "published_sha256": "8727dd04e31cbb3273297e2b1dc93284eaf0bd9b52cd19114b8e8d789c83409f"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/results.json",
+      "source": "build/mutation/20261029T045602Z/results.json",
+      "original_sha256": "d0fcdae9fae42ab9f968fae0bbed521d50b0573cce8510aca491146b8b681297",
+      "published_sha256": "27c314584d1de84bfc68eda44dde1a631dc8b2669ae44a5ace1f52003f787cec"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/tb_tma_mutation_top.sv",
+      "source": "build/mutation/20261029T045602Z/tb_tma_mutation_top.sv",
+      "original_sha256": "23c946e72a0d7a0bfc767b27580518fd60c5aa451f50a6b1437c7542e84634ee",
+      "published_sha256": "23c946e72a0d7a0bfc767b27580518fd60c5aa451f50a6b1437c7542e84634ee"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_before.log",
+      "source": "build/mutation/20261029T045602Z/nominal_before/console.log",
+      "original_sha256": "9fd099aa64e5d88bfbc25d3ad61a68abf60ca6477307edc82675104bf3789ddc",
+      "published_sha256": "d89f1af222fd3f4f1817528ff5774733b2fd433babc5d18aa58bd80ae6d0b857"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_before.compile.log",
+      "source": "build/mutation/20261029T045602Z/nominal_before/compile.log",
+      "original_sha256": "b762d4015493867ff6b805a3c7c680a5f5b7c3bcd0ca5a20398e4f980e14306a",
+      "published_sha256": "59381b5ddae2a63f87adfd92da55579eff58db7ea8152507687a04428ab0851f"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_after.log",
+      "source": "build/mutation/20261029T045602Z/nominal_after/console.log",
+      "original_sha256": "7898858608a2e0e72ba7458773467657ccef3b43b76bf79a4a61c7071ed3ff0e",
+      "published_sha256": "cbc999ce67008abc69ec9c859c7bab4f889d9ad4a065b015d444c5999af8ac8b"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_after.compile.log",
+      "source": "build/mutation/20261029T045602Z/nominal_after/compile.log",
+      "original_sha256": "314bfb4848dccd68aac14c0d19901a0dc69665865dc03aa71ee926f898709c9e",
+      "published_sha256": "7460cecc4d0bf477590a8ae08e7e281ba7bb34df19cfd722a918f979b43d52b4"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/fifo_data_bit_flipped.log",
+      "source": "build/mutation/20261029T045602Z/fifo_data_bit_flipped/console.log",
+      "original_sha256": "55f0410682c9c7742933d21f04b618d4280ce74b44ceb4245eb410d611be3118",
+      "published_sha256": "818e006b614ea4e4d80de687e5b825d9527eb447e6ed623a6f956184b1dd86b1"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/fifo_data_bit_flipped.compile.log",
+      "source": "build/mutation/20261029T045602Z/fifo_data_bit_flipped/compile.log",
+      "original_sha256": "3b566c501931af8637426d08a0b38a40a19a819d8eda43c3b1bedfbbe185fd44",
+      "published_sha256": "3a1e3282b4fa3a7b137c90ff87485976bfa9ef8b61745f5e085a0f57bc0f94db"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/fifo_destination_bit_flipped.log",
+      "source": "build/mutation/20261029T045602Z/fifo_destination_bit_flipped/console.log",
+      "original_sha256": "431a8b18817450c28c7fa31bc078b84f4fb7f77718d028dbbf13616af636caba",
+      "published_sha256": "665f88280c2c087a1f66766001343b2b961181edf8ed48e1fd6956627846dd0d"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/fifo_destination_bit_flipped.compile.log",
+      "source": "build/mutation/20261029T045602Z/fifo_destination_bit_flipped/compile.log",
+      "original_sha256": "cbef3fc46a9e790e0f7e55bed0ade58e5ab88bc1f0bfadc31e4f33f6f95bc2fa",
+      "published_sha256": "c5e127b67bf660be17ffc034eff7157704d8748fad4de54132fe66d77ff56559"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/fifo_head_skips_entry.log",
+      "source": "build/mutation/20261029T045602Z/fifo_head_skips_entry/console.log",
+      "original_sha256": "41c6e93f5f94d70a9b4bcd78fec1aa37647edd7aea9128925b4fe3f705696fa5",
+      "published_sha256": "8fa17bacc426e62601d3653f96cc1a3f1a5f38a2a50f5fef02aa631fb2cb4e84"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/fifo_head_skips_entry.compile.log",
+      "source": "build/mutation/20261029T045602Z/fifo_head_skips_entry/compile.log",
+      "original_sha256": "4e6ed9890e034fdd479fdb05c790fe4ed6951165540cc9dd5fe6832e2d9db441",
+      "published_sha256": "3bc1ee567ea9379e5e6b68ecbb7a6457b790cbe2de3b0cb1dc4f316587bcfad6"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/fifo_head_never_advances.log",
+      "source": "build/mutation/20261029T045602Z/fifo_head_never_advances/console.log",
+      "original_sha256": "203fd5d3f05d6e1a4979df79810e54ad8db63fb82f2a29367c50f32f1ec7f8be",
+      "published_sha256": "298ebf81148f71a55e3201413de68851bcb465323f998e3b9dc9ac9c3e1abacf"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/fifo_head_never_advances.compile.log",
+      "source": "build/mutation/20261029T045602Z/fifo_head_never_advances/compile.log",
+      "original_sha256": "d9dae9e7f15434d7debc87f612877f5c0e3fed92b0e1ad4decd11f179601ffc6",
+      "published_sha256": "d1a798e8ecb4fbafc3d6aec3b6af8b32267cb162f0e2746828d9360abc938b80"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/write_offered_when_fifo_empty.log",
+      "source": "build/mutation/20261029T045602Z/write_offered_when_fifo_empty/console.log",
+      "original_sha256": "6888091ec6a487d147f25998b0eb1eed5f2070d82715591312f51c94205bad74",
+      "published_sha256": "a4306c46ac776f98fd4ce37e82ae1614d71407957b81447ca19c750c7c3868db"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/write_offered_when_fifo_empty.compile.log",
+      "source": "build/mutation/20261029T045602Z/write_offered_when_fifo_empty/compile.log",
+      "original_sha256": "5773c8b06f4f4871593f000a55293a61b496f49eb84a2c15c911fb53a14c564c",
+      "published_sha256": "f37637e9bdd9a41f1574577042edc7a08c8bcf1454e7629679a75b2e86c79225"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/completion_count_increments_twice.log",
+      "source": "build/mutation/20261029T045602Z/completion_count_increments_twice/console.log",
+      "original_sha256": "95e8891f7ae68a6d3dca153389a1198b28d651bdcf35603bd18227a2a97ae89e",
+      "published_sha256": "0a1777d1a3f775b32a6785b0d41ec10c4a58a792190746dcbd85e47db6343ce3"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/completion_count_increments_twice.compile.log",
+      "source": "build/mutation/20261029T045602Z/completion_count_increments_twice/compile.log",
+      "original_sha256": "9390a17ecca019c129eb27aad23e49d85568eff94cc1e225c556cc3a8a6afb68",
+      "published_sha256": "14dd673dfb1aa47aee925b7d5a3924e5be544332c9cd012a404159a645645b85"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/completion_before_drain.log",
+      "source": "build/mutation/20261029T045602Z/completion_before_drain/console.log",
+      "original_sha256": "a6ba7d0f3cae1b9cd4a6914b7ceaa7314c600035133f9959b230d175238eb8b3",
+      "published_sha256": "1fcaf8e9c8027166cc776b970df773ebb3b8ae23467cdf7bfec6b0f7a01f999a"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/completion_before_drain.compile.log",
+      "source": "build/mutation/20261029T045602Z/completion_before_drain/compile.log",
+      "original_sha256": "ab203b2c68aa83ad2e58ae73fb2d077ddb9f7858373c802e6ebd3a18d0306a6b",
+      "published_sha256": "e904555f92c3fe7c0c2ef9a1354923ed87b12a9df3784579f4ce4734738e9f23"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/late_bounds_check_disabled.log",
+      "source": "build/mutation/20261029T045602Z/late_bounds_check_disabled/console.log",
+      "original_sha256": "dd24fac8dd020de5cb6b3322264c0a09ca56533b7b167b28ea9245c515a0f80b",
+      "published_sha256": "22ae34f2095cd6b7faf188bd1b224f652b781f47159095c43389e05553ec8c5c"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/late_bounds_check_disabled.compile.log",
+      "source": "build/mutation/20261029T045602Z/late_bounds_check_disabled/compile.log",
+      "original_sha256": "243f366e1ddae62504f70497b47dcc97e77cbd88d3392724bfad3a41beb01e0b",
+      "published_sha256": "9f0a58f590b218162e8a6f2a29363ca377627923894b75e8bf8e11b072455a42"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/source_column_uses_row_stride.log",
+      "source": "build/mutation/20261029T045602Z/source_column_uses_row_stride/console.log",
+      "original_sha256": "c0554445e280bfd7eaf2d1e9a8392f1f077365e80268cac9d92595442296ad7a",
+      "published_sha256": "efb56baab933d4d836fea185e4759c9c6c084e0754561b4c55778afea9876356"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/source_column_uses_row_stride.compile.log",
+      "source": "build/mutation/20261029T045602Z/source_column_uses_row_stride/compile.log",
+      "original_sha256": "c94d86e78a1aa6c9604ce8c1fc59f4e6e15f6cd6f2cd18e2ca16b3d0ec6e6692",
+      "published_sha256": "38af5b18a453e2601f4b959a5866d909c460966cfbdb247692a3a021d13c59cb"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/destination_column_uses_row_stride.log",
+      "source": "build/mutation/20261029T045602Z/destination_column_uses_row_stride/console.log",
+      "original_sha256": "c79d5608492234bc6261e96bdc1c7bc7744159ce416e09afcd14a5db3653a8ba",
+      "published_sha256": "22006afeb1f14bf252c959207aaf35abbb25d77b1d41f9ffbd16d65aa4d5df0f"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/destination_column_uses_row_stride.compile.log",
+      "source": "build/mutation/20261029T045602Z/destination_column_uses_row_stride/compile.log",
+      "original_sha256": "415af77912fe105e8b9862e880934594f19d403f69a138fe8f890fc97a1e54e5",
+      "published_sha256": "8b3833e05d67400e4c43b1aca9c7fa9dd35708da2bcbc38ad37fd6b717fbfadc"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/source_row_uses_column_stride.log",
+      "source": "build/mutation/20261029T045602Z/source_row_uses_column_stride/console.log",
+      "original_sha256": "773fdd387a6d26f263ce48034a057d2a8ff735deccd10f123137a1ec6fe9c40d",
+      "published_sha256": "9e2136ae97b7a8dec82a9bde060f9f27cc4cd0b3cc1fa027f6588e925886b106"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/source_row_uses_column_stride.compile.log",
+      "source": "build/mutation/20261029T045602Z/source_row_uses_column_stride/compile.log",
+      "original_sha256": "5bcddf2907d0c935b272b02a4f8a5cdac59d4f258cc4d497e7c259071f2491af",
+      "published_sha256": "c80790a89a9cfd7482405bb8b0f9747bef52ed4a55eabb3e5891c3c69673fa03"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/destination_row_uses_column_stride.log",
+      "source": "build/mutation/20261029T045602Z/destination_row_uses_column_stride/console.log",
+      "original_sha256": "b727df1c6d64940d5a123c4ea8d8db45ad6a9ac9798f77687907399c8073d738",
+      "published_sha256": "de119f3764bf1b3046be59a135b11733e8f8abfcaf9e6ad54c6b4949f6d6639c"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/destination_row_uses_column_stride.compile.log",
+      "source": "build/mutation/20261029T045602Z/destination_row_uses_column_stride/compile.log",
+      "original_sha256": "dea2a16cf2cbcf52af0d97796d66ba5538ff11bc4f8d8116dc6b43f109dd8a7f",
+      "published_sha256": "5d0dcfba832457d4f3b1f54061f4c33d70f58709cac75eb76802103053087436"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/burst_hit_returns_word_zero.log",
+      "source": "build/mutation/20261029T045602Z/burst_hit_returns_word_zero/console.log",
+      "original_sha256": "b560e2c7642b86ab108d713e1dfa68b5e740daa25fbadaf13676032360e5b2e7",
+      "published_sha256": "77243f398462a8ad0df4211aa9171a541cb52d51a9df9e6ec31c19d22071a83d"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/burst_hit_returns_word_zero.compile.log",
+      "source": "build/mutation/20261029T045602Z/burst_hit_returns_word_zero/compile.log",
+      "original_sha256": "7a7a4b184e8ee31495f59940696696326acd92a9b72aceb7f5f8a663e8128b64",
+      "published_sha256": "129271ddf482b7e53458c45c8648c6c0a493e0c3b34c6ec5c01b3d7af6c0c8cb"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/burst_tag_ignores_bank.log",
+      "source": "build/mutation/20261029T045602Z/burst_tag_ignores_bank/console.log",
+      "original_sha256": "aea4a22e0550c6c8a0cf43bc8e8660a2cdc1e513795bf4a2c27dab8fa44c0986",
+      "published_sha256": "116a584d7bd2aa955eb2a0f17db129d9f11462715807bbbd75ad65f147e2d1b0"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/burst_tag_ignores_bank.compile.log",
+      "source": "build/mutation/20261029T045602Z/burst_tag_ignores_bank/compile.log",
+      "original_sha256": "6c1dd34c17cae74359c9ad6d1bf3bad1750e9922c5bdf69fc9f5eb39bf68e270",
+      "published_sha256": "621cac58a8667ac2f63d3a777c758e6b6906860cc8eb8bfa3679101dd5eae17c"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/burst_tag_ignores_row.log",
+      "source": "build/mutation/20261029T045602Z/burst_tag_ignores_row/console.log",
+      "original_sha256": "f7c0c40d6d29d3f788ff7569765c36b67d420f18877df2386f85360d6a3cc08a",
+      "published_sha256": "9416f871a4b4cab04fbb1c2101f3056577b0cb3650c55b41d0f8ee0ff86e4f9d"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/burst_tag_ignores_row.compile.log",
+      "source": "build/mutation/20261029T045602Z/burst_tag_ignores_row/compile.log",
+      "original_sha256": "41d449d96a89523c017cbfd9183dfa1dc6a76c308366cc29cda1e60b6d997683",
+      "published_sha256": "aae4b6964df63fdbc598386107187bb9c445d75ab7363e7074827ae8504dc106"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/write_does_not_invalidate_buffer.log",
+      "source": "build/mutation/20261029T045602Z/write_does_not_invalidate_buffer/console.log",
+      "original_sha256": "c1575f736e046b222250c8353160a9abf8c737bee253101d813d21f8d28c4847",
+      "published_sha256": "2f0e5826b456b777ccc31207de5f9bae7cc1fdf93baaaf9c91327d3edaa8e909"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/write_does_not_invalidate_buffer.compile.log",
+      "source": "build/mutation/20261029T045602Z/write_does_not_invalidate_buffer/compile.log",
+      "original_sha256": "c5b9f41dfa88baf0d704107284a4c35e3b80fbdc739cacd85684d61624b6afbe",
+      "published_sha256": "a32c3278eb85d8a963e9bdcdaa406abc4f6cb9ef7fcd1a5b9217da2b43257566"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/burst_miss_selects_wrong_beat.log",
+      "source": "build/mutation/20261029T045602Z/burst_miss_selects_wrong_beat/console.log",
+      "original_sha256": "aef30c2d3d4e38ecd2cd285c9622a88bb48ba978d2cbab59b788a1f17ff2cb81",
+      "published_sha256": "175c815641e61609a2a6c3fff1a7288f9c375ab25ea4e5956427d1a8d710a554"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/burst_miss_selects_wrong_beat.compile.log",
+      "source": "build/mutation/20261029T045602Z/burst_miss_selects_wrong_beat/compile.log",
+      "original_sha256": "93652dd0aeeb74b22c4f7b26748ff329bc7e607867cc6376bc272017e1f8188b",
+      "published_sha256": "d29c12461c691c2aa796fe15d87a76c23211326ef3201e306b7a3b609980cd28"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/invalid_write_reports_success.log",
+      "source": "build/mutation/20261029T045602Z/invalid_write_reports_success/console.log",
+      "original_sha256": "19cd946177d8eb4a6afdae94a2db9e798e7d4cd9abbc28fe993144c329452e35",
+      "published_sha256": "6a2fbe0263715c6097235c6f1530eb15f9aeb0a49ed8e0a0cc625251e8641249"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/invalid_write_reports_success.compile.log",
+      "source": "build/mutation/20261029T045602Z/invalid_write_reports_success/compile.log",
+      "original_sha256": "a765db9613d537dd672b4095948acadff66f095818c0ac9f82d88a9fcf3c15d1",
+      "published_sha256": "6ed4bc814dfc36e96eb3ec04ee8d946f1b66a3893c9b946ec6829bf4a6886229"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/held_response_valid_dropped.log",
+      "source": "build/mutation/20261029T045602Z/held_response_valid_dropped/console.log",
+      "original_sha256": "b73f5260366fa3c0e3ca9498d7aea0875296afa7dc004614173e9ec9d8f37dd2",
+      "published_sha256": "4549dea06ccec710261392b1e015bde0f0e447a5c76030bdbd6a84da929a8537"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/held_response_valid_dropped.compile.log",
+      "source": "build/mutation/20261029T045602Z/held_response_valid_dropped/compile.log",
+      "original_sha256": "153eb2293c35582f450bf84c6a3580d8c43b18c010c54d12922cdfdac2decd3b",
+      "published_sha256": "d632d6de5f147e13f7c64796de6ed379c77429dc89f5d98a04bc58e878f7b06a"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/held_response_data_changes.log",
+      "source": "build/mutation/20261029T045602Z/held_response_data_changes/console.log",
+      "original_sha256": "866ff5e655f709ddfcdf2fa67b308c0f5d72d971b63e22ddc5dea924b1a70260",
+      "published_sha256": "b541fdac8f7bf36258c4aba9ccf77e1d9617b230ed4c7298004b567cd5d353aa"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/held_response_data_changes.compile.log",
+      "source": "build/mutation/20261029T045602Z/held_response_data_changes/compile.log",
+      "original_sha256": "14f5df0069aebc4b0f1658ef7616d75bda98d17ca9d1576f62130f212291a5f8",
+      "published_sha256": "f04b671bd79d5293e05ab4d347654f96644718c4d26b7c806bccc817b47f25ea"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/refresh_blocked_by_held_response.log",
+      "source": "build/mutation/20261029T045602Z/refresh_blocked_by_held_response/console.log",
+      "original_sha256": "56099d546b07f64eb04ba74e7482d788a764d114baf04b378b7ee20c410373e5",
+      "published_sha256": "7e88c1d5580145d089b59c019653ce360699f82b3c7ab2b89ff4494eea375339"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/refresh_blocked_by_held_response.compile.log",
+      "source": "build/mutation/20261029T045602Z/refresh_blocked_by_held_response/compile.log",
+      "original_sha256": "e55d383546ccdcc8d603dd32e236cde69e22a9431991e8c046e7b2c70c1cee83",
+      "published_sha256": "b0553fb5b3b34398108a4fe1d61261d0939b7f56d17fdb06b9385e353fb8e43b"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/pilot_shutdown_failure.log",
+      "source": "build/mutation/20261029T044741Z/fifo_data_bit_flipped/console.log",
+      "original_sha256": "35dcc466a97a6880ecc466616da85f5c055d1c98ea2ba5cf930cdaebe47618ae",
+      "published_sha256": "44c6ecd27b152040e95a8d39866e4c927c00c6897f0d280d67d435bf094303d7"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_matrix/results.json",
+      "source": "build/uvm/starter/results.json",
+      "original_sha256": "aec1aae9935f52309163fea33a2880777a638391a060224683de0617c6a6b5f0",
+      "published_sha256": "c5d0a00bc4e7ad7ac8220864d6f9865f2bea69b24b98742d3899b4d0611e14e9"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_matrix/p0_b1_s0.log",
+      "source": "build/uvm/starter/p0_b1_s0_console.log",
+      "original_sha256": "2fbb5fd76b7f08a9612e4cb70c0fc463c981761c599aafcc75dfbffdf335bcf8",
+      "published_sha256": "449f23883faf4f73f19b8f75da30386abb80b0113ab1d78bcf287ee65e0e2b70"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_matrix/p0_b1_s1.log",
+      "source": "build/uvm/starter/p0_b1_s1_console.log",
+      "original_sha256": "dbc85b9a480ef36cd7f1cd1539d8bce270bca6efc8dda6b5f05ee850d5ae62ae",
+      "published_sha256": "41b1575732bb70fee43214c459c4fa17bb4f7803b74b43c3436d828cb430f706"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_matrix/p0_b4_s0.log",
+      "source": "build/uvm/starter/p0_b4_s0_console.log",
+      "original_sha256": "ef3dd74c5307617e9bc47c998db287f2a0c16ab3f5fa4d9998c95072ecfadc7e",
+      "published_sha256": "ad39b90c3482e4c8e6c8e503266f1121ecf210f600d2715dda651e48bbf18b37"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_matrix/p0_b4_s1.log",
+      "source": "build/uvm/starter/p0_b4_s1_console.log",
+      "original_sha256": "c4e4f83b636881c1f4157980171e9b5bd3f82b31a45a3a505d37233f0493d026",
+      "published_sha256": "3eb79f88975e5427f2ede59719e76ac4179203569ad23503f1e5c84678e3f8a7"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_matrix/p1_b1_s0.log",
+      "source": "build/uvm/starter/p1_b1_s0_console.log",
+      "original_sha256": "1bdd9a9d0194155da4e554786d2c1482c63528c2a2078d0136e8516d254f5dd5",
+      "published_sha256": "e96c456f8d17b77d8a1eda747c5b0015f104f88517c7c33d96de5d2d4ed19a16"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_matrix/p1_b1_s1.log",
+      "source": "build/uvm/starter/p1_b1_s1_console.log",
+      "original_sha256": "ee5d1a712e0699dce106c776c64774b265ddab3f90ff7e28f1e4e5f9fe9e9045",
+      "published_sha256": "8f2288574b97ad599360e0c055191505daabdaf658f94ec6f25e450c52002132"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_matrix/p1_b4_s0.log",
+      "source": "build/uvm/starter/p1_b4_s0_console.log",
+      "original_sha256": "5af4e12ad4569cf4b8244f07a491e745b7e1ef1d3c1e93496c7d39d74cfcf807",
+      "published_sha256": "20c25f4790f8b99232e9fe228bcf6a446b60e8ad4eea7120557367fcbd5e9143"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_matrix/p1_b4_s1.log",
+      "source": "build/uvm/starter/p1_b4_s1_console.log",
+      "original_sha256": "86a3346aa0752ea5feb3deac6a7cada27c243dd2a78f67c28a1056f31576ee7c",
+      "published_sha256": "1aed144bcdd04ebe42ba330e09af732eb75820b59ec57797b8640ae41604b7ae"
+    },
+    {
+      "path": "evidence/mutation/2026-10-29/nominal_matrix/data_fault_control.log",
+      "source": "build/uvm/starter/data_fault_control_console.log",
+      "original_sha256": "6975666670ef87c92dd309b65c5b11b2f520a44938921f9c6e56b2209e3d4d1a",
+      "published_sha256": "0a0a9dc7c67be3a4ba97ec18a910aa27519df6b321b3213fff8b47dd7d8be37d"
     }
-  ]
+  ],
+  "last_extended_utc": "2026-10-29T05:11:03.918548+00:00"
 }

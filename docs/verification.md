@@ -237,6 +237,11 @@ qualification. The direct PLL output's non-dedicated-routing warning is retained
 
 ## Remaining coverage
 
+The [native UVM mutation campaign](mutation.md) exercises selected FIFO,
+addressing, completion, cache, protocol and refresh defects against the current
+checkers. That fault set measures checker sensitivity in one configuration; it
+does not close the remaining coverage items below.
+
 - Parameter-width sweeps beyond the default 32-bit address / 16-bit count build.
 - Formal safety/liveness properties and formal assumptions on the interfaces.
 - Coverage-driven closure; randomized simulation is not proof of correctness.

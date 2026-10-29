@@ -11,7 +11,8 @@ four-word burst read prefetch.
 16,525 to 5,735 cycles at nominal 50 MHz. Three implementations each passed two
 fresh FPGA configurations and complete tile readback. Native UVM verification
 passed 368 descriptors across eight configurations and detected injected data
-corruption. [Results and evidence](docs/results.md) · [Reproduce](docs/reproduce.md)
+corruption. A separate mutation campaign detected **21/21 selected RTL defects**
+with clean nominal controls. [Results and evidence](docs/results.md) · [Reproduce](docs/reproduce.md)
 
 ## Hardware result
 
@@ -77,8 +78,9 @@ SDRAM pin model through public maintenance/descriptor interfaces.
 | UVM data checks | 23,496 DMA reads, 23,496 DMA writes, 206,376 maintenance readbacks |
 | UVM nominal severity counts | Zero warnings, errors, or fatals in every profile |
 | Corruption control | Deliberately wrong SDRAM data detected by the scoreboard |
+| RTL mutation campaign | 21/21 targeted defects detected; clean controls before/after; production sources unchanged |
 | Focused simulation regression | 35 invocations, including 10 expected-failure controls |
-| Python reference/decoder/report tests | 52 tests passed |
+| Python model/tooling tests | 58 tests passed |
 
 The tested Questa Starter license runs UVM base classes with seeded procedural
 stimulus and explicit scenario counters. SV constrained randomization and
@@ -86,6 +88,8 @@ covergroups require a suitable license; that optional branch compiled but was
 not executed. See [UVM scope and reports](docs/uvm.md) and
 [verification strategy](docs/verification.md). Hosted CI runs Python model and
 evidence checks; RTL simulation and FPGA fitting run locally with vendor tools.
+The [mutation report](docs/mutation.md) lists the faults, checker diagnoses,
+reproduction commands and the limits of that selected fault set.
 
 ## Reproduce
 
@@ -100,6 +104,7 @@ For Windows with Questa and Quartus Prime Lite installed:
 
 ```powershell
 python scripts/run_uvm_tests.py
+python scripts/run_mutation_tests.py
 python scripts/run_sdram_tests.py
 python scripts/build_board.py --engine serialized
 python scripts/build_board.py --engine pipelined

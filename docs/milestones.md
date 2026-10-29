@@ -14,6 +14,7 @@ board comparison. A compute consumer is an optional extension to this release.
 | Board implementation | Constraints, 50 fitted user pins, positive reported corner slacks |
 | Physical comparison | Three variants, two fresh configurations each, full tile checks |
 | UVM acceptance | Eight configurations, 368 descriptors, independent scoreboard and corruption control |
+| Checker sensitivity | 21/21 selected RTL mutants detected in native UVM; clean before/after controls and source hashes |
 | Reproducibility | Source/image hashes, published records, offline replay and model/evidence CI |
 
 [Results](results.md) · [Reproduction](reproduce.md) · [UVM plan](uvm.md).

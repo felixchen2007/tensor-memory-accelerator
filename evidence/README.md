@@ -8,6 +8,7 @@ license files, vendor libraries and the Terasic reference image are excluded.
 | --- | --- |
 | [hardware/2026-10-29](hardware/2026-10-29) | Six physical configurations, decoded/raw JTAG, programming reports and fitted build records |
 | [uvm/2026-10-29](uvm/2026-10-29) | Eight native UVM profiles, corruption control, source hashes and license/compile-only records |
+| [mutation/2026-10-29](mutation/2026-10-29) | 21 isolated RTL defects, clean controls, compile/simulation reports, rejected pilot and fresh nominal UVM matrix |
 | [simulation/2026-10-29](simulation/2026-10-29) | Current focused directed-plus-UVM regression and burst metrics |
 | [simulation/2026-10-27](simulation/2026-10-27) | Historical full/local-memory studies; not a new full-suite pass |
 
@@ -19,6 +20,9 @@ with placeholders and JSON is formatted consistently. Measurements, status
 packets, source/SOF hashes, warnings and severity reports retain their meaning.
 The raw on-board packet hex strings are unchanged. Exported-file hashes differ
 when these presentation transformations alter bytes.
+
+Runner timestamps use UTC. Simulator banners retain the host's local clock,
+so their calendar date can differ from the enclosing UTC evidence directory.
 
 References to `build/` inside historical records identify original local
 artifacts; they are provenance strings, not promised downloadable files. The
@@ -39,5 +43,6 @@ python scripts/check_portfolio.py
 The checker validates exported hashes, matches current hardware/UVM source bytes
 to their recorded hashes, decodes every three-packet hardware sample, recomputes
 the benchmark comparison, and checks nominal/negative UVM reports. It also checks
-local Markdown file links. This is evidence validation, not fresh RTL simulation
+the exact mutation edits, their designated checker diagnoses, clean controls,
+follow-up UVM matrix and local Markdown file links. This is evidence validation, not fresh RTL simulation
 or a fresh hardware run. Hosted CI runs it and the Python unit tests.

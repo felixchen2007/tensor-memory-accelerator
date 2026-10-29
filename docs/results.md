@@ -77,6 +77,27 @@ execution is recorded separately from a successful build.
 - [Burst tradeoffs](../evidence/simulation/2026-10-29/burst_comparison.md)
 - [Verification details and remaining gaps](verification.md)
 
+## RTL mutation campaign · 2026-10-29 UTC
+
+Native UVM detected **21/21 manually selected RTL defects** in the pipelined,
+BL4, linear configuration. Twenty produced their designated UVM checker
+diagnosis; a refresh-blocking defect produced the independent pin model's
+refresh-deadline failure. Compilation errors and simulator crashes are excluded
+from detections. Clean controls before and after passed 34 directed descriptors
+each with zero UVM warnings/errors/fatals and unchanged source hashes.
+
+The defects cover FIFO data/order, completion/counts, bounds, all four stride
+updates, burst tags/offsets/invalidation, address errors and held responses.
+The new cache probes expose bank/row aliasing without intervening writes.
+The Python model/tooling suite now contains **58 passing tests**, including six
+tests that protect mutation patching and result classification. This selected
+fault set measures checker sensitivity in one configuration, not exhaustive
+design coverage or a statistical bug-detection rate.
+
+- [Method, requirements and reproduction](mutation.md)
+- [Machine-readable campaign result](../evidence/mutation/2026-10-29/results.json)
+- [Fresh follow-up UVM matrix: all eight profiles plus corruption control](../evidence/mutation/2026-10-29/nominal_matrix/results.json)
+
 ## Historical local-memory studies · 2026-10-27 UTC
 
 The earlier full-project simulation record predates the current SDRAM and UVM

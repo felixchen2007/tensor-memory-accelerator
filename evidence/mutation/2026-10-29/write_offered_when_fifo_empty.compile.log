@@ -1,0 +1,25 @@
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Start time: 21:58:08 on Oct 28,2026
+vlog -sv -L uvm12 "+incdir+C:\altera_lite\24.1std\questa_fse\verilog_src\uvm-1.2\src" "+incdir+<PROJECT>\tb\uvm" <PROJECT>\rtl\tma_addr_gen.sv <PROJECT>\rtl\tma_copy_engine.sv <PROJECT>\build\mutation\20261029T045602Z\write_offered_when_fifo_empty\tma_copy_engine_pipelined.sv <PROJECT>\rtl\tma_copy_engine_select.sv <PROJECT>\rtl\tma_ram_bank.sv <PROJECT>\rtl\tma_scratchpad.sv <PROJECT>\rtl\tma_scratchpad_endpoint.sv <PROJECT>\rtl\tma_sdram_controller.sv <PROJECT>\rtl\tma_sdram_copy_system.sv <PROJECT>\tb\tma_sdram_model.sv <PROJECT>\tb\uvm\tma_uvm_if.sv <PROJECT>\tb\uvm\tma_uvm_pkg.sv <PROJECT>\tb\uvm\tma_mutation_pkg.sv <PROJECT>\build\mutation\20261029T045602Z\tb_tma_mutation_top.sv 
+-- Compiling module tma_addr_gen
+-- Compiling module tma_copy_engine
+-- Compiling module tma_copy_engine_pipelined
+-- Compiling module tma_copy_engine_select
+-- Compiling module tma_ram_bank
+-- Compiling module tma_scratchpad
+-- Compiling module tma_scratchpad_endpoint
+-- Compiling module tma_sdram_controller
+-- Compiling module tma_sdram_copy_system
+-- Compiling module tma_sdram_model
+-- Compiling interface tma_uvm_if
+-- Compiling package tma_uvm_pkg
+-- Importing package uvm12.uvm_pkg (uvm-1.2 Built-in)
+-- Compiling package tma_mutation_pkg
+-- Importing package tma_uvm_pkg
+-- Compiling module tb_tma_uvm
+-- Importing package tma_mutation_pkg
+
+Top level modules:
+	tb_tma_uvm
+End time: 21:58:09 on Oct 28,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
