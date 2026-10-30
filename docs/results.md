@@ -98,31 +98,6 @@ design coverage or a statistical bug-detection rate.
 - [Machine-readable campaign result](../evidence/mutation/2026-10-29/results.json)
 - [Fresh follow-up UVM matrix: all eight profiles plus corruption control](../evidence/mutation/2026-10-29/nominal_matrix/results.json)
 
-## C++17 / DPI-C validation · 2026-10-29 UTC
-
-The standalone model passed 21 directed C++ tests, 387 exact Python/C++ cases,
-8,192 bank mappings and 100 C API lifecycles. Eight XSim configurations passed
-with both independent scoreboards: 368 descriptors. Complete DPI integration
-and dual corruption diagnoses also passed on Questa. The original eight-profile
-Questa regression was rerun unchanged.
-
-With the SV scoreboard disconnected, the C++-enabled path detected all 21
-selected mutations: 17 by the C++ checker, three by existing UVM protocol
-monitors and one by the independent SDRAM refresh model. XSim additionally
-executed constrained randomization and the defined descriptor covergroup in
-`p1_b4_s0` over three seeds: 138 descriptors and 100% of that scoped covergroup
-per seed. No broader coverage closure is claimed.
-
-For a 32x32 prediction, median C++/DPI computation was 14.73 us versus 455.22 us
-for the unchanged SV predictor. Complete single-profile RTL runs had medians
-11.30 s (SV) and 11.75 s (C++), with overlapping ranges. This experiment
-demonstrates interoperability and independent checking, with no demonstrated
-end-to-end simulation acceleration. All 61 current Python tests passed.
-
-- [Architecture, ABI and exact reproduction commands](cpp_reference.md)
-- [Measured timings, memory usage and methodology](reference_performance.md)
-- [Published log/record index](../evidence/cpp_reference/2026-10-29/index.json)
-
 ## Historical local-memory studies · 2026-10-27 UTC
 
 The earlier full-project simulation record predates the current SDRAM and UVM

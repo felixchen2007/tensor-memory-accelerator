@@ -15,9 +15,6 @@ board comparison. A compute consumer is an optional extension to this release.
 | Physical comparison | Three variants, two fresh configurations each, full tile checks |
 | UVM acceptance | Eight configurations, 368 descriptors, independent scoreboard and corruption control |
 | Checker sensitivity | 21/21 selected RTL mutants detected in native UVM; clean before/after controls and source hashes |
-| C++17 reference model | 21 directed tests, 387 exact Python/C++ cases, 8,192 bank mappings and 100 API lifecycles |
-| DPI-C interoperability | Separate Questa/XSim ABI proofs; eight XSim dual-scoreboard configurations and C++-only mutations |
-| Executed constrained randomization | XSim p1_b4_s0, three seeds, 138 descriptors and the defined descriptor covergroup |
 | Reproducibility | Source/image hashes, published records, offline replay and model/evidence CI |
 
 [Results](results.md) · [Reproduction](reproduce.md) · [UVM plan](uvm.md).
@@ -28,9 +25,9 @@ board comparison. A compute consumer is an optional extension to this release.
 - Test more physical addresses and all banks, additional patterns/strides, longer
   runs and retention. Current physical evidence covers one 2 KiB tile.
 - Capture a short video of a freshly configured board and decoded counters.
-- Extend constrained-random/covergroup runs beyond the currently executed
-  `p1_b4_s0` three-seed set, and add protocol SVA. Preserve the earlier Starter
-  procedural results as distinct evidence.
+- If a suitable simulator license is available, execute the constrained-random
+  and covergroup branch and retain its coverage report. Current UVM results use
+  seeded procedural stimulus and scenario counters.
 
 ## Optional extensions
 

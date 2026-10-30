@@ -7,66 +7,17 @@ Descriptor-driven 16-bit copies and transposes from external SDRAM into a banked
 scratchpad, with a preserved serialized baseline, pipelined transfers, and
 four-word burst read prefetch.
 
-## Results at a glance
-
-| Measurement | Recorded result | Tested scope and evidence |
-| --- | --- | --- |
-| **FPGA transfer performance** | **2.88× cycle speedup: 16,525 → 5,735 cycles** | 32×32, 16-bit transpose at 50 MHz; serialized baseline versus pipelining plus burst prefetch; complete tile readback across six board runs. [Hardware results](docs/hardware_benchmark.md) |
-| **UVM simulation runtime** | **39% less time: 12.94 s → 7.91 s median** | Five interleaved normal/standalone XSim pairs in one configuration; identical stimulus, both scoreboards and all readbacks; compilation excluded. [Runtime measurements](docs/simulation_performance.md) |
-
-The first result measures tensor movement on the FPGA. The second measures how
-quickly the host runs verification. They describe separate improvements.
-
-**Native UVM 1.2:** an agent with sequences and a sequencer/driver, passive host
-and DMA monitors, and independent scoreboards. The configuration matrix passed
-**368 descriptors across eight configurations**. A separate mutation campaign
-detected **21/21 selected RTL defects** through UVM and the SDRAM pin model, with
-clean nominal controls. [Verification environment](docs/uvm.md) ·
-[Mutation evidence](docs/mutation.md)
-
-**C++17 / DPI-C:** an independent golden model agrees with Python on **387
-complete transfer cases** and checks accepted RTL transactions alongside the
-preserved SV scoreboard. All eight XSim configurations passed dual checking;
-the DPI path also ran on Questa. [Architecture and build instructions](docs/cpp_reference.md)
-
-**Executed randomization and coverage:** three XSim seeds exercised constrained
-randomization and reached 100% of the defined descriptor covergroup in
-`p1_b4_s0`. This result covers one configuration and that specific covergroup.
-[Scope and raw reports](docs/uvm.md)
-
-A separate 32×32 predictor microbenchmark measured about **31× faster prediction
-through C++/DPI than SV**. Replacing the predictor alone produced no demonstrated
-complete-simulation speedup: 11.30 s SV versus 11.75 s C++ median, with overlapping
-ranges. The 39% runtime reduction above comes from the standalone launcher.
-[Predictor and complete-run measurements](docs/reference_performance.md) ·
+**Measured on hardware: 2.88× cycle speedup for a 32×32, 16-bit transpose**,
+from 16,525 to 5,735 cycles at 50 MHz. The comparison preserves a serialized
+baseline and measures pipelining plus four-word burst prefetch. All three
+implementations passed two fresh FPGA configurations and complete tile readback.
+[Hardware methodology and evidence](docs/hardware_benchmark.md) ·
 [Reproduce the project](docs/reproduce.md)
 
-## RTL mutation testing: 21/21 targeted faults detected
-
-The verification environment is tested against **intentionally broken RTL**.
-Each simulation compiles an isolated source copy with one controlled defect,
-then requires a specific checker diagnosis. The accepted campaign detected all
-21 selected defects: **20 through native UVM scoreboards/monitors and one through
-the independent SDRAM pin model**.
-
-| Fault family | Detected | Examples of injected defects |
-| --- | ---: | --- |
-| FIFO data and ordering | 5/5 | Corrupted payload/address, skipped or reused entry, write from an empty FIFO |
-| Completion and bounds | 3/3 | Double-counted writes, completion before draining, disabled bounds check |
-| Source/destination addressing | 4/4 | Wrong row/column stride in each address update |
-| Burst read buffer | 5/5 | Wrong beat, missing bank/row tag bits, stale data after a write |
-| Responses and refresh | 4/4 | Missing address error, dropped/changed held response, refresh starvation |
-
-Unmodified controls passed **before and after** the campaign with zero UVM
-warnings, errors or fatals. Compile failures, simulator crashes and unrelated
-errors do not count as detections. Production source hashes remained unchanged.
-The standard **eight-configuration UVM regression passed again** afterward.
-
-This is a selected fault set in the pipelined / BL4 / linear configuration;
-it measures checker sensitivity rather than exhaustive design coverage.
-[Read the mutation report](docs/mutation.md) ·
-[Inspect every exact edit and diagnosis](evidence/mutation/2026-10-29/results.json) ·
-[Run the campaign](scripts/run_mutation_tests.py)
+The design explores how address generation, overlapping reads/writes, buffering,
+SDRAM access patterns and banked on-chip memory affect tensor transfers.
+Verification combines native UVM, independent reference models and physical
+board tests. [Verification details](docs/verification.md)
 
 ## Hardware result
 
@@ -134,21 +85,22 @@ SDRAM pin model through public maintenance/descriptor interfaces.
 | Corruption control | Deliberately wrong SDRAM data detected by the scoreboard |
 | RTL mutation campaign | 21/21 targeted defects detected; clean controls before/after; production sources unchanged |
 | Focused simulation regression | 35 invocations, including 10 expected-failure controls |
-| Python model/tooling tests | 65 tests passed |
-| C++17 reference checks | 21 directed tests; 387 Python/C++ cases; 8,192 bank mappings; 100 C API lifecycles |
-| Dual SV/C++ UVM | Eight XSim configurations; 368 descriptors; both paths detect corruption |
-| C++-enabled mutation campaign | 21/21 selected faults: 17 C++ checks, 3 existing UVM protocol checks, 1 SDRAM pin check |
-| Executed XSim full-feature runs | Three seeds, 138 descriptors; 100% of the defined descriptor covergroup in p1_b4_s0 |
+| Python model/tooling tests | 58 tests passed |
 
-The recorded Questa Starter license runs UVM base classes with seeded procedural
-stimulus and explicit scenario counters. SV constrained randomization and
-covergroups were compile-only on that license. Separate XSim 2025.2 runs now
-execute those features in the scope listed above; earlier results retain their
-original labels. See [UVM scope and reports](docs/uvm.md) and
-[verification strategy](docs/verification.md). Hosted CI runs Python model and
-evidence checks; RTL simulation and FPGA fitting run locally with vendor tools.
-The [mutation report](docs/mutation.md) lists the faults, checker diagnoses,
-reproduction commands and the limits of that selected fault set.
+The recorded Questa Starter license runs native UVM with seeded procedural
+stimulus and explicit scenario counters. Its optional constrained-random and
+covergroup branch was compiled but not executed under that license.
+[UVM scope and reports](docs/uvm.md) · [Verification strategy](docs/verification.md)
+
+The [mutation report](docs/mutation.md) records each selected fault and its
+required checker diagnosis. Hosted CI runs Python models and evidence checks;
+RTL simulation and FPGA fitting run locally with vendor tools.
+
+## Remaining hardware work
+
+- Measure sustained bandwidth and test more tensor sizes, strides and SDRAM banks.
+- Address the documented non-dedicated SDRAM clock route and validate its timing.
+- Profile SDRAM stalls and bus utilization before selecting the next RTL optimization.
 
 ## Reproduce
 
@@ -164,8 +116,6 @@ For Windows with Questa and Quartus Prime Lite installed:
 ```powershell
 python scripts/run_uvm_tests.py
 python scripts/run_mutation_tests.py
-python scripts/run_cpp_reference.py
-python scripts/run_dpi_uvm_tests.py --sim xsim --checker dual
 python scripts/run_sdram_tests.py
 python scripts/build_board.py --engine serialized
 python scripts/build_board.py --engine pipelined

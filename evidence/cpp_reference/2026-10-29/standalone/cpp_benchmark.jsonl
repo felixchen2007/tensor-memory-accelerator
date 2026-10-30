@@ -1,6 +1,0 @@
-{"side":1,"elements":1,"loops":100,"ns_per_descriptor":[21420,21290,21270,21270,21280,21390,21430],"process_peak_bytes":4587520,"checksum":35402500}
-{"side":8,"elements":64,"loops":100,"ns_per_descriptor":[23550,23520,23520,23560,23600,23510,23520],"process_peak_bytes":4591616,"checksum":35446600}
-{"side":16,"elements":256,"loops":100,"ns_per_descriptor":[25640,25700,25630,25720,25640,25750,26260],"process_peak_bytes":4710400,"checksum":35581000}
-{"side":32,"elements":1024,"loops":97,"ns_per_descriptor":[32082.5,31804.1,31907.2,31783.5,31855.7,31762.9,31670.1],"process_peak_bytes":4743168,"checksum":35035042}
-{"side":64,"elements":4096,"loops":24,"ns_per_descriptor":[120708,119125,118292,122042,123875,130917,108208],"process_peak_bytes":4837376,"checksum":2534280}
-{"side":128,"elements":16384,"loops":6,"ns_per_descriptor":[469833,488167,518000,530833,530000,521167,501167],"process_peak_bytes":5410816,"checksum":2353890}
