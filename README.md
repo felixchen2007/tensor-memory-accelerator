@@ -7,32 +7,39 @@ Descriptor-driven 16-bit copies and transposes from external SDRAM into a banked
 scratchpad, with a preserved serialized baseline, pipelined transfers, and
 four-word burst read prefetch.
 
-**Measured on hardware: 2.88× cycle speedup for a 32×32 transpose**, from
-16,525 to 5,735 cycles at nominal 50 MHz. Three implementations each passed two
-fresh FPGA configurations and complete tile readback. Native UVM verification
-passed 368 descriptors across eight configurations and detected injected data
-corruption. A separate mutation campaign detected **21/21 selected RTL defects**
-with clean nominal controls. [Results and evidence](docs/results.md) · [Reproduce](docs/reproduce.md)
+## Results at a glance
 
-**C++17 / DPI-C verification:** an independent golden model now runs alongside
-the preserved SV scoreboard on XSim and Questa. It agrees with Python on
-**387 complete transfer cases**. All eight XSim configurations passed dual
-checking; three additional seeds executed constrained randomization and the
-defined descriptor covergroup in one configuration.
-[Architecture and build instructions](docs/cpp_reference.md) ·
-[Measured performance](docs/reference_performance.md).
+| Measurement | Recorded result | Tested scope and evidence |
+| --- | --- | --- |
+| **FPGA transfer performance** | **2.88× cycle speedup: 16,525 → 5,735 cycles** | 32×32, 16-bit transpose at 50 MHz; serialized baseline versus pipelining plus burst prefetch; complete tile readback across six board runs. [Hardware results](docs/hardware_benchmark.md) |
+| **UVM simulation runtime** | **39% less time: 12.94 s → 7.91 s median** | Five interleaved normal/standalone XSim pairs in one configuration; identical stimulus, both scoreboards and all readbacks; compilation excluded. [Runtime measurements](docs/simulation_performance.md) |
 
-For a 32x32 prediction, C++ through DPI was about **31x faster than the SV
-predictor** in the microbenchmark. The complete p1_b4_s0 RTL/UVM run showed **no speedup**:
-11.30 s SV versus 11.75 s C++ median, with overlapping ranges. The report keeps
-model computation, DPI overhead and complete simulation time separate.
+The first result measures tensor movement on the FPGA. The second measures how
+quickly the host runs verification. They describe separate improvements.
 
-**Faster verification launches:** a separate Windows/XSim standalone launcher
-reduced median complete simulation time from **12.94 s to 7.91 s (39% less time)**
-across five interleaved pairs in one configuration, with compilation excluded.
-The same UVM sequences, passive monitors, both scoreboards and every memory
-readback remain active.
-[Matched complete-test measurements and commands](docs/simulation_performance.md).
+**Native UVM 1.2:** an agent with sequences and a sequencer/driver, passive host
+and DMA monitors, and independent scoreboards. The configuration matrix passed
+**368 descriptors across eight configurations**. A separate mutation campaign
+detected **21/21 selected RTL defects** through UVM and the SDRAM pin model, with
+clean nominal controls. [Verification environment](docs/uvm.md) ·
+[Mutation evidence](docs/mutation.md)
+
+**C++17 / DPI-C:** an independent golden model agrees with Python on **387
+complete transfer cases** and checks accepted RTL transactions alongside the
+preserved SV scoreboard. All eight XSim configurations passed dual checking;
+the DPI path also ran on Questa. [Architecture and build instructions](docs/cpp_reference.md)
+
+**Executed randomization and coverage:** three XSim seeds exercised constrained
+randomization and reached 100% of the defined descriptor covergroup in
+`p1_b4_s0`. This result covers one configuration and that specific covergroup.
+[Scope and raw reports](docs/uvm.md)
+
+A separate 32×32 predictor microbenchmark measured about **31× faster prediction
+through C++/DPI than SV**. Replacing the predictor alone produced no demonstrated
+complete-simulation speedup: 11.30 s SV versus 11.75 s C++ median, with overlapping
+ranges. The 39% runtime reduction above comes from the standalone launcher.
+[Predictor and complete-run measurements](docs/reference_performance.md) ·
+[Reproduce the project](docs/reproduce.md)
 
 ## RTL mutation testing: 21/21 targeted faults detected
 
