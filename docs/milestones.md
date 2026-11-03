@@ -13,11 +13,11 @@ board comparison. A compute consumer is an optional extension to this release.
 | SDRAM source | Project controller; initialization, refresh, BL1/BL4 and pin model |
 | Board implementation | Constraints, 50 fitted user pins, positive reported corner slacks |
 | Physical comparison | Three variants, two fresh configurations each, full tile checks |
-| UVM acceptance | Eight configurations, 368 descriptors, independent scoreboard and corruption control |
+| RTL acceptance | Eight pytest/cocotb configurations, 368 descriptors, independent scoreboard and corruption control |
 | Checker sensitivity | 21/21 selected RTL mutants detected in native UVM; clean before/after controls and source hashes |
 | Reproducibility | Source/image hashes, published records, offline replay and model/evidence CI |
 
-[Results](results.md) · [Reproduction](reproduce.md) · [UVM plan](uvm.md).
+[Results](results.md) · [Reproduction](reproduce.md) · [Archived UVM evidence](uvm.md).
 
 ## Finish-up validation
 
@@ -25,9 +25,6 @@ board comparison. A compute consumer is an optional extension to this release.
 - Test more physical addresses and all banks, additional patterns/strides, longer
   runs and retention. Current physical evidence covers one 2 KiB tile.
 - Capture a short video of a freshly configured board and decoded counters.
-- If a suitable simulator license is available, execute the constrained-random
-  and covergroup branch and retain its coverage report. Current UVM results use
-  seeded procedural stimulus and scenario counters.
 
 ## Optional extensions
 
@@ -37,7 +34,7 @@ board comparison. A compute consumer is an optional extension to this release.
 - SDRAM tensor writeback, write bursts and open-row scheduling.
 - Sustained multi-tile throughput, resource/frequency sweeps and power measurements.
 
-Each extension needs its own UVM acceptance, implementation reports and matched
+Each extension needs its own RTL acceptance, implementation reports and matched
 benchmark. Preserve the serialized baseline and existing evidence.
 
 ## Evidence-supported project description
@@ -46,7 +43,7 @@ benchmark. Preserve the serialized baseline and existing evidence.
 > addressing, banked SRAM, pipelined transfers and burst read prefetch; measured
 > 2.88× cycle speedup over a serialized baseline for a 32×32 sixteen-bit
 > SDRAM-to-SRAM transpose at nominal 50 MHz, with repeated hardware readback and
-> native UVM verification.
+> pytest/cocotb verification.
 
 The 2.88× result is a tile-latency comparison. The separate 4.97× local-memory
 result is simulated. Neither is a comparison against a commercial DMA or GPU.

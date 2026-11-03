@@ -189,9 +189,9 @@ def run_sdram_suite(tool, output_dir: Path) -> dict:
 
 def main() -> int:
     from scripts.run_tests import find_questa, run
-    from scripts.run_uvm_tests import UVM_SOURCES, run_uvm_suite
+    from scripts.run_cocotb_tests import COCOTB_SOURCES, run_cocotb_suite
     names = DEPENDENCIES + SDRAM_SOURCES
-    hashes = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in names + UVM_SOURCES}
+    hashes = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in names + COCOTB_SOURCES}
     output = ROOT / "build" / "sdram_sim"
     output.mkdir(parents=True, exist_ok=True)
     result_path = output / "results.json"
@@ -205,7 +205,7 @@ def main() -> int:
          *[str(ROOT / name) for name in names if name.endswith(".sv")]], output)
     (output / "run_sim.do").write_text("onerror {quit -code 1}\nrun -all\nquit -code 0\n", encoding="ascii")
     summaries = run_sdram_suite(tool, output)
-    summaries["uvm"] = run_uvm_suite(tool_dir, output / "uvm" / "starter")
+    summaries["cocotb"] = run_cocotb_suite(output / "cocotb")
     if any(hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != expected
            for name, expected in hashes.items()):
         raise RuntimeError("Sources changed during SDRAM verification")

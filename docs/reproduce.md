@@ -2,9 +2,10 @@
 
 ## Requirements
 
-- Python **3.10+**; all project Python checks use the standard library.
+- Python **3.10+** and the packages in [requirements-verification.txt](../requirements-verification.txt).
 - For RTL simulation: Questa with SystemVerilog support. Tested on Windows
-  with Questa Intel Starter FPGA Edition **2024.3** and its UVM **1.2** sources/DPI.
+  with Questa Intel Starter FPGA Edition **2024.3**. Historical UVM replay also
+  uses the simulator's UVM **1.2** sources and DPI library.
 - For fitting: Quartus Prime Lite **24.1std**, MAX 10 device support,
   target **10M50DAF484C7G**.
 - For physical checks: Terasic **DE10-Lite**, onboard USB-Blaster and
@@ -20,12 +21,13 @@ evidence checks work without FPGA tools on Windows or Linux.
 From the repository root:
 
 ```sh
-python -m unittest discover -s tests -v
+python -m pip install -r requirements-verification.txt
+python -m pytest tests -q
 python scripts/check_portfolio.py
 python scripts/read_board_status.py --transcript evidence/hardware/2026-10-29/5_pipelined_burst4/probe.log
 ```
 
-The first command runs the 58 Python tests. The second checks the published
+Pytest runs the 58 portable Python tests. The evidence checker checks the published
 record hashes, actual source bytes, hardware packet decoding/ratios, UVM reports
 and local documentation links. The third decodes saved digital JTAG evidence.
 These checks do not establish a fresh RTL or physical-board pass.
@@ -41,40 +43,44 @@ $env:QUARTUS_BIN = 'C:/altera_lite/24.1std/quartus/bin64'
 ```
 
 Questa licensing must already be configured using the simulator's normal setup.
+If Questa cannot load cocotb from a path with spaces, install the verification
+dependencies in a Python environment whose path contains no spaces.
 The observed Starter license runs native UVM components, but denies the
-`svverification` feature for `randomize` and covergroups. Default runs use seeded
-procedural stimulus and scenario counters. [UVM details](uvm.md).
+`svverification` feature for `randomize` and covergroups. The archived UVM runs
+use seeded procedural stimulus and scenario counters. [UVM details](uvm.md).
 
 ## RTL verification
 
 ```powershell
-# Native UVM: eight configurations plus a corruption control
-python scripts/run_uvm_tests.py
-# Single profile and explicit stimulus seed
-python scripts/run_uvm_tests.py --profile p1_b4_s0 --seed 20261029 --random-cases 12
-# Native UVM against isolated RTL defects, with clean controls
-python scripts/run_mutation_tests.py
-# Focused SDRAM/board regression, including UVM: 35 invocations
+# Eight cocotb configurations plus a corruption control
+python -m pytest tb/cocotb/test_regression.py -q
+# Single profile
+python -m pytest tb/cocotb/test_regression.py -q -k p1_b4_s0
+# Focused SDRAM/board regression, including cocotb
 python scripts/run_sdram_tests.py
-# Full project regression, including local studies and UVM: 44 invocations
+# Full project regression, including local studies and cocotb
 python scripts/run_tests.py
 ```
 
 `p1_b4_s0` means pipelined engine, four-word reads and linear scratchpad layout.
-Each default UVM profile runs 34 directed plus 12 generated descriptors. A fault
-control succeeds only when the designated checker detects the intended fault.
-Logs and hashes are written under `build/`; a failed run cannot retain a stale
-successful summary. The published current focused result is separate from the
-historical full-project run.
+Each cocotb profile runs 34 directed plus 12 seeded descriptors. The corruption
+control succeeds when the DMA data checker detects the injected bit flip.
+Pytest's temporary directory holds per-profile simulator logs, XML results and
+JSON reports with the seed, profile, observed scenarios and source hashes.
+The standard scripts retain these files under `build/` and include the per-profile
+reports in their result JSON. Use `pytest --basetemp` with a fresh directory
+to retain files from a direct run.
 
-The [RTL mutation campaign](mutation.md) tests the checkers in `p1_b4_s0` with
+The archived [RTL mutation campaign](mutation.md) uses UVM in `p1_b4_s0` with
 34 directed descriptors plus cache probes. It compiles temporary source copies,
 requires a specific checker diagnosis for every defect and verifies unchanged
 canonical source hashes. It is separate from the eight-profile nominal matrix.
 
-Optional licensed features:
+Historical UVM replay and optional licensed features:
 
 ```powershell
+python scripts/run_uvm_tests.py
+python scripts/run_mutation_tests.py
 python scripts/run_uvm_tests.py --full --compile-only
 # Requires the simulator's SV verification license:
 python scripts/run_uvm_tests.py --full

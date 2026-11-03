@@ -21,7 +21,7 @@ from scripts.generate_local_vectors import generate_local_vectors
 from scripts.generate_pipeline_vectors import generate_pipeline_vectors
 from scripts.generate_swizzle_vectors import generate_swizzle_vectors
 from scripts.run_sdram_tests import SDRAM_SOURCES, run_sdram_suite
-from scripts.run_uvm_tests import UVM_SOURCES, run_uvm_suite
+from scripts.run_cocotb_tests import COCOTB_SOURCES, run_cocotb_suite
 
 
 def run(command: list[str], cwd: Path) -> str:
@@ -191,7 +191,7 @@ def main() -> int:
                "scripts/generate_swizzle_vectors.py", "tb/tb_tma_swizzle_comparison.sv"]
     sources += SDRAM_SOURCES
     source_hashes = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
-                     for name in sources + UVM_SOURCES}
+                     for name in sources + COCOTB_SOURCES}
 
     output_dir = ROOT / "build" / "sim"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -200,7 +200,7 @@ def main() -> int:
         "swizzle_only_results.json" if args.swizzle_only else "results.json")
     result_path = output_dir / result_file
     result_path.unlink(missing_ok=True)
-    run([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"], ROOT)
+    run([sys.executable, "-m", "pytest", "tests", "-q"], ROOT)
     manifest = generate_vectors(output_dir, args.seed, args.random_cases)
     print(json.dumps(manifest, indent=2), flush=True)
     copy_manifest = generate_copy_vectors(output_dir, args.seed, args.copy_random_cases)
@@ -333,7 +333,7 @@ def main() -> int:
     pipeline_summary = run_pipeline_comparison(tool, output_dir, pipeline_manifest)
     swizzle_summary = run_swizzle_comparison(tool, output_dir, swizzle_manifest)
     sdram_summary = run_sdram_suite(tool, output_dir)
-    uvm_summary = run_uvm_suite(tool_dir, output_dir / "uvm" / "starter")
+    cocotb_summary = run_cocotb_suite(output_dir / "cocotb")
     if any(hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != expected
            for name, expected in source_hashes.items()):
         raise RuntimeError("Sources changed during verification; rerun against a stable source tree")
@@ -344,7 +344,7 @@ def main() -> int:
         "simulator_directory": str(tool_dir),
         "simulator_version": version,
         "model_tests": "pass",
-        "uvm": uvm_summary,
+        "cocotb": cocotb_summary,
         **manifest,
         "copy_engine": {k: v for k, v in copy_manifest.items() if k != "cases"},
         "copy_reset_stages": 6,

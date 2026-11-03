@@ -1,5 +1,8 @@
 # Native UVM verification
 
+This guide documents the archived native UVM runs and their replay. The standard
+regression now uses the [pytest/cocotb matrix](reproduce.md#rtl-verification).
+
 The [RTL mutation campaign](mutation.md) uses this same agent, passive monitors
 and independent scoreboard to test whether deliberately broken implementations
 are detected. It adds public-interface cache probes and keeps production sources
@@ -129,10 +132,9 @@ runner currently targets the Windows Questa layout with UVM 1.2 sources and
 `uvm_dpi.dll` alongside the simulator. Vendor library source is referenced from
 the installation rather than copied into the project.
 
-`build/uvm/starter/results.json` records standalone runs. The standard SDRAM
-runner also runs UVM and places its record in
-`build/sdram_sim/uvm/starter/results.json`; the full regression uses
-`build/sim/uvm/starter/results.json`. Each keeps seeds, configuration, mode,
+`build/uvm/starter/results.json` records standalone UVM replay. The archived
+standard SDRAM and full-project runners stored UVM results under their output
+directories. Each record keeps seeds, configuration, mode,
 source hashes, topology and raw UVM reports. Earlier directed/hardware results
 remain distinct. UVM runs in simulation; the FPGA's RTL self-test, fitted timing
 checks and JTAG readout remain necessary for physical validation.

@@ -158,16 +158,15 @@ shift 5 and write reports to `build/quartus/scratchpad_swizzled/` and
 `build/quartus/local_copy_swizzled/`. Shifts 3/4 are RTL-simulated in the comparison;
 only shift 5 is included in the current area comparison.
 
-## UVM acceptance environment
+## RTL acceptance environment
 
-RTL acceptance uses the native UVM 1.2 environment
-in [tb/uvm](../tb/uvm/tma_uvm_pkg.sv) is now part of both standard RTL entry points.
-It uses a sequencer/driver, separate passive host and DMA monitors, an independent
-data/address/commit scoreboard and a scenario subscriber. See [the UVM guide](uvm.md)
-for the matrix, license boundary and replay commands. Existing directed benches
-and pin checks remain complementary; older runs are not relabeled as UVM.
+Both standard RTL entry points run the pytest/cocotb matrix. The Python harness
+drives the maintenance and descriptor ports, checks DMA request and response
+handshakes, and compares data and completion against the address oracle and
+memory populated through maintenance writes. The pin-level SDRAM model checks
+memory command and timing behavior. See [the reproduction guide](reproduce.md#rtl-verification).
 
-Starter mode exercises UVM with seeded procedural stimulus. Its scenario counters
+The archived UVM suite exercises UVM with seeded procedural stimulus. Its scenario counters
 are reported separately from the optional licensed SV covergroups and constraint
 solver. The latter branch has been compiled but cannot be executed with the
 currently available `svverification` license. Physical board tests remain RTL
@@ -177,7 +176,7 @@ On 2026-10-29 UTC, all eight UVM profiles passed with zero UVM warnings, errors
 and fatals: 368 descriptors, 23,496 checked DMA reads, 23,496 checked DMA writes
 and 206,376 checked maintenance readbacks. A separate injected-data-corruption
 run produced the required scoreboard error. These nine runs are included in the
-current focused SDRAM acceptance result; see [executed results](uvm.md#executed-acceptance-result).
+historical focused SDRAM acceptance result. See [executed results](uvm.md#executed-acceptance-result).
 
 ## SDRAM and fitted-board milestone
 

@@ -16,7 +16,7 @@ implementations passed two fresh FPGA configurations and complete tile readback.
 
 The design explores how address generation, overlapping reads/writes, buffering,
 SDRAM access patterns and banked on-chip memory affect tensor transfers.
-Verification combines native UVM, independent reference models and physical
+Verification combines cocotb, pytest, independent reference models and physical
 board tests. [Verification details](docs/verification.md)
 
 ## Hardware result
@@ -72,24 +72,28 @@ flowchart LR
 
 ## Verification
 
-The native **UVM 1.2** environment uses sequences, a sequencer/driver, passive
-host and DMA monitors, an independent data/address/commit scoreboard, and a
-scenario subscriber. It drives the real tensor-system RTL and an independent
-SDRAM pin model through public maintenance/descriptor interfaces.
+The **pytest/cocotb** acceptance matrix exercises the RTL through public
+maintenance and descriptor ports, with passive DMA checks and the independent
+pin-level SDRAM model. It covers both engines, both burst modes, and both layouts.
+See the [cocotb reproduction commands](docs/reproduce.md#rtl-verification).
+
+The first four rows are from the executed cocotb matrix. The mutation and
+focused simulation rows refer to the archived runs.
 
 | Recorded check | Result |
 | --- | --- |
-| UVM configuration matrix | 2 engines × 2 read modes × 2 layouts; 368 descriptors |
-| UVM data checks | 23,496 DMA reads, 23,496 DMA writes, 206,376 maintenance readbacks |
-| UVM nominal severity counts | Zero warnings, errors, or fatals in every profile |
-| Corruption control | Deliberately wrong SDRAM data detected by the scoreboard |
+| cocotb configuration matrix | 2 engines × 2 read modes × 2 layouts; 368 descriptors |
+| cocotb data checks | 46,992 DMA transactions (23,496 reads and 23,496 writes) and 206,376 maintenance readbacks |
+| cocotb scenario checks | All required scenario bins, busy blocking and refresh during a held response |
+| cocotb corruption control | Deliberately corrupted SDRAM data detected at the DMA read response |
 | RTL mutation campaign | 21/21 targeted defects detected; clean controls before/after; production sources unchanged |
 | Focused simulation regression | 35 invocations, including 10 expected-failure controls |
 | Python model/tooling tests | 58 tests passed |
 
 The recorded Questa Starter license runs native UVM with seeded procedural
 stimulus and explicit scenario counters. Its optional constrained-random and
-covergroup branch was compiled but not executed under that license.
+covergroup branch was compiled under that license. Executed UVM results use
+the seeded procedural mode.
 [UVM scope and reports](docs/uvm.md) · [Verification strategy](docs/verification.md)
 
 The [mutation report](docs/mutation.md) records each selected fault and its
@@ -104,18 +108,18 @@ RTL simulation and FPGA fitting run locally with vendor tools.
 
 ## Reproduce
 
-Python 3.10+; no third-party Python packages are needed. From a fresh checkout:
+Python 3.10+. From a fresh checkout:
 
 ```sh
-python -m unittest discover -s tests -v
+python -m pip install -r requirements-verification.txt
+python -m pytest tests -q
 python scripts/check_portfolio.py
 ```
 
 For Windows with Questa and Quartus Prime Lite installed:
 
 ```powershell
-python scripts/run_uvm_tests.py
-python scripts/run_mutation_tests.py
+python -m pytest tb/cocotb/test_regression.py -q
 python scripts/run_sdram_tests.py
 python scripts/build_board.py --engine serialized
 python scripts/build_board.py --engine pipelined
@@ -143,7 +147,8 @@ one to four. This is distinct from the single-stream engine benchmark.
 | Path | Contents |
 | --- | --- |
 | [rtl/](rtl) | Address generator, two engines, scratchpads, SDRAM controller and board top |
-| [tb/uvm/](tb/uvm) | Native UVM environment |
+| [tb/cocotb/](tb/cocotb) | Current pytest/cocotb acceptance tests |
+| [tb/uvm/](tb/uvm) | Native UVM environment for replaying archived evidence |
 | [tb/](tb) | Directed benches, paired timing models and independent SDRAM model |
 | [model/](model) and [tests/](tests) | Mathematical references, status decoders and Python tests |
 | [quartus/](quartus) | MAX 10 synthesis, pin assignments, constraints and JTAG scripts |
