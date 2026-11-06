@@ -1,0 +1,1240 @@
+{
+  "status": "pass",
+  "framework": "pytest/cocotb",
+  "profiles": {
+    "p0_b1_s0": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "scenarios": {
+        "bank_family": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "offset": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "status": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "size": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stall": [
+          0,
+          1,
+          2
+        ]
+      },
+      "busy_blocked": true,
+      "long_hold": true,
+      "status": "pass",
+      "profile": "p0_b1_s0",
+      "seed": 20261029,
+      "parameters": {
+        "PIPELINED": 0,
+        "READ_BURST_WORDS": 1,
+        "SWIZZLE": 0,
+        "READ_XOR_MASK": 0
+      },
+      "sha256": {
+        "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+        "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+        "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+        "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+        "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+        "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+        "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+        "rtl/tma_sdram_controller.sv": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+        "rtl/tma_sdram_copy_system.sv": "cddbd836f8c44517454202559bee2bf6c0831e7568368edd3c691d42f447addf",
+        "tb/tma_sdram_model.sv": "49df16b3595093d1a8467d05f28b6f5202eb17b81bcd4942876a9a009c917219",
+        "tb/cocotb/tb_tma_cocotb.sv": "e8a2bcb31d2216cefcd40e31e7c67d697d881023caf5fabde6aa9d174349d425",
+        "tb/cocotb/tma_regression.py": "d7c1be1785de1ad6e7f6f674c0cd57175443d9ea5b0b6236c5457c6468fe6e81",
+        "tb/cocotb/test_regression.py": "d7d1b57a645c2b1cab311bc91e3343e58b0ed8cbf7736e9cfc73c3eb467f63d4",
+        "model/address_model.py": "558ecab3c694623045d575206abbd371a68a13a3d5487673adf61f179945dad7",
+        "model/copy_model.py": "c88c9e24e65d8f00964fdb18022aa3fb40bcf7dd315e571ff24087f8641822af",
+        "requirements-verification.txt": "84bdcc3f262a284daca0d76c095596807f71852d34e26d038a9b4581d43716e5",
+        "scripts/run_tests.py": "f427807791406842864853d7619e1b6a53e54b991abad62dd05b60c23bcac857",
+        "scripts/run_uvm_tests.py": "df9632aa37331071cbae4041893b5ea806f6bf94e1e3b600c4fab9f55f9617cc"
+      },
+      "cocotb_version": "2.0.1",
+      "pytest_version": "8.4.2",
+      "simulator_version": "Questa Intel Starter FPGA Edition-64 vsim 2024.3 Simulator 2024.09 Sep 10 2024"
+    },
+    "p0_b1_s1": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "scenarios": {
+        "bank_family": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "offset": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "status": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "size": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stall": [
+          0,
+          1,
+          2
+        ]
+      },
+      "busy_blocked": true,
+      "long_hold": true,
+      "status": "pass",
+      "profile": "p0_b1_s1",
+      "seed": 20261029,
+      "parameters": {
+        "PIPELINED": 0,
+        "READ_BURST_WORDS": 1,
+        "SWIZZLE": 1,
+        "READ_XOR_MASK": 0
+      },
+      "sha256": {
+        "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+        "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+        "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+        "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+        "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+        "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+        "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+        "rtl/tma_sdram_controller.sv": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+        "rtl/tma_sdram_copy_system.sv": "cddbd836f8c44517454202559bee2bf6c0831e7568368edd3c691d42f447addf",
+        "tb/tma_sdram_model.sv": "49df16b3595093d1a8467d05f28b6f5202eb17b81bcd4942876a9a009c917219",
+        "tb/cocotb/tb_tma_cocotb.sv": "e8a2bcb31d2216cefcd40e31e7c67d697d881023caf5fabde6aa9d174349d425",
+        "tb/cocotb/tma_regression.py": "d7c1be1785de1ad6e7f6f674c0cd57175443d9ea5b0b6236c5457c6468fe6e81",
+        "tb/cocotb/test_regression.py": "d7d1b57a645c2b1cab311bc91e3343e58b0ed8cbf7736e9cfc73c3eb467f63d4",
+        "model/address_model.py": "558ecab3c694623045d575206abbd371a68a13a3d5487673adf61f179945dad7",
+        "model/copy_model.py": "c88c9e24e65d8f00964fdb18022aa3fb40bcf7dd315e571ff24087f8641822af",
+        "requirements-verification.txt": "84bdcc3f262a284daca0d76c095596807f71852d34e26d038a9b4581d43716e5",
+        "scripts/run_tests.py": "f427807791406842864853d7619e1b6a53e54b991abad62dd05b60c23bcac857",
+        "scripts/run_uvm_tests.py": "df9632aa37331071cbae4041893b5ea806f6bf94e1e3b600c4fab9f55f9617cc"
+      },
+      "cocotb_version": "2.0.1",
+      "pytest_version": "8.4.2",
+      "simulator_version": "Questa Intel Starter FPGA Edition-64 vsim 2024.3 Simulator 2024.09 Sep 10 2024"
+    },
+    "p0_b4_s0": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "scenarios": {
+        "bank_family": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "offset": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "status": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "size": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stall": [
+          0,
+          1,
+          2
+        ]
+      },
+      "busy_blocked": true,
+      "long_hold": true,
+      "status": "pass",
+      "profile": "p0_b4_s0",
+      "seed": 20261029,
+      "parameters": {
+        "PIPELINED": 0,
+        "READ_BURST_WORDS": 4,
+        "SWIZZLE": 0,
+        "READ_XOR_MASK": 0
+      },
+      "sha256": {
+        "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+        "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+        "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+        "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+        "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+        "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+        "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+        "rtl/tma_sdram_controller.sv": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+        "rtl/tma_sdram_copy_system.sv": "cddbd836f8c44517454202559bee2bf6c0831e7568368edd3c691d42f447addf",
+        "tb/tma_sdram_model.sv": "49df16b3595093d1a8467d05f28b6f5202eb17b81bcd4942876a9a009c917219",
+        "tb/cocotb/tb_tma_cocotb.sv": "e8a2bcb31d2216cefcd40e31e7c67d697d881023caf5fabde6aa9d174349d425",
+        "tb/cocotb/tma_regression.py": "d7c1be1785de1ad6e7f6f674c0cd57175443d9ea5b0b6236c5457c6468fe6e81",
+        "tb/cocotb/test_regression.py": "d7d1b57a645c2b1cab311bc91e3343e58b0ed8cbf7736e9cfc73c3eb467f63d4",
+        "model/address_model.py": "558ecab3c694623045d575206abbd371a68a13a3d5487673adf61f179945dad7",
+        "model/copy_model.py": "c88c9e24e65d8f00964fdb18022aa3fb40bcf7dd315e571ff24087f8641822af",
+        "requirements-verification.txt": "84bdcc3f262a284daca0d76c095596807f71852d34e26d038a9b4581d43716e5",
+        "scripts/run_tests.py": "f427807791406842864853d7619e1b6a53e54b991abad62dd05b60c23bcac857",
+        "scripts/run_uvm_tests.py": "df9632aa37331071cbae4041893b5ea806f6bf94e1e3b600c4fab9f55f9617cc"
+      },
+      "cocotb_version": "2.0.1",
+      "pytest_version": "8.4.2",
+      "simulator_version": "Questa Intel Starter FPGA Edition-64 vsim 2024.3 Simulator 2024.09 Sep 10 2024"
+    },
+    "p0_b4_s1": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "scenarios": {
+        "bank_family": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "offset": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "status": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "size": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stall": [
+          0,
+          1,
+          2
+        ]
+      },
+      "busy_blocked": true,
+      "long_hold": true,
+      "status": "pass",
+      "profile": "p0_b4_s1",
+      "seed": 20261029,
+      "parameters": {
+        "PIPELINED": 0,
+        "READ_BURST_WORDS": 4,
+        "SWIZZLE": 1,
+        "READ_XOR_MASK": 0
+      },
+      "sha256": {
+        "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+        "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+        "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+        "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+        "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+        "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+        "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+        "rtl/tma_sdram_controller.sv": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+        "rtl/tma_sdram_copy_system.sv": "cddbd836f8c44517454202559bee2bf6c0831e7568368edd3c691d42f447addf",
+        "tb/tma_sdram_model.sv": "49df16b3595093d1a8467d05f28b6f5202eb17b81bcd4942876a9a009c917219",
+        "tb/cocotb/tb_tma_cocotb.sv": "e8a2bcb31d2216cefcd40e31e7c67d697d881023caf5fabde6aa9d174349d425",
+        "tb/cocotb/tma_regression.py": "d7c1be1785de1ad6e7f6f674c0cd57175443d9ea5b0b6236c5457c6468fe6e81",
+        "tb/cocotb/test_regression.py": "d7d1b57a645c2b1cab311bc91e3343e58b0ed8cbf7736e9cfc73c3eb467f63d4",
+        "model/address_model.py": "558ecab3c694623045d575206abbd371a68a13a3d5487673adf61f179945dad7",
+        "model/copy_model.py": "c88c9e24e65d8f00964fdb18022aa3fb40bcf7dd315e571ff24087f8641822af",
+        "requirements-verification.txt": "84bdcc3f262a284daca0d76c095596807f71852d34e26d038a9b4581d43716e5",
+        "scripts/run_tests.py": "f427807791406842864853d7619e1b6a53e54b991abad62dd05b60c23bcac857",
+        "scripts/run_uvm_tests.py": "df9632aa37331071cbae4041893b5ea806f6bf94e1e3b600c4fab9f55f9617cc"
+      },
+      "cocotb_version": "2.0.1",
+      "pytest_version": "8.4.2",
+      "simulator_version": "Questa Intel Starter FPGA Edition-64 vsim 2024.3 Simulator 2024.09 Sep 10 2024"
+    },
+    "p1_b1_s0": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "scenarios": {
+        "bank_family": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "offset": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "status": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "size": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stall": [
+          0,
+          1,
+          2
+        ]
+      },
+      "busy_blocked": true,
+      "long_hold": true,
+      "status": "pass",
+      "profile": "p1_b1_s0",
+      "seed": 20261029,
+      "parameters": {
+        "PIPELINED": 1,
+        "READ_BURST_WORDS": 1,
+        "SWIZZLE": 0,
+        "READ_XOR_MASK": 0
+      },
+      "sha256": {
+        "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+        "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+        "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+        "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+        "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+        "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+        "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+        "rtl/tma_sdram_controller.sv": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+        "rtl/tma_sdram_copy_system.sv": "cddbd836f8c44517454202559bee2bf6c0831e7568368edd3c691d42f447addf",
+        "tb/tma_sdram_model.sv": "49df16b3595093d1a8467d05f28b6f5202eb17b81bcd4942876a9a009c917219",
+        "tb/cocotb/tb_tma_cocotb.sv": "e8a2bcb31d2216cefcd40e31e7c67d697d881023caf5fabde6aa9d174349d425",
+        "tb/cocotb/tma_regression.py": "d7c1be1785de1ad6e7f6f674c0cd57175443d9ea5b0b6236c5457c6468fe6e81",
+        "tb/cocotb/test_regression.py": "d7d1b57a645c2b1cab311bc91e3343e58b0ed8cbf7736e9cfc73c3eb467f63d4",
+        "model/address_model.py": "558ecab3c694623045d575206abbd371a68a13a3d5487673adf61f179945dad7",
+        "model/copy_model.py": "c88c9e24e65d8f00964fdb18022aa3fb40bcf7dd315e571ff24087f8641822af",
+        "requirements-verification.txt": "84bdcc3f262a284daca0d76c095596807f71852d34e26d038a9b4581d43716e5",
+        "scripts/run_tests.py": "f427807791406842864853d7619e1b6a53e54b991abad62dd05b60c23bcac857",
+        "scripts/run_uvm_tests.py": "df9632aa37331071cbae4041893b5ea806f6bf94e1e3b600c4fab9f55f9617cc"
+      },
+      "cocotb_version": "2.0.1",
+      "pytest_version": "8.4.2",
+      "simulator_version": "Questa Intel Starter FPGA Edition-64 vsim 2024.3 Simulator 2024.09 Sep 10 2024"
+    },
+    "p1_b1_s1": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "scenarios": {
+        "bank_family": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "offset": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "status": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "size": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stall": [
+          0,
+          1,
+          2
+        ]
+      },
+      "busy_blocked": true,
+      "long_hold": true,
+      "status": "pass",
+      "profile": "p1_b1_s1",
+      "seed": 20261029,
+      "parameters": {
+        "PIPELINED": 1,
+        "READ_BURST_WORDS": 1,
+        "SWIZZLE": 1,
+        "READ_XOR_MASK": 0
+      },
+      "sha256": {
+        "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+        "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+        "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+        "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+        "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+        "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+        "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+        "rtl/tma_sdram_controller.sv": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+        "rtl/tma_sdram_copy_system.sv": "cddbd836f8c44517454202559bee2bf6c0831e7568368edd3c691d42f447addf",
+        "tb/tma_sdram_model.sv": "49df16b3595093d1a8467d05f28b6f5202eb17b81bcd4942876a9a009c917219",
+        "tb/cocotb/tb_tma_cocotb.sv": "e8a2bcb31d2216cefcd40e31e7c67d697d881023caf5fabde6aa9d174349d425",
+        "tb/cocotb/tma_regression.py": "d7c1be1785de1ad6e7f6f674c0cd57175443d9ea5b0b6236c5457c6468fe6e81",
+        "tb/cocotb/test_regression.py": "d7d1b57a645c2b1cab311bc91e3343e58b0ed8cbf7736e9cfc73c3eb467f63d4",
+        "model/address_model.py": "558ecab3c694623045d575206abbd371a68a13a3d5487673adf61f179945dad7",
+        "model/copy_model.py": "c88c9e24e65d8f00964fdb18022aa3fb40bcf7dd315e571ff24087f8641822af",
+        "requirements-verification.txt": "84bdcc3f262a284daca0d76c095596807f71852d34e26d038a9b4581d43716e5",
+        "scripts/run_tests.py": "f427807791406842864853d7619e1b6a53e54b991abad62dd05b60c23bcac857",
+        "scripts/run_uvm_tests.py": "df9632aa37331071cbae4041893b5ea806f6bf94e1e3b600c4fab9f55f9617cc"
+      },
+      "cocotb_version": "2.0.1",
+      "pytest_version": "8.4.2",
+      "simulator_version": "Questa Intel Starter FPGA Edition-64 vsim 2024.3 Simulator 2024.09 Sep 10 2024"
+    },
+    "p1_b4_s0": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "scenarios": {
+        "bank_family": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "offset": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "status": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "size": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stall": [
+          0,
+          1,
+          2
+        ]
+      },
+      "busy_blocked": true,
+      "long_hold": true,
+      "status": "pass",
+      "profile": "p1_b4_s0",
+      "seed": 20261029,
+      "parameters": {
+        "PIPELINED": 1,
+        "READ_BURST_WORDS": 4,
+        "SWIZZLE": 0,
+        "READ_XOR_MASK": 0
+      },
+      "sha256": {
+        "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+        "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+        "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+        "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+        "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+        "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+        "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+        "rtl/tma_sdram_controller.sv": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+        "rtl/tma_sdram_copy_system.sv": "cddbd836f8c44517454202559bee2bf6c0831e7568368edd3c691d42f447addf",
+        "tb/tma_sdram_model.sv": "49df16b3595093d1a8467d05f28b6f5202eb17b81bcd4942876a9a009c917219",
+        "tb/cocotb/tb_tma_cocotb.sv": "e8a2bcb31d2216cefcd40e31e7c67d697d881023caf5fabde6aa9d174349d425",
+        "tb/cocotb/tma_regression.py": "d7c1be1785de1ad6e7f6f674c0cd57175443d9ea5b0b6236c5457c6468fe6e81",
+        "tb/cocotb/test_regression.py": "d7d1b57a645c2b1cab311bc91e3343e58b0ed8cbf7736e9cfc73c3eb467f63d4",
+        "model/address_model.py": "558ecab3c694623045d575206abbd371a68a13a3d5487673adf61f179945dad7",
+        "model/copy_model.py": "c88c9e24e65d8f00964fdb18022aa3fb40bcf7dd315e571ff24087f8641822af",
+        "requirements-verification.txt": "84bdcc3f262a284daca0d76c095596807f71852d34e26d038a9b4581d43716e5",
+        "scripts/run_tests.py": "f427807791406842864853d7619e1b6a53e54b991abad62dd05b60c23bcac857",
+        "scripts/run_uvm_tests.py": "df9632aa37331071cbae4041893b5ea806f6bf94e1e3b600c4fab9f55f9617cc"
+      },
+      "cocotb_version": "2.0.1",
+      "pytest_version": "8.4.2",
+      "simulator_version": "Questa Intel Starter FPGA Edition-64 vsim 2024.3 Simulator 2024.09 Sep 10 2024"
+    },
+    "p1_b4_s1": {
+      "descriptors": 46,
+      "read_checks": 2937,
+      "write_checks": 2937,
+      "memory_checks": 25797,
+      "scenarios": {
+        "bank_family": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "offset": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "status": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "size": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "stall": [
+          0,
+          1,
+          2
+        ]
+      },
+      "busy_blocked": true,
+      "long_hold": true,
+      "status": "pass",
+      "profile": "p1_b4_s1",
+      "seed": 20261029,
+      "parameters": {
+        "PIPELINED": 1,
+        "READ_BURST_WORDS": 4,
+        "SWIZZLE": 1,
+        "READ_XOR_MASK": 0
+      },
+      "sha256": {
+        "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+        "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+        "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+        "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+        "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+        "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+        "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+        "rtl/tma_sdram_controller.sv": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+        "rtl/tma_sdram_copy_system.sv": "cddbd836f8c44517454202559bee2bf6c0831e7568368edd3c691d42f447addf",
+        "tb/tma_sdram_model.sv": "49df16b3595093d1a8467d05f28b6f5202eb17b81bcd4942876a9a009c917219",
+        "tb/cocotb/tb_tma_cocotb.sv": "e8a2bcb31d2216cefcd40e31e7c67d697d881023caf5fabde6aa9d174349d425",
+        "tb/cocotb/tma_regression.py": "d7c1be1785de1ad6e7f6f674c0cd57175443d9ea5b0b6236c5457c6468fe6e81",
+        "tb/cocotb/test_regression.py": "d7d1b57a645c2b1cab311bc91e3343e58b0ed8cbf7736e9cfc73c3eb467f63d4",
+        "model/address_model.py": "558ecab3c694623045d575206abbd371a68a13a3d5487673adf61f179945dad7",
+        "model/copy_model.py": "c88c9e24e65d8f00964fdb18022aa3fb40bcf7dd315e571ff24087f8641822af",
+        "requirements-verification.txt": "84bdcc3f262a284daca0d76c095596807f71852d34e26d038a9b4581d43716e5",
+        "scripts/run_tests.py": "f427807791406842864853d7619e1b6a53e54b991abad62dd05b60c23bcac857",
+        "scripts/run_uvm_tests.py": "df9632aa37331071cbae4041893b5ea806f6bf94e1e3b600c4fab9f55f9617cc"
+      },
+      "cocotb_version": "2.0.1",
+      "pytest_version": "8.4.2",
+      "simulator_version": "Questa Intel Starter FPGA Edition-64 vsim 2024.3 Simulator 2024.09 Sep 10 2024"
+    },
+    "data_fault_control": {
+      "descriptors": 0,
+      "read_checks": 0,
+      "write_checks": 0,
+      "memory_checks": 0,
+      "scenarios": {
+        "bank_family": [],
+        "offset": [],
+        "status": [],
+        "size": [],
+        "stall": [
+          2
+        ]
+      },
+      "busy_blocked": false,
+      "long_hold": false,
+      "corruption_detected": "TMA_READ_DATA at 0x0: 0xa55b != 0xa55a",
+      "status": "pass",
+      "profile": "data_fault_control",
+      "seed": 20261029,
+      "parameters": {
+        "PIPELINED": 1,
+        "READ_BURST_WORDS": 4,
+        "SWIZZLE": 0,
+        "READ_XOR_MASK": 1
+      },
+      "sha256": {
+        "rtl/tma_addr_gen.sv": "8926a5accaf5e5a4d3860654883b7c5f31a30ce475f12733849bd815db11d436",
+        "rtl/tma_copy_engine.sv": "45a7fb9a1e63fcbf8e2f535129eecdb77b9cad41ba4f01435717d81f46cf4c04",
+        "rtl/tma_copy_engine_pipelined.sv": "3c9559ae1140d53a843539866d235ff12e68d404613c5c6d89288f45023d53a3",
+        "rtl/tma_copy_engine_select.sv": "bb81f396cf7576436339b5b163801c86ba009ae71b2a954c72d233ea4e8a5285",
+        "rtl/tma_ram_bank.sv": "7a97cbb65d731c71764ce08fdf8a8bec11bde240f4139bbba0678dda27eb5f01",
+        "rtl/tma_scratchpad.sv": "11c0356cc9a0d2996d8d10d02ff1ae328bd68205231893b1cd5f3e691d666563",
+        "rtl/tma_scratchpad_endpoint.sv": "610f3f9f5377af08129f7050b00387e799422794e60a5962d46ff0f0d00d2b7b",
+        "rtl/tma_sdram_controller.sv": "f50be88aa4525d441888eff06c70e6c2e596b1a1c075bb3966112a6b21eb29f1",
+        "rtl/tma_sdram_copy_system.sv": "cddbd836f8c44517454202559bee2bf6c0831e7568368edd3c691d42f447addf",
+        "tb/tma_sdram_model.sv": "49df16b3595093d1a8467d05f28b6f5202eb17b81bcd4942876a9a009c917219",
+        "tb/cocotb/tb_tma_cocotb.sv": "e8a2bcb31d2216cefcd40e31e7c67d697d881023caf5fabde6aa9d174349d425",
+        "tb/cocotb/tma_regression.py": "d7c1be1785de1ad6e7f6f674c0cd57175443d9ea5b0b6236c5457c6468fe6e81",
+        "tb/cocotb/test_regression.py": "d7d1b57a645c2b1cab311bc91e3343e58b0ed8cbf7736e9cfc73c3eb467f63d4",
+        "model/address_model.py": "558ecab3c694623045d575206abbd371a68a13a3d5487673adf61f179945dad7",
+        "model/copy_model.py": "c88c9e24e65d8f00964fdb18022aa3fb40bcf7dd315e571ff24087f8641822af",
+        "requirements-verification.txt": "84bdcc3f262a284daca0d76c095596807f71852d34e26d038a9b4581d43716e5",
+        "scripts/run_tests.py": "f427807791406842864853d7619e1b6a53e54b991abad62dd05b60c23bcac857",
+        "scripts/run_uvm_tests.py": "df9632aa37331071cbae4041893b5ea806f6bf94e1e3b600c4fab9f55f9617cc"
+      },
+      "cocotb_version": "2.0.1",
+      "pytest_version": "8.4.2",
+      "simulator_version": "Questa Intel Starter FPGA Edition-64 vsim 2024.3 Simulator 2024.09 Sep 10 2024"
+    }
+  }
+}

@@ -697,7 +697,13 @@
       "source": "build/uvm/starter/data_fault_control_console.log",
       "original_sha256": "6975666670ef87c92dd309b65c5b11b2f520a44938921f9c6e56b2209e3d4d1a",
       "published_sha256": "0a0a9dc7c67be3a4ba97ec18a910aa27519df6b321b3213fff8b47dd7d8be37d"
+    },
+    {
+      "path": "evidence/cocotb/2026-11-03/results.json",
+      "source": "build/cocotb_acceptance/results.json",
+      "original_sha256": "5f79c000170b7045d0b0f87cab181bbc9a6d71c23df1160bbcc7a829c16d2800",
+      "published_sha256": "741a452ab16f8c33991d4d0ce91c56e2fe1c3da7d7222c4083334452fc587082"
     }
   ],
-  "last_extended_utc": "2026-10-29T18:31:27.354664+00:00"
+  "last_extended_utc": "2026-11-06T07:25:55.708079+00:00"
 }

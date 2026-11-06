@@ -166,6 +166,12 @@ handshakes, and compares data and completion against the address oracle and
 memory populated through maintenance writes. The pin-level SDRAM model checks
 memory command and timing behavior. See [the reproduction guide](reproduce.md#rtl-verification).
 
+On 2026-11-03 UTC, all eight cocotb profiles passed in Questa Intel Starter
+2024.3 with seed `20261029`. Each profile ran 34 directed and 12 seeded
+descriptors, for 368 descriptor executions across the matrix. The separate
+corruption control detected an injected bit flip in the DMA read response.
+[Per-profile results, observed scenarios and source hashes](../evidence/cocotb/2026-11-03/results.json)
+
 The archived UVM suite exercises UVM with seeded procedural stimulus. Its scenario counters
 are reported separately from the optional licensed SV covergroups and constraint
 solver. The latter branch has been compiled but cannot be executed with the

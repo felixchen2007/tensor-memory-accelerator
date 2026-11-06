@@ -2,60 +2,56 @@
 
 [![Model and evidence checks](https://github.com/felixchen2007/tensor-memory-accelerator/actions/workflows/checks.yml/badge.svg)](https://github.com/felixchen2007/tensor-memory-accelerator/actions/workflows/checks.yml)
 
-**SystemVerilog tensor data movement on a Terasic DE10-Lite / MAX 10 FPGA.**
-Descriptor-driven 16-bit copies and transposes from external SDRAM into a banked
-scratchpad, with a preserved serialized baseline, pipelined transfers, and
-four-word burst read prefetch.
+**17.9 MB/s of effective tile bandwidth on a DE10-Lite FPGA.** Pipelining
+and four-word SDRAM read prefetch moved a 32×32, 16-bit transpose in
+**114.7 µs at 50 MHz**, a **2.88× speedup** over the serialized, single-word
+baseline.
 
-**Measured on hardware: 2.88× cycle speedup for a 32×32, 16-bit transpose**,
-from 16,525 to 5,735 cycles at 50 MHz. The comparison preserves a serialized
-baseline and measures pipelining plus four-word burst prefetch. All three
-implementations passed two fresh FPGA configurations and complete tile readback.
-[Hardware methodology and evidence](docs/hardware_benchmark.md) ·
-[Reproduce the project](docs/reproduce.md)
+The SystemVerilog design combines a descriptor-driven tensor DMA engine, a
+custom SDRAM controller, and an 8 KiB banked scratchpad. The engine uses
+independent source and destination strides for copies and transposes.
 
-The design explores how address generation, overlapping reads/writes, buffering,
-SDRAM access patterns and banked on-chip memory affect tensor transfers.
-Verification combines cocotb, pytest, independent reference models and physical
-board tests. [Verification details](docs/verification.md)
+[Board benchmark](docs/hardware_benchmark.md) ·
+[Architecture](docs/architecture.md) ·
+[Verification results](#verification) ·
+[Run it locally](docs/reproduce.md)
 
 ## Hardware result
 
-Same 2 KiB tensor, data pattern, clock, destination layout, and refresh start
-phase. Seeding, memory preflights, and final readback are outside the descriptor
-counter. Recorded on **2026-10-29 UTC**.
+All three builds ran the same 2,048-byte transpose with the same clock, layout,
+data pattern, and starting refresh phase. Each passed two fresh FPGA loads
+and full tile readback on **2026-10-29 UTC**.
 
-| Implementation | Descriptor cycles | Latency at 50 MHz | Speedup vs baseline | Logic elements | Registers |
+| Implementation | Cycles | Tile latency | Effective bandwidth | Speedup | Fitted logic elements |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Serialized, single-word reads | 16,525 | 330.50 µs | 1.00× | 2,477 | 1,652 |
-| Pipelined, single-word reads | 13,541 | 270.82 µs | 1.22× | 2,703 | 1,863 |
-| Pipelined, four-word prefetch | **5,735** | **114.70 µs** | **2.88×** | 2,856 | 1,953 |
+| Serialized, single-word reads (BL1) | 16,525 | 330.50 µs | 6.20 MB/s | 1.00× | 2,477 |
+| Pipelined, single-word reads (BL1) | 13,541 | 270.82 µs | 7.56 MB/s | 1.22× | 2,703 |
+| Pipelined, four-word prefetch (BL4) | **5,735** | **114.70 µs** | **17.86 MB/s** | **2.88×** | 2,856 |
 
-All fits use 65,536 RAM bits and one PLL. Counts include the complete board test
-and diagnostics. The BL4 image's worst reported setup/hold slacks are
-+1.584 / +0.147 ns under the documented external-delay assumptions.
-[Six hardware runs and image hashes](evidence/hardware/2026-10-29/results.json).
+Effective bandwidth divides useful tile bytes by the measured descriptor time.
+The counter starts after initialization and seeding and stops before readback.
+Logic counts include the board self-test and diagnostics.
+[Six hardware runs and image hashes](evidence/hardware/2026-10-29/results.json)
 
-This result covers one 2 KiB tile crossing a row boundary in SDRAM bank 1.
-Sustained bandwidth, full-memory coverage, retention, and temperature/jitter
-qualification remain open. Quartus warning 15064 for non-dedicated SDRAM clock
-routing remains documented in [the hardware methodology](docs/hardware_benchmark.md).
+Pipelining overlaps SDRAM reads with scratchpad writes and delivers a **1.22×**
+gain at BL1. Four-word prefetch then delivers a further **2.36×** over
+pipelined BL1 by reusing adjacent words from one SDRAM access. On the simulated
+sparse column gather, BL4 took **23% more cycles** because it fetched four
+times as much data. [Burst study](docs/bursts.md)
 
 ## Implemented architecture
 
 ```mermaid
 flowchart LR
-    D[2D descriptor] --> A[Address generator]
-    A --> E[Serialized / pipelined engine]
-    M[64 MiB x16 SDRAM] <--> C[Refresh-capable SDRAM controller]
-    C --> B[Optional 4-word read buffer]
-    B --> E
-    E --> P[8 KiB / 4-bank scratchpad]
-    T[Onboard self-test / maintenance port] --> C
-    T --> P
-    E --> S[Status and cycle counters]
-    T --> J[Passive JTAG diagnostics]
-    S --> J
+    subgraph FPGA["DE10-Lite FPGA fabric"]
+        D["2D descriptor"] --> E["Tensor DMA: address generator and copy engine"]
+        C["SDRAM controller: BL1 or BL4 prefetch"] -->|"16-bit read data"| E
+        E -->|"strided writes"| P["8 KiB, four-bank scratchpad"]
+        E --> J["Status and cycle counters via JTAG"]
+    end
+    M["External 64 MiB SDRAM"] -->|"x16 data bus"| C
+    E -.->|"read requests"| C
+    C -.->|"commands and addresses"| M
 ```
 
 - **Addressing:** 32-bit byte addresses, 16-bit row/column counts and element
@@ -72,39 +68,31 @@ flowchart LR
 
 ## Verification
 
-The **pytest/cocotb** acceptance matrix exercises the RTL through public
-maintenance and descriptor ports, with passive DMA checks and the independent
-pin-level SDRAM model. It covers both engines, both burst modes, and both layouts.
-See the [cocotb reproduction commands](docs/reproduce.md#rtl-verification).
+The **cocotb and pytest** regression drives the real DMA and SDRAM-controller
+RTL through public interfaces. A Python reference checks DMA requests,
+responses, and scratchpad contents. An independent pin-level SDRAM model
+checks commands and timing.
 
-The first four rows are from the executed cocotb matrix. The mutation and
-focused simulation rows refer to the archived runs.
-
-| Recorded check | Result |
+| Recorded cocotb check | Result |
 | --- | --- |
-| cocotb configuration matrix | 2 engines × 2 read modes × 2 layouts; 368 descriptors |
-| cocotb data checks | 46,992 DMA transactions (23,496 reads and 23,496 writes) and 206,376 maintenance readbacks |
-| cocotb scenario checks | All required scenario bins, busy blocking and refresh during a held response |
-| cocotb corruption control | Deliberately corrupted SDRAM data detected at the DMA read response |
-| RTL mutation campaign | 21/21 targeted defects detected; clean controls before/after; production sources unchanged |
-| Focused simulation regression | 35 invocations, including 10 expected-failure controls |
-| Python model/tooling tests | 58 tests passed |
+| Matrix | **368 descriptor executions** across 2 engines × 2 read modes × 2 scratchpad layouts |
+| Data checks | **46,992 DMA transactions** and **206,376 memory readbacks** |
+| Observed scenarios | Bank/transfer combinations, burst offsets, error statuses, stalls, and refresh during a held response |
+| Corruption control | Detected an injected bit flip at the DMA read response |
 
-The recorded Questa Starter license runs native UVM with seeded procedural
-stimulus and explicit scenario counters. Its optional constrained-random and
-covergroup branch was compiled under that license. Executed UVM results use
-the seeded procedural mode.
-[UVM scope and reports](docs/uvm.md) · [Verification strategy](docs/verification.md)
+[Executed results and source hashes](evidence/cocotb/2026-11-03/results.json) ·
+[Reproduce the RTL regression](docs/reproduce.md#rtl-verification)
 
-The [mutation report](docs/mutation.md) records each selected fault and its
-required checker diagnosis. Hosted CI runs Python models and evidence checks;
-RTL simulation and FPGA fitting run locally with vendor tools.
+Hosted CI runs the portable Python tests and evidence checks. The separate
+[archived UVM mutation campaign](docs/mutation.md) caught 21 of 21 targeted
+RTL faults.
 
 ## Remaining hardware work
 
-- Measure sustained bandwidth and test more tensor sizes, strides and SDRAM banks.
-- Address the documented non-dedicated SDRAM clock route and validate its timing.
-- Profile SDRAM stalls and bus utilization before selecting the next RTL optimization.
+The hardware benchmark covers one tile that crosses a row boundary in SDRAM
+bank 1. Sustained bandwidth and broader board qualification remain open. The
+benchmark documents the fitted timing and Quartus warning 15064 for the
+[non-dedicated SDRAM clock route](docs/hardware_benchmark.md#interpretation-and-limits).
 
 ## Reproduce
 
@@ -131,11 +119,6 @@ volatile hardware configuration, and offline replay are in
 [the reproduction guide](docs/reproduce.md).
 
 ## Engineering tradeoffs
-
-Burst prefetch amortizes ACTIVATE/PRECHARGE overhead across neighboring words.
-It also regresses on sparse loads: the simulated column-gather case rises from
-3,387 to 4,167 cycles while fetching four times as much data.
-[Burst study](docs/bursts.md).
 
 In the separate four-lane scratchpad study, XOR banking reduces a stride-32
 column batch from four issue cycles to one; a stride-33 diagonal regresses from

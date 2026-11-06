@@ -7,9 +7,10 @@ license files, vendor libraries and the Terasic reference image are excluded.
 | Directory | Meaning |
 | --- | --- |
 | [hardware/2026-10-29](hardware/2026-10-29) | Six physical configurations, decoded/raw JTAG, programming reports and fitted build records |
+| [cocotb/2026-11-03](cocotb/2026-11-03/results.json) | Eight pytest/cocotb acceptance profiles and a corruption control, with tool versions, seed, source hashes and observed scenarios |
 | [uvm/2026-10-29](uvm/2026-10-29) | Eight native UVM profiles, corruption control, source hashes and license/compile-only records |
 | [mutation/2026-10-29](mutation/2026-10-29) | 21 isolated RTL defects, clean controls, compile/simulation reports, rejected pilot and fresh nominal UVM matrix |
-| [simulation/2026-10-29](simulation/2026-10-29) | Current focused directed-plus-UVM regression and burst metrics |
+| [simulation/2026-10-29](simulation/2026-10-29) | Archived focused directed-plus-UVM regression and burst metrics |
 | [simulation/2026-10-27](simulation/2026-10-27) | Historical full/local-memory studies; not a new full-suite pass |
 
 ## Provenance
@@ -20,6 +21,9 @@ with placeholders and JSON is formatted consistently. Measurements, status
 packets, source/SOF hashes, warnings and severity reports retain their meaning.
 The raw on-board packet hex strings are unchanged. Exported-file hashes differ
 when these presentation transformations alter bytes.
+
+The cocotb export retains the per-profile reports and omits the local simulator
+artifact directory.
 
 Runner timestamps use UTC. Simulator banners retain the host's local clock,
 so their calendar date can differ from the enclosing UTC evidence directory.
