@@ -2,6 +2,8 @@
 
 // External SDRAM source and an 8 KiB banked destination scratchpad.
 // The maintenance port loads/inspects memory while the copy engine is idle.
+// Descriptor traffic reads SDRAM and writes the scratchpad. Maintenance can
+// access either endpoint and retains ownership until its response is accepted.
 module tma_sdram_copy_system #(
     parameter bit PIPELINED = 0,
     parameter bit SWIZZLE = 0,

@@ -22,6 +22,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
+          # Published runs refer to the original source blobs in Git history.
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-python@v7
         with:

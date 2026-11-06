@@ -92,6 +92,8 @@ class Bench:
         return self.seed % limit
 
     async def tick(self):
+        # The SV wrapper snapshots handshakes on the rising edge. Read that
+        # snapshot after the edge so same-cycle replacements are unambiguous.
         await FallingEdge(self.dut.clk)
         return self.observe()
 
@@ -129,6 +131,8 @@ class Bench:
         if 'desc' in events:
             assert self.active is None, 'TMA_OVERLAP'
             self.active = Descriptor(*events['desc'])
+            # Predict the legal prefix and its data from the descriptor and
+            # public maintenance traffic, independently of the DMA signals.
             prefix, self.status = predict(self.active)
             self.expected = [(sa, da, self.source[sa]) for sa, da in prefix]
             self.read_issued = self.write_issued = self.committed = 0
@@ -146,6 +150,7 @@ class Bench:
             assert self.writes, 'TMA_WRITE_ORPHAN'
             _, da, data = self.writes.popleft()
             assert events['write_response'] == (0,), 'TMA_WRITE_ERROR'
+            # Update the expected memory when the accepted write completes.
             self.destination[da] = data
             self.committed += 1
         if 'read' in events:

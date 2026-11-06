@@ -24,7 +24,7 @@ The final recorded configuration used the burst image.
 
 The [six-run record](../evidence/hardware/2026-10-29/results.json)
 contains image hashes and measurements. Adjacent numbered folders include build
-records and programming/probe logs; source hashes bind the current RTL. Original
+records and programming/probe logs. Source hashes identify the RTL used in the runs. Original
 binary/source archives remain local. This is a 2 KiB tile result. Physical command counts
 come from simulation; the board reports verified data and descriptor cycles.
 Scattered-access penalties are recorded in [the burst study](bursts.md).

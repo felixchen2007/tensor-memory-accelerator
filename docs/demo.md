@@ -8,7 +8,7 @@ yet been recorded; the following steps define a reproducible hardware demo.
 1. Read the three hardware measurements in the README: serialized BL1,
    pipelined BL1, and pipelined BL4. Explain what changed between them.
 2. Run `python scripts/check_portfolio.py` to validate evidence integrity,
-   current hardware/UVM source identity and all six hardware results.
+   archived hardware/UVM source identity and all six hardware results.
 3. Decode the repeated burst run:
 
    ```sh

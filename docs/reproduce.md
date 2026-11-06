@@ -18,7 +18,7 @@ evidence checks work without FPGA tools on Windows or Linux.
 
 ## Checks without a board or simulator
 
-From the repository root:
+From the root of a Git clone with history:
 
 ```sh
 python -m pip install -r requirements-verification.txt
@@ -28,7 +28,7 @@ python scripts/read_board_status.py --transcript evidence/hardware/2026-10-29/5_
 ```
 
 Pytest runs the 58 portable Python tests. The evidence checker checks the published
-record hashes, actual source bytes, hardware packet decoding/ratios, UVM reports
+record hashes, archived source bytes, hardware packet decoding/ratios, UVM reports
 and local documentation links. The third decodes saved digital JTAG evidence.
 These checks do not establish a fresh RTL or physical-board pass.
 

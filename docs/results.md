@@ -120,5 +120,5 @@ SDRAM speedups.
 - [Bank-layout measurements](../evidence/simulation/2026-10-27/swizzle_comparison.md)
 
 Run `python scripts/check_portfolio.py` to verify published evidence integrity,
-current hardware/UVM source hashes, decoded packets, ratios and document links.
+archived hardware/UVM source hashes, decoded packets, ratios and document links.
 Fresh simulation and fitting commands are in [the reproduction guide](reproduce.md).

@@ -44,8 +44,10 @@ records establish the hardware result separately.
 python scripts/check_portfolio.py
 ```
 
-The checker validates exported hashes, matches current hardware/UVM source bytes
-to their recorded hashes, decodes every three-packet hardware sample, recomputes
+Run the checker from a Git clone with history. It validates exported hashes
+and compares the hardware and UVM source hashes against the
+[archived source revision](https://github.com/felixchen2007/tensor-memory-accelerator/tree/b453ed9aaa66a35f5c222fe55494d942c8d837a1).
+It decodes every three-packet hardware sample, recomputes
 the benchmark comparison, and checks nominal/negative UVM reports. It also checks
 the exact mutation edits, their designated checker diagnoses, clean controls,
 follow-up UVM matrix and local Markdown file links. This is evidence validation, not fresh RTL simulation

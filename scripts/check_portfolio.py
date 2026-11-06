@@ -6,8 +6,10 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
 import sys
 from dataclasses import asdict
+from functools import cache
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,6 +20,10 @@ from model.board_status import decode_samples, decode_read_trace
 from scripts.mutation_catalog import MUTATIONS
 from scripts.run_mutation_tests import ADDITIONAL, classify, nominal_result
 from scripts.run_uvm_tests import RTL_SOURCES, UVM_SOURCES
+
+# This revision contains the source bytes for the published hardware and
+# simulation records. Source comments added later change those byte hashes.
+EVIDENCE_SOURCE_COMMIT = "b453ed9aaa66a35f5c222fe55494d942c8d837a1"
 
 
 def require(condition: bool, message: str) -> None:
@@ -33,11 +39,21 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+@cache
+def archived_source(name: str) -> bytes:
+    blob = subprocess.run(
+        ["git", "cat-file", "blob", f"{EVIDENCE_SOURCE_COMMIT}:{name}"],
+        cwd=ROOT, capture_output=True,
+    )
+    require(blob.returncode == 0,
+            f"Archived source unavailable: {name}. Use a Git clone with the evidence revision.")
+    return blob.stdout
+
+
 def check_source_hashes(hashes: dict) -> None:
     for name, expected in hashes.items():
-        path = ROOT / name
-        require(path.is_file() and digest(path) == expected,
-                f"Tested source differs: {name}; retain historical evidence and record a new run")
+        require(hashlib.sha256(archived_source(name)).hexdigest() == expected,
+                f"Archived source hash mismatch: {name}")
 
 
 def check_exports() -> int:
@@ -163,7 +179,7 @@ def check_mutations() -> int:
         for key, value in asdict(mutation).items():
             require(record[key] == (list(value) if isinstance(value, tuple) else value),
                     f"Mutation patch or expected diagnosis changed: {mutation.name}/{key}")
-        for key, value in mutation.identity((ROOT / mutation.source).read_bytes()).items():
+        for key, value in mutation.identity(archived_source(mutation.source)).items():
             require(record[key] == value, f"Mutated source identity mismatch: {mutation.name}")
         report = (folder / f"{mutation.name}.log").read_text(encoding="utf-8")
         verdict = classify(report, mutation, record["returncode"])

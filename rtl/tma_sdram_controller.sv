@@ -50,6 +50,8 @@ module tma_sdram_controller #(
     logic write_q, last_write_q;
     logic [24:0] word_q;
     logic [15:0] data_q, read_data_q;
+    // In BL4 mode the tag keeps the bank, row, and aligned line column.
+    // Byte-address bits [2:1] select one of the four buffered words.
     logic line_valid_q;
     logic [22:0] line_tag_q;
     logic [15:0] line_words_q [4];
@@ -175,6 +177,8 @@ module tma_sdram_controller #(
                 MODE_WAIT: if (wait_q != 0) wait_q <= wait_q - 1'b1;
                            else begin init_done <= 1; refresh_age_q <= 0; state_q <= IDLE; end
                 IDLE: begin
+                    // At IDLE all rows are closed. A held host response
+                    // blocks new requests while refresh remains eligible.
                     if (due) state_q <= REFRESH;
                     else if ((rd_req_valid && rd_req_ready) || (wr_req_valid && wr_req_ready)) begin
                         write_q <= wr_req_valid && wr_req_ready;
@@ -220,6 +224,8 @@ module tma_sdram_controller #(
                 WRITE_WAIT: if (wait_q != 0) wait_q <= wait_q - 1'b1;
                             else state_q <= PRECHARGE;
                 PRECHARGE: begin state_q <= RP_WAIT; wait_q <= 1; end
+                // Return a miss or write response after the bank has closed
+                // and the precharge delay has elapsed.
                 RP_WAIT: if (wait_q != 0) wait_q <= wait_q - 1'b1;
                          else begin
                              state_q <= IDLE;
