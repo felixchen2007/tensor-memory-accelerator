@@ -1,3 +1,6 @@
+// Defines the UVM transaction types and assembles the verification environment.
+// The package brings together the sequences, agent, scoreboard, and scenario tracking.
+
 `timescale 1ns/1ps
 package tma_uvm_pkg;
     import uvm_pkg::*;

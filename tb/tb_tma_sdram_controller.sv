@@ -1,3 +1,6 @@
+// Tests the controller directly against a pin-level SDRAM model.
+// It exercises read and write traffic, burst reads, and refresh under backpressure.
+
 `timescale 1ns/1ps
 `default_nettype none
 module tb_tma_sdram_controller #(

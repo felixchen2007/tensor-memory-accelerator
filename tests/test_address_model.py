@@ -1,3 +1,8 @@
+"""Tests the Python descriptor-to-address model.
+
+The cases cover strides, transposes, empty shapes, and address wraparound.
+"""
+
 import unittest
 from dataclasses import replace
 

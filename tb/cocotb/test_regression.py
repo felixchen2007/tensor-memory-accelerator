@@ -1,4 +1,7 @@
-"""Pytest entry point for the eight-profile RTL regression and its fault control."""
+"""Defines the eight pytest configurations and the injected-corruption test.
+
+Each case launches cocotb and saves its result and source hashes.
+"""
 
 import ctypes
 import hashlib

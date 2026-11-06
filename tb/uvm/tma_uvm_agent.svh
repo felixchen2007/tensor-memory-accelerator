@@ -1,3 +1,6 @@
+// Defines the UVM driver, monitors, and agent wiring.
+// The driver sends host operations while the monitors report observed host and DMA handshakes.
+
 class tma_driver extends uvm_driver #(tma_item);
     `uvm_component_utils(tma_driver)
     virtual tma_uvm_if vif;

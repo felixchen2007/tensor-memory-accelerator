@@ -1,8 +1,8 @@
-"""Run native UVM against isolated RTL mutants; never program hardware.
+"""Runs the archived UVM mutation campaign against temporary RTL copies.
 
-The optimized p1_b4_s0 configuration is the campaign's explicit scope. Nominal
-controls run before and after; existing source files are never overwritten.
+A defect counts as detected when the expected checker reports it.
 """
+
 import argparse
 from dataclasses import asdict
 from datetime import datetime, timezone

@@ -1,4 +1,7 @@
-"""Generate deterministic independent address expectations for the RTL scoreboard."""
+"""Creates repeatable descriptors and expected addresses for the address generator test.
+
+The RTL testbench compares its output against these files.
+"""
 
 import json
 import random

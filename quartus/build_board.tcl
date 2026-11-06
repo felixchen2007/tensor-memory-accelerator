@@ -1,4 +1,6 @@
-# Full compile, including fitter and timing. Does NOT program the board.
+# Builds a DE10-Lite FPGA image for the selected engine and read burst mode.
+# It runs the Quartus fit and timing flow and leaves programming to a separate tool.
+
 package require ::quartus::project
 package require ::quartus::flow
 set root [file normalize [file join [file dirname [info script]] ..]]

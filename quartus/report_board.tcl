@@ -1,3 +1,6 @@
+# Opens the fitted Quartus design and exports timing reports.
+# The build script uses those reports to check clock and SDRAM timing.
+
 package require ::quartus::project
 package require ::quartus::sta
 set root [file normalize [file join [file dirname [info script]] ..]]

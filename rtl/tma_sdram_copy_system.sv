@@ -1,9 +1,7 @@
-`default_nettype none
+// Connects the tensor DMA to external SDRAM for reads and the on-chip scratchpad for writes.
+// The maintenance port can seed or inspect either memory between descriptors.
 
-// External SDRAM source and an 8 KiB banked destination scratchpad.
-// The maintenance port loads/inspects memory while the copy engine is idle.
-// Descriptor traffic reads SDRAM and writes the scratchpad. Maintenance can
-// access either endpoint and retains ownership until its response is accepted.
+`default_nettype none
 module tma_sdram_copy_system #(
     parameter bit PIPELINED = 0,
     parameter bit SWIZZLE = 0,

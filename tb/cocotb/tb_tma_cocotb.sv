@@ -1,3 +1,6 @@
+// Connects the accelerator to the pin-level SDRAM model for cocotb.
+// It snapshots interface signals on each rising edge so Python can check which transfers occurred.
+
 `timescale 1ns/1ps
 module tb_tma_cocotb #(
     parameter bit PIPELINED=1,SWIZZLE=0,

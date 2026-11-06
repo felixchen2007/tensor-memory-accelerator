@@ -1,5 +1,7 @@
-"""Validate paired board evidence and compute tile latency, not sustained bandwidth."""
+"""Checks that repeated board runs used comparable settings and agreed on their cycle counts.
 
+It turns those counts into latency, tile bandwidth, and speedup.
+"""
 
 def compare_runs(runs: list[dict]) -> dict:
     has_burst = any(r["configuration"].get("read_burst_words", 1) == 4 for r in runs)

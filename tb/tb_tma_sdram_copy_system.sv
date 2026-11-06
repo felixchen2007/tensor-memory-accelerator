@@ -1,3 +1,6 @@
+// Tests complete transfers from SDRAM into the scratchpad.
+// It loads data through maintenance requests and reads back the destination after the DMA runs.
+
 `timescale 1ns/1ps
 `default_nettype none
 module tb_tma_sdram_copy_system #(

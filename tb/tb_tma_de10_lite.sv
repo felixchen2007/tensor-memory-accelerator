@@ -1,3 +1,6 @@
+// Simulates the DE10-Lite top with the SDRAM model and board simulation models.
+// It checks the self-test result and the diagnostic packet that would be read over JTAG.
+
 `timescale 1ns/1ps
 `default_nettype none
 module tb_tma_de10_lite #(

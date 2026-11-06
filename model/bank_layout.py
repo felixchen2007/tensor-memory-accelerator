@@ -1,4 +1,7 @@
-"""Word-addressed four-bank layout, with an explicit reversible mapping."""
+"""Maps a scratchpad word address to a bank and a row.
+
+Use it to compare bank conflicts with linear and XOR layouts.
+"""
 
 from dataclasses import dataclass
 

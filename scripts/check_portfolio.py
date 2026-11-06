@@ -1,7 +1,8 @@
-"""Validate published engineering evidence and links using only Python stdlib.
+"""Checks the published benchmark, simulation evidence, and documentation links.
 
-This reads recorded results. It does not run RTL, fit an FPGA or access hardware.
+It compares the recorded source hashes with the archived Git revision.
 """
+
 import hashlib
 import json
 from pathlib import Path

@@ -1,10 +1,8 @@
-"""Compare descriptor timings across FPGA images or replay saved JTAG records.
+"""Compares the FPGA variants using the same tensor workload and reports latency, bandwidth, and speedup.
 
-With --hardware, validate the simulator and Quartus records before programming
-the FPGA's volatile configuration. With --records, compare saved runs offline.
-The descriptor timer measures the transfer itself. Seeding and readback checks
-run outside that interval.
+Use --records to replay saved runs or --hardware to load validated images and collect new measurements.
 """
+
 import argparse
 from datetime import datetime, timezone
 import hashlib
@@ -31,8 +29,6 @@ def check_sources(record: dict) -> None:
 
 
 def hardware_runs(include_burst: bool = False) -> tuple[list[dict], Path]:
-    # Check each image against the same workload, refresh phase, and current
-    # sources so cycle differences can be attributed to the selected variant.
     sim_path = ROOT / "build/sdram_sim/results.json"
     sim = json.loads(sim_path.read_text())
     check_sources(sim)
@@ -66,7 +62,6 @@ def hardware_runs(include_burst: bool = False) -> tuple[list[dict], Path]:
     folder = ROOT / "build/hardware" / f"{stamp}_engine_benchmark"
     folder.mkdir(parents=True)
     shutil.copy2(sim_path, folder / "simulation_results.json")
-    # Keep the exact inputs alongside the measurements for later reproduction.
     sources = dict(sim["sha256"])
     sources.update(variants["pipelined"][1]["sha256"])
     for name, expected in sources.items():
@@ -77,8 +72,7 @@ def hardware_runs(include_burst: bool = False) -> tuple[list[dict], Path]:
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)
     runs = []
-    # Repeat the same load order so each image's counter must reproduce after
-    # a fresh configuration. Leave the last variant loaded.
+    # Alternate images and finish with the optimized version loaded.
     order = list(variants) * 2
     for index, variant in enumerate(order):
         board_path, board, image = variants[variant]
@@ -96,8 +90,6 @@ def hardware_runs(include_burst: bool = False) -> tuple[list[dict], Path]:
         if (scan.returncode or "031050DD" not in scan.stdout or "USB-Blaster [USB-0]" not in scan.stdout
                 or "JTAG chain broken" in scan.stdout):
             raise RuntimeError(f"Expected board is not connected; see {run_dir / 'jtag_scan.log'}")
-        # Program the first device in the verified JTAG chain with a .sof.
-        # This loads volatile fabric configuration.
         programmed = subprocess.run([str(tool_dir / f"quartus_pgm{suffix}"), "-m", "JTAG",
             "-c", "USB-Blaster [USB-0]", "-o", f"p;{image}@1"], text=True, capture_output=True)
         output = programmed.stdout + programmed.stderr
@@ -112,8 +104,6 @@ def hardware_runs(include_burst: bool = False) -> tuple[list[dict], Path]:
         record_path.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
         if not success:
             raise RuntimeError(f"Volatile programming failed; see {run_dir}")
-        # Successful programming only proves the image loaded. The probe must
-        # also report the intended variant and a passing data self-test.
         read = subprocess.run([sys.executable, str(ROOT / "scripts/read_board_status.py"), "--hardware"],
                               cwd=ROOT, text=True, capture_output=True)
         if read.returncode:

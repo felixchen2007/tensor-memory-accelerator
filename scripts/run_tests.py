@@ -1,4 +1,7 @@
-"""Run address and data-copy regressions, or explicitly select model-only."""
+"""Runs the address, copy, scratchpad, and pipeline regressions along with cocotb acceptance.
+
+The --model-only option runs the Python checks and generates vectors.
+"""
 
 import argparse
 import csv

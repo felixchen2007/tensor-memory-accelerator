@@ -1,7 +1,7 @@
-`default_nettype none
+// Implements one synchronous RAM bank with one read port and one write port.
+// The scratchpad handles what readers see when a read and write target the same address.
 
-// One synchronous read port and one write port. Collision forwarding lives in
-// the parent, so primitive read-during-write data is deliberately unspecified.
+`default_nettype none
 module tma_ram_bank #(
     parameter int unsigned ROW_W = 10
 ) (

@@ -1,3 +1,6 @@
+// Tracks the scenarios exercised during archived UVM simulation.
+// It records combinations such as SDRAM bank, transfer shape, burst offset, and stalls.
+
 class tma_coverage extends uvm_subscriber #(tma_observation);
     `uvm_component_utils(tma_coverage)
     tma_item active_descriptor;

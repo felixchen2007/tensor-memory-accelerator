@@ -1,3 +1,6 @@
+// Connects the SDRAM tensor system to the archived UVM environment.
+// The same top also connects the independent SDRAM model and publishes the UVM interface.
+
 `timescale 1ns/1ps
 `include "uvm_macros.svh"
 module tb_tma_uvm #(

@@ -1,7 +1,7 @@
-`default_nettype none
+// Seeds and checks each memory before launching a tensor transfer.
+// It reads back the result and reports the test stage and cycle count to board diagnostics.
 
-// Isolate local RAM and SDRAM before exercising the tensor loader. All accesses
-// use the public maintenance/descriptor interfaces; no hierarchical RAM access.
+`default_nettype none
 module tma_sdram_selftest #(
     parameter bit PIPELINED=1,
     parameter bit SWIZZLE=0,

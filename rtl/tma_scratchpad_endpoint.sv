@@ -1,7 +1,7 @@
-`default_nettype none
+// Adapts the DMA's byte-addressed requests to the word-addressed scratchpad.
+// It checks alignment and range and uses one of the scratchpad's read lanes.
 
-// Byte-addressed ready/valid adapter for the copy engine. Lanes 1-3 are unused
-// here; the standalone scratchpad exposes them to a future parallel consumer.
+`default_nettype none
 module tma_scratchpad_endpoint #(
     parameter int unsigned ROW_W = 10,
     parameter bit SWIZZLE = 0,

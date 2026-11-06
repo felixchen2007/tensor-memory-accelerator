@@ -1,4 +1,8 @@
-"""Prevent false mutation detections from tool errors or unrelated failures."""
+"""Tests how the archived mutation runner classifies failures.
+
+A tool error or unrelated checker failure should never count as a detected defect.
+"""
+
 from dataclasses import replace
 from pathlib import Path
 import unittest

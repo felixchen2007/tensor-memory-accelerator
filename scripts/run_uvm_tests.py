@@ -1,4 +1,8 @@
-"""Run native UVM 1.2 against the SDRAM tensor system; never access hardware."""
+"""Replays the archived native UVM regression for the SDRAM tensor system.
+
+It runs the selected hardware configurations and records the scoreboard results.
+"""
+
 import argparse
 from datetime import datetime, timezone
 import hashlib

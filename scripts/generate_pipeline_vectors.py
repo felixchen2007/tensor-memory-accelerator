@@ -1,4 +1,7 @@
-"""Paired-engine vectors: identical data and per-transaction memory timing."""
+"""Prepares the same tensor inputs and memory service delays for both engines.
+
+The comparison bench uses them to compare correctness and cycle counts.
+"""
 
 import json
 from pathlib import Path

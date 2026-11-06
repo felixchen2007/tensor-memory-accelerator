@@ -1,3 +1,6 @@
+// Tests descriptor transfers between two on-chip scratchpads.
+// It seeds and reads back both memories through the public maintenance port.
+
 `timescale 1ns/1ps
 `default_nettype none
 

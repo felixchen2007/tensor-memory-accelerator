@@ -1,4 +1,8 @@
-"""Build completion alone must not be mistaken for successful fitted timing."""
+"""Tests the Quartus timing and pin report checks with saved-format fixtures.
+
+It exercises the checks that reject incomplete or unsafe fits.
+"""
+
 import unittest
 from scripts.build_board import validate_timing, validate_pins
 

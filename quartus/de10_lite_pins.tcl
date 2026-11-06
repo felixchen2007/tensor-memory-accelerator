@@ -1,3 +1,6 @@
+# Maps the RTL ports to the physical DE10-Lite pins.
+# It also sets the electrical standard for the clock, SDRAM, and board controls.
+
 # Terasic DE10-Lite user manual, downloaded from resource page on 2026-10-27.
 # PDF footer October 17, 2022: Tables 3-2, 3-5, 3-12 (printed pp24,27,38).
 # See docs/sdram.md for the source URL and physical-board validation gate.

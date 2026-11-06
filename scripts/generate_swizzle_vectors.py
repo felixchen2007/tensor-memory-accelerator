@@ -1,4 +1,7 @@
-"""Fixed logical requests and independent bank-occupancy expectations."""
+"""Generates requests for the linear and XOR scratchpad layouts.
+
+The Python bank model predicts where the layouts will cause conflicts.
+"""
 
 import json
 from pathlib import Path

@@ -1,7 +1,7 @@
-`default_nettype none
+// Overlaps source reads and destination writes using a FIFO that pairs data with its destination address.
+// The engine reports completion after outstanding traffic has drained.
 
-// Ordered copy pipeline: one pending read, a data/destination FIFO, and one
-// pending write. Both channels can replace a response on its acceptance edge.
+`default_nettype none
 module tma_copy_engine_pipelined #(
     parameter int unsigned ADDR_W = 32,
     parameter int unsigned COUNT_W = 16,
@@ -49,8 +49,6 @@ module tma_copy_engine_pipelined #(
     typedef enum logic [1:0] {IDLE, RUN, FINISH} state_t;
     state_t state_q;
     logic allocation_done_q, drop_reads_q, drop_writes_q;
-    // Hold an offered address pair through stalls. Once the read is accepted,
-    // keep its destination separately until the matching response arrives.
     logic slot_valid_q, read_pending_q, write_pending_q;
     logic [ADDR_W-1:0] slot_src_q, slot_dst_q, pending_dst_q;
     logic [PTR_W-1:0] head_q, tail_q;
@@ -79,8 +77,6 @@ module tma_copy_engine_pipelined #(
     assign wr_req_addr = fifo_dst[head_q];
     assign wr_req_data = fifo_data[head_q];
     wire pop = wr_req_valid && wr_req_ready;
-    // A write accepted on this edge frees space for a read response on the
-    // same edge, even when the FIFO started full.
     wire fifo_room = (used_q < USED_W'(FIFO_DEPTH)) || pop;
     assign rd_rsp_ready = (state_q == RUN) && read_pending_q &&
         (drop_reads_q || (rd_rsp_valid && rd_rsp_error) || fifo_room);
@@ -206,8 +202,6 @@ module tma_copy_engine_pipelined #(
                     used_q <= next_used;
                     if (push) tail_q <= tail_q + 1'b1;
                     if (pop) head_q <= head_q + 1'b1;
-                    // A write leaves the FIFO when issued, but only its
-                    // successful acknowledgement counts toward completion.
                     if (write_response && !wr_rsp_error)
                         completed_elements <= completed_elements + 1'b1;
 
@@ -228,8 +222,6 @@ module tma_copy_engine_pipelined #(
                         if (error_code == OK) error_code <= BOUNDS;
                         allocation_done_q <= 1;
                     end
-                    // Generating the last address only ends allocation.
-                    // Retire the descriptor after every occupied stage drains.
                     if (allocation_done_q && !slot_valid_q && !read_pending_q &&
                         (used_q == 0) && !write_pending_q)
                         state_q <= FINISH;

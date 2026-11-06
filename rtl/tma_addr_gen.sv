@@ -1,9 +1,7 @@
-`default_nettype none
+// Turns a 2D descriptor into an ordered stream of source and destination byte addresses.
+// Independent strides let the engine copy, transpose, or repeat data.
 
-// Row-major traversal of a 2D descriptor. All addresses/strides are byte offsets.
-// Arithmetic intentionally wraps at ADDR_W bits. See docs/architecture.md.
-// Source and destination advance independently. Exchanging destination row and
-// column strides transposes the tile; a zero source stride repeats an address.
+`default_nettype none
 module tma_addr_gen #(
     parameter int unsigned ADDR_W = 32,
     parameter int unsigned COUNT_W = 16

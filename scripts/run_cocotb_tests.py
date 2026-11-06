@@ -1,4 +1,7 @@
-"""Run the pytest/cocotb acceptance matrix and return its per-profile reports."""
+"""Launches the pytest and cocotb acceptance matrix.
+
+It collects the per-configuration results and keeps the simulator artifacts with the run.
+"""
 
 import json
 from pathlib import Path

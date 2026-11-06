@@ -1,4 +1,8 @@
-"""Targeted first-order RTL defects; every anchor must match exactly once."""
+"""Lists small deliberate RTL defects for the archived UVM mutation campaign.
+
+Each entry names the exact edit and the failure that should catch it.
+"""
+
 from dataclasses import dataclass
 import hashlib
 

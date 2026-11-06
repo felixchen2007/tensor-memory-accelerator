@@ -1,4 +1,7 @@
-"""Generate whole-memory and transaction-trace expectations for copy RTL."""
+"""Generates source data and descriptors for the copy-engine testbench.
+
+The Python model supplies the expected memory image and ordered transactions.
+"""
 
 from dataclasses import dataclass, replace
 import json

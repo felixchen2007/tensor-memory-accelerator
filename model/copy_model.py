@@ -1,4 +1,7 @@
-"""16-bit copy oracle with separate source/destination word arrays."""
+"""Predicts the final destination memory and transfer order for a descriptor.
+
+It also reports the expected error and how many writes should have completed.
+"""
 
 from dataclasses import dataclass
 from enum import IntEnum

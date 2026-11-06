@@ -1,7 +1,7 @@
-`default_nettype none
+// Implements four RAM banks shared by four read lanes and one write port.
+// The optional XOR layout changes which addresses compete for the same bank.
 
-// Four logical word-addressed read lanes and one always-accepting write port.
-// Optional XOR bank permutation; physical row remains word address / 4.
+`default_nettype none
 module tma_scratchpad #(
     parameter int unsigned ROW_W = 10,
     parameter bit SWIZZLE = 0,

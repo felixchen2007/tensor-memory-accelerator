@@ -1,3 +1,8 @@
+"""Tests the Python mapping between scratchpad words and banks.
+
+The cases check which patterns collide under linear and XOR addressing.
+"""
+
 import unittest
 
 from model.bank_layout import BankLayout

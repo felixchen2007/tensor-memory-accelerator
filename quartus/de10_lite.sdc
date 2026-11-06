@@ -1,5 +1,6 @@
-# Initial 50 MHz SDR-SDRAM board constraints. PCB delays below are assumptions,
-# not measured trace delays; a pass is conditional on this external timing budget.
+# Defines the board clocks and the timing budget for signals crossing between the FPGA and SDRAM.
+# The external delays use documented PCB assumptions.
+
 create_clock -name ref_clk -period 20.000 [get_ports MAX10_CLK1_50]
 derive_pll_clocks
 # Forwarded clock at the board pin, including the PLL and output path. Its edge

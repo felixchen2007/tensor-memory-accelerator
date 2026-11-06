@@ -1,4 +1,6 @@
-# Standalone analysis and synthesis, not a fitted or board-programmable project.
+# Runs standalone Quartus synthesis for a selected RTL module.
+# Use its reports to inspect logic and inferred RAM before a full board fit.
+
 package require ::quartus::project
 package require ::quartus::flow
 

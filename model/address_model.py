@@ -1,4 +1,7 @@
-"""Mathematical address oracle; intentionally independent of RTL state updates."""
+"""Calculates the expected source and destination address for each tensor element.
+
+It uses the descriptor coordinates and strides directly.
+"""
 
 from dataclasses import dataclass
 from typing import Iterator

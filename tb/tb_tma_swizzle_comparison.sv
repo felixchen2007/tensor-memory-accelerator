@@ -1,3 +1,6 @@
+// Sends the same read patterns to linear and XOR scratchpad layouts.
+// It measures how many request cycles each layout needs to serve a group of reads.
+
 `timescale 1ns/1ps
 `default_nettype none
 

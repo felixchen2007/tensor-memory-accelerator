@@ -1,4 +1,8 @@
-"""Compile the DE10-Lite image and reject failed timing; never program hardware."""
+"""Builds a selected DE10-Lite image with Quartus.
+
+It checks fitted timing and pin assignments and records the image hash.
+"""
+
 from datetime import datetime, timezone
 import argparse
 import hashlib

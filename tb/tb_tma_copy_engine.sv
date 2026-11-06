@@ -1,3 +1,6 @@
+// Tests the serialized DMA against a simulated source and destination.
+// It checks the request trace, final memory, and transfer counters.
+
 `timescale 1ns/1ps
 `default_nettype none
 

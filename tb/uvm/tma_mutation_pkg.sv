@@ -1,5 +1,7 @@
+// Defines the UVM stimulus used to replay the archived RTL mutation campaign.
+// It adds focused cases that exercise the targeted fault locations.
+
 `timescale 1ns/1ps
-// Campaign-only stimulus. The production RTL and existing UVM suite are unchanged.
 package tma_mutation_pkg;
     import uvm_pkg::*;
     import tma_uvm_pkg::*;

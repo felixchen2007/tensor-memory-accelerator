@@ -1,3 +1,6 @@
+// Selects the serialized or pipelined DMA engine at build time.
+// Both variants expose the same descriptor and memory interfaces.
+
 `default_nettype none
 
 module tma_copy_engine_select #(

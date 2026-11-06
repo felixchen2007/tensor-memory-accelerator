@@ -1,4 +1,7 @@
-"""Select copy-oracle cases for integration with the actual synthesizable RAMs."""
+"""Selects copy cases for testing the engine with real scratchpad RTL.
+
+The testbench uses these vectors to seed and verify memory through its maintenance port.
+"""
 
 import json
 from pathlib import Path

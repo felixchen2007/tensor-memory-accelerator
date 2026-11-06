@@ -1,3 +1,6 @@
+// Builds expected transfer data from descriptors and observed maintenance operations.
+// It checks DMA requests, responses, completion, and memory readbacks.
+
 class tma_scoreboard extends uvm_component;
     `uvm_component_utils(tma_scoreboard)
     uvm_analysis_imp #(tma_observation,tma_scoreboard) observations;

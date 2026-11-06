@@ -1,3 +1,8 @@
+"""Tests the Python reference for descriptor-based copies.
+
+The cases verify final data, expected faults, and the number of completed writes.
+"""
+
 import unittest
 from dataclasses import replace
 

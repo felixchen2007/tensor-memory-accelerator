@@ -1,3 +1,6 @@
+// Defines the operations that seed memory, submit descriptors, and read results back in UVM.
+// It includes directed cases and repeatable seeded stimulus.
+
 class tma_regression_sequence extends uvm_sequence #(tma_item);
     `uvm_object_utils(tma_regression_sequence)
     tma_item host_item;

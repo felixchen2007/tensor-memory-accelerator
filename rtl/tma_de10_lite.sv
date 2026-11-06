@@ -1,3 +1,6 @@
+// Connects the accelerator to the DE10-Lite clocks, SDRAM pins, LEDs, and JTAG probe.
+// The board self-test supplies the benchmark descriptor and checks the transferred data.
+
 `default_nettype none
 
 module tma_de10_lite #(

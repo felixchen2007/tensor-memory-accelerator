@@ -1,4 +1,8 @@
-"""Run the SDRAM subset, including deliberate failures of the checking model."""
+"""Runs the SDRAM-focused directed benches and the cocotb acceptance matrix.
+
+It records results for controller, board-wrapper, and deliberate fault cases.
+"""
+
 import csv
 from datetime import datetime, timezone
 import hashlib

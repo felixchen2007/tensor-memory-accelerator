@@ -1,6 +1,7 @@
+// Wraps the MAX 10 PLL to generate the 50 MHz core and phase-shifted SDRAM clocks.
+// The board top uses the PLL lock signal to control reset release.
+
 `default_nettype none
-// Vendor PLL primitive; project-authored wrapper. 50 MHz core and a phase-shifted
-// 50 MHz SDRAM clock. Reset release waits for lock in tma_de10_lite.
 module tma_board_clocks (
     input wire ref_clk,
     output wire core_clk,sdram_clk,locked

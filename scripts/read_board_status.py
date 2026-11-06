@@ -1,4 +1,8 @@
-"""Decode a saved probe transcript; hardware reads require explicit --hardware."""
+"""Reads the FPGA's JTAG diagnostics or replays a saved probe transcript.
+
+It decodes the result into fields such as the test status and elapsed cycles.
+"""
+
 import argparse
 from datetime import datetime, timezone
 import hashlib

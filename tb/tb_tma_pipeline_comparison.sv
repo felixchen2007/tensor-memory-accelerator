@@ -1,3 +1,6 @@
+// Runs the serialized and pipelined engines on matched memory models.
+// It checks that they produce the expected writes and records the cycles each engine takes.
+
 `timescale 1ns/1ps
 `default_nettype none
 

@@ -1,3 +1,6 @@
+# Finds the board's USB-Blaster and opens the FPGA's in-system probe.
+# It prints captured status and trace packets for the Python decoder.
+
 package require ::quartus::jtag
 package require ::quartus::insystem_source_probe
 set hardware [get_hardware_names]

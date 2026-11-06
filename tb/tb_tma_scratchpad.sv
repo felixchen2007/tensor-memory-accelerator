@@ -1,3 +1,6 @@
+// Tests reads and writes across the four scratchpad banks.
+// It checks conflicts, stalled read responses, and simultaneous reads and writes to the same address.
+
 `timescale 1ns/1ps
 `default_nettype none
 

@@ -1,7 +1,7 @@
-`default_nettype none
+// Implements the serialized baseline that reads and writes one tensor element at a time.
+// It waits for each write acknowledgement before moving to the next element.
 
-// Serialized 16-bit copy baseline. A successful write response acknowledges
-// completion, not just acceptance of the write request. See docs/copy_engine.md.
+`default_nettype none
 module tma_copy_engine #(
     parameter int unsigned ADDR_W = 32,
     parameter int unsigned COUNT_W = 16,

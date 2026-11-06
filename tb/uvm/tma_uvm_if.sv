@@ -1,3 +1,6 @@
+// Defines the signals shared by the UVM components and the RTL testbench.
+// It exposes the host ports and observation points used to check DMA activity.
+
 `timescale 1ns/1ps
 interface tma_uvm_if(input logic clk,input logic rst);
     logic desc_valid=0,desc_ready;

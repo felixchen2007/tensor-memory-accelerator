@@ -1,3 +1,8 @@
+"""Tests the hardware benchmark math with synthetic board records.
+
+The cases also check that invalid or inconsistent runs are rejected.
+"""
+
 import unittest
 from model.board_benchmark import compare_runs
 

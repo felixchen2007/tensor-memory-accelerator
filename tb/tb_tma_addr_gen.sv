@@ -1,3 +1,6 @@
+// Feeds descriptors and stalls into the RTL address generator.
+// It checks the accepted addresses, end-of-transfer flag, and reset behavior.
+
 `timescale 1ns/1ps
 `default_nettype none
 

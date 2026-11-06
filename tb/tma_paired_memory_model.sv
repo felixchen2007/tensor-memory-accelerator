@@ -1,8 +1,8 @@
+// Supplies simulated source and destination memory for the engine comparison.
+// Matching transaction numbers get the same delays even if the engines issue them on different cycles.
+
 `timescale 1ns/1ps
 `default_nettype none
-
-// Test-only memory. Transaction i receives the same service delays in either
-// engine, independently of the cycle on which that engine issues it.
 module tma_paired_memory_model (
     input wire clk, rst, load_image,
     input wire [15:0] source_image [0:4095], initial_image [0:4095],

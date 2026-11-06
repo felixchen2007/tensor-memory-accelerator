@@ -1,3 +1,8 @@
+"""Tests the Python decoder with known JTAG status packets and traces.
+
+The cases check that invalid packets and inconsistent samples are rejected.
+"""
+
 import unittest
 from model.board_status import decode_snapshot, decode_samples, decode_read_trace
 

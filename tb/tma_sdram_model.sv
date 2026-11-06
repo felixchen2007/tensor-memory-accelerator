@@ -1,8 +1,8 @@
+// Emulates the project's SDRAM chip at the pin level for simulation.
+// It checks the supported commands, timing, burst transfers, and refresh schedule.
+
 `timescale 1ns/1ps
 `default_nettype none
-
-// Independent pin-level subset model, authored for this project. Not a vendor
-// model. Checks BL1/BL4 reads, single writes, CL3, startup, timing and refresh.
 module tma_sdram_model #(
     parameter realtime T_AC = 5.4,
     parameter int READ_SKEW_CYCLES = 0,

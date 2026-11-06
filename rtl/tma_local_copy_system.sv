@@ -1,7 +1,7 @@
-`default_nettype none
+// Connects the DMA to two on-chip scratchpads for local memory transfers.
+// A maintenance port can load or read either scratchpad when the engine is idle.
 
-// Synthesizable integration: serialized copy engine and two 8 KiB banked RAMs.
-// The maintenance port loads/inspects memory while the copy engine is idle.
+`default_nettype none
 module tma_local_copy_system #(
     parameter bit PIPELINED = 0,
     parameter bit SWIZZLE = 0,

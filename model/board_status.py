@@ -1,4 +1,8 @@
-"""Decode version-2/3/4 passive board diagnostics; never access hardware."""
+"""Decodes the status and read trace captured through JTAG.
+
+It turns packed fields into named values such as the test stage and elapsed cycles.
+"""
+
 import re
 
 STAGES = ("waiting_for_initialization", "sdram_seed_request", "sdram_seed_response",
